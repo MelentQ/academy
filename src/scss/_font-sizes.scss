@@ -1,0 +1,23 @@
+%fs-h {
+  font-size: 6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 3rem;
+  }
+}
+
+%fs-t1 {
+  font-size: 1.8rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+  }
+}
+
+%fs-t2 {
+  font-size: 1.6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+  }
+}

@@ -1,3 +1,21 @@
 {
-    "title": "Главная страница"
+    "title": "Главная страница",
+    "introSlider": [
+        {
+            "text": "Гарантия до 50 лет на материалы и 5 лет на монтаж",
+            "image": "img/content/intro-slider/1.png"
+        },
+        {
+            "text": "Наши сметы точны до копейки",
+            "image": "img/content/intro-slider/1.png"
+        },
+        {
+            "text": "Замер, монтажный проект и еще 4 услуги бесплатно",
+            "image": "img/content/intro-slider/1.png"
+        },
+        {
+            "text": "Поэтапная оплата,  кредит или рассрочка",
+            "image": "img/content/intro-slider/1.png"
+        }
+    ]
 }

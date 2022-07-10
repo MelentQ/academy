@@ -1,3 +1,4 @@
+import $ from "jquery";
 import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
@@ -10,6 +11,8 @@ import tabs from './tabs';
 import menu from './menu';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import introSlider from "./my/introSlider";
+import headerHeight from "./my/headerHeight";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
     modals();
     tabs();
     menu();
+
+    headerHeight();
+    introSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

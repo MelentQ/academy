@@ -1,12 +1,17 @@
+@import 'fonts';
 @import 'vendor';
 @import 'mixins';
+@import 'font-sizes';
 @import 'global';
 @import 'utils';
 @import 'layout';
-@import 'page-header';
-@import 'page-footer';
 
+@import 'ui';
 
+@import 'header';
+@import 'footer';
+
+@import 'index/intro';
 
 
 

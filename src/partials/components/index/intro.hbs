@@ -1,0 +1,74 @@
+<section class="intro js-init-intro-slider">
+  <h1 class="visually-hidden">Купить металлочерепицу в Тюмени</h1>
+
+  <div class="swiper intro__images">
+    <ul class="swiper-wrapper">
+      {{#each introSlider}}
+      <li class="swiper-slide">
+        <div class="intro__image-wrapper">
+          <img src="{{this.image}}" alt="Intro Image">
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="intro__inner">
+      <div class="intro__title-block">
+        <span>Купить металлочерепицу</span>
+        <div class="intro__bonus-wrapper">
+          <span>В Тюмени</span>
+          <div class="intro__bonus">
+            <svg>
+              <use xlink:href="#plus">
+            </svg>
+            <span>монтаж под ключ</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper intro__thumbs">
+        <ul class="swiper-wrapper">
+          {{#each introSlider}}
+          <li class="swiper-slide">
+            <a class="intro__thumb" href="#">
+              <div class="intro__thumb-line">
+                <div class="intro__thumb-fill"></div>
+              </div>
+              <div class="intro__thumb-text">
+                <p>{{this.text}}</p>
+              </div>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="intro__button-block">
+        <a class="intro__button" href="#">
+          <span class="intro__button-label">Рассчитать стоимость</span>
+          <div class="intro__button-arrow">
+            <svg>
+              <use xlink:href="#arrow">
+            </svg>
+          </div>
+        </a>
+        <div class="intro__tip">
+          <svg class="intro__tip-icon">
+            <use xlink:href="#question">
+          </svg>
+          <div class="intro__tip-text">
+            <p>Ответьте на несколько вопросов получите расчет материалов и монтажа</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro__region">
+        <img src="img/region.svg" alt="Region">
+        <span class="intro__region-title">РЕГИОН 72</span>
+        <span class="intro__region-description">Наши крыши в каждом поселке и дачном сообществе Тюмени</span>
+      </div>
+    </div>
+  </div>
+</section>
