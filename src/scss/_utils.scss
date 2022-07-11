@@ -9,6 +9,7 @@
     height: 100%;
     left: 0;
     top: 0;
+
     body {
         height: auto;
         overflow: hidden;
@@ -23,6 +24,18 @@
 
 .show-on-mobile {
     @include breakpointMF(small-tablet) {
+        display: none !important;
+    }
+}
+
+.hide-on-tablet {
+    @include breakpoint(tablet) {
+        display: none !important;
+    }
+}
+
+.show-on-tablet {
+    @include breakpointMF(laptop) {
         display: none !important;
     }
 }

@@ -1,15 +1,23 @@
-%fs-h {
+%fs-h1 {
   font-size: 6rem;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
     font-size: 3rem;
+  }
+}
+
+%fs-h2 {
+  font-size: 2.5rem;
+
+  @include breakpoint(tablet) {
+    font-size: 2rem;
   }
 }
 
 %fs-t1 {
   font-size: 1.8rem;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
     font-size: 1.4rem;
   }
 }
@@ -17,7 +25,15 @@
 %fs-t2 {
   font-size: 1.6rem;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+%fs-t3 {
+  font-size: 1.4rem;
+
+  @include breakpoint(tablet) {
     font-size: 1.2rem;
   }
 }

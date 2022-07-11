@@ -15,12 +15,8 @@
 
     --js-header-height: 256px;
 
-    @include breakpoint(desktop) {
-        --content-padding: 3rem;
-    }
-
-    @include breakpoint(small-tablet) {
-        --content-padding: 1.5rem;
+    @include breakpoint(tablet) {
+        --content-padding: 3.5rem;
     }
 }
 

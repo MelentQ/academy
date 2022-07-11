@@ -1,22 +1,18 @@
 .images {
-
-  &__inner {
-    padding: 8rem 4rem;
-    margin: 0 -4rem;
-
-    border: 0.1rem solid rgba(33, 42, 47, 0.2);
-    border-radius: 4rem;
-  }
-
-  &__heading {}
-
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-  }
 
-  &__item {}
+    @include breakpoint(tablet) {
+      gap: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
 
   &__item-image {
     height: 28rem;
@@ -25,12 +21,16 @@
     border-radius: 4rem 4rem 4rem 0;
 
     margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__item-title {
     margin-bottom: 1rem;
 
-    font-size: 2.5rem;
+    @extend %fs-h2;
     font-weight: 700;
     font-family: 'Bebas Neue', cursive;
   }

@@ -1,5 +1,5 @@
-import {Swiper, Navigation, Autoplay, EffectFade, Thumbs} from "swiper";
-Swiper.use([Navigation, Autoplay, EffectFade, Thumbs]);
+import {Swiper, Navigation, Autoplay, EffectFade, Thumbs, Controller} from "swiper";
+Swiper.use([Navigation, Autoplay, EffectFade, Thumbs, Controller]);
 
 import gsap from 'gsap';
 
@@ -32,36 +32,59 @@ export default function introSlider() {
     }
   });
 
-  const animation = gsap.timeline();
+  const mobileSlider = new Swiper(container.querySelector('.intro__mobile-slider'), {
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    controller: {
+      control: imageSlider
+    },
+    navigation: {
+      nextEl: container.querySelector('.slider-button.--right'),
+      prevEl: container.querySelector('.slider-button.--left'),
+    }
+  });
 
-  function lineAnimation() {
-    if (window.lastThumbLine) {
-      gsap.set(window.lastThumbLine, { xPercent: -100 });
-    };
-    
-    const currentThumbLine = thumbsSlider.slides[imageSlider.activeIndex].querySelector('.intro__thumb-fill');
-    window.lastThumbLine = currentThumbLine;
-    animation.clear();
-    animation.eventCallback('onComplete', null);
-    animation.fromTo(currentThumbLine, {
-        xPercent: -100,
-      }, {
-        ease: "none",
-        xPercent: 0,
-        duration: 5,
-      }
-    );
-    animation.eventCallback('onComplete', () => {
-      if(imageSlider.isEnd) {
-        imageSlider.slideTo(0);
-      }
-      else {
-        imageSlider.slideNext();
-      }
-    });
+  if (window.matchMedia("(min-width: 1440px)").matches) {
+
+    const animation = gsap.timeline();
+
+    thumbsSlider.slides.forEach(slide => {
+      const line = slide.querySelector('.intro__thumb-fill');
+      gsap.set(line, { xPercent: -100 });
+    })
+
+    function lineAnimation() {
+      if (window.lastThumbLine) {
+        gsap.set(window.lastThumbLine, { xPercent: -100 });
+      };
+      
+      const currentThumbLine = thumbsSlider.slides[imageSlider.activeIndex].querySelector('.intro__thumb-fill');
+      window.lastThumbLine = currentThumbLine;
+      animation.clear();
+      animation.eventCallback('onComplete', null);
+      animation.fromTo(currentThumbLine, {
+          xPercent: -100,
+        }, {
+          ease: "none",
+          xPercent: 0,
+          duration: 5,
+        }
+      );
+      animation.eventCallback('onComplete', () => {
+        if(imageSlider.isEnd) {
+          imageSlider.slideTo(0);
+        }
+        else {
+          imageSlider.slideNext();
+        }
+      });
+    }
+
+    lineAnimation();
+
+    imageSlider.on("slideChange", lineAnimation);
   }
-
-  lineAnimation();
-
-  imageSlider.on("slideChange", lineAnimation);
 }

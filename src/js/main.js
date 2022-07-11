@@ -15,6 +15,7 @@ import introSlider from "./my/introSlider";
 import headerHeight from "./my/headerHeight";
 import map from "./my/map";
 import slider from "./my/slider";
+import mobileSlider from "./my/mobileSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     introSlider();
     map();
     slider();
+    mobileSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

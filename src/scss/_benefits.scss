@@ -1,13 +1,13 @@
 .benefits {
-
-  &__inner {}
-
-  &__content {}
-
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      gap: 0;
+    }
   }
 
   &__item {
@@ -18,6 +18,11 @@
 
     border: 0.1rem solid rgba(33, 42, 47, 0.2);
     border-radius: 2.4rem;
+
+    @include breakpoint(tablet) {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
   }
 
   &__item-image {
@@ -27,10 +32,15 @@
     object-position: left center;
     max-width: 100%;
     margin-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+      height: 5.6rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__item-title {
-    font-size: 2.5rem;
+    @extend %fs-h2;
     font-weight: 700;
     font-family: 'Bebas Neue', cursive;
   }
@@ -44,5 +54,20 @@
 
   &__button {
     margin-top: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
   }
 }

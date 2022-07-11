@@ -18,6 +18,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      margin: 0 -2rem;
+    }
   }
 
   &__logo-block {
@@ -35,6 +39,10 @@
     height: auto;
 
     object-fit: contain;
+
+    @include breakpoint(mobile) {
+      width: 8.8rem;
+    }
   }
 
   &__logo-label {
@@ -100,13 +108,9 @@
   }
 
   &__contact-heading {
-    font-size: 1.4rem;
+    @extend %fs-t3;
     font-weight: 500;
     text-transform: uppercase;
-
-    @include breakpoint(laptop) {
-      font-size: 1.2rem;
-    }
   }
 
   &__contact-links {

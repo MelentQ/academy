@@ -1,7 +1,4 @@
 .slider {
-
-  &__inner {}
-
   &__heading-block {
     display: flex;
     flex-direction: column;
@@ -9,16 +6,22 @@
     gap: 2.4rem;
   }
 
-  &__heading {}
-
   &__buttons {
     display: flex;
     gap: 1.2rem;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
   }
 
   &__slider-block {
     overflow: hidden;
     min-width: 0;
+
+    @include breakpoint(desktop) {
+      overflow: visible;
+    }
   }
 
   &__slide {
@@ -28,6 +31,10 @@
     border-radius: 2.4rem;
 
     flex-grow: 1;
+
+    @include breakpoint(tablet) {
+      padding: 2rem;
+    }
   }
 
   &__slide-image {
@@ -37,12 +44,16 @@
     object-fit: cover;
 
     margin-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__slide-title {
     margin-bottom: 1rem;
 
-    font-size: 2.5rem;
+    @extend %fs-h2;
     font-weight: 700;
     font-family: 'Bebas Neue', cursive;
   }
@@ -50,5 +61,16 @@
   &__slide-text {
     @extend %fs-t1;
     color: #5A5A5A;
+  }
+
+  &__pagination {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
   }
 }

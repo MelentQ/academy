@@ -4,25 +4,28 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
 
-    margin: 0 -4rem;
-    padding: 8rem 4rem;
-
-    background: #F5F5F5;
-    border-radius: 4rem;
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
   }
 
   &__text-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10rem;
-  }
+    gap: 4rem;
 
-  &__heading {}
+    @include breakpoint(tablet) {
+      gap: 2rem;
+    }
+  }
 
   &__text {
     @extend %fs-t1;
     color: #5A5A5A;
+
+    margin-top: 1rem;
   }
 
   &__manager {
@@ -37,33 +40,53 @@
 
     object-fit: cover;
     border-radius: 50%;
+
+    background-color: white;
+
+    @include breakpoint(mobile) {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 
   &__manager-info {
     @extend %fs-t1;
-    color: #5A5A5A;
   }
 
   &__manager-name {
     display: block;
 
-    font-size: 2.5rem;
+    @extend %fs-h2;
     font-weight: 700;
     font-family: 'Bebas Neue', cursive;
   }
 
   &__manager-label {
     display: block;
+
+    color: #5A5A5A;
   }
 
   &__manager-button {
     margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__preview-block {
     position: relative;
     border-radius: 4rem;
     overflow: hidden;
+
+    min-height: 45rem;
+
+    background-color: white;
+
+    @include breakpoint(tablet) {
+      min-height: 36rem;
+    }
   }
 
   &__preview-image {

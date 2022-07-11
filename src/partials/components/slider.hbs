@@ -1,8 +1,8 @@
 <section class="js-init-slider page-section-margin slider">
   <div class="container">
-    <div class="page-section-grid slider__inner">
+    <div class="page-section-grid">
       <div class="slider__heading-block">
-        <h2 class="page-section-heading slider__heading">Что будет если довериться любителям?</h2>
+        <h2 class="page-section-heading">Что будет если довериться любителям?</h2>
         <div class="slider__buttons">
           <button class="slider-button --left">
             <svg>
@@ -22,7 +22,7 @@
             {{#each slider.items}}
             <li class="swiper-slide">
               <div class="slider__slide">
-                <img class="slider__slide-image" src="{{this.image}}" alt="Image">
+                <img class="slider__slide-image lazyload" data-src="{{this.image}}" alt="Image">
                 <h3 class="slider__slide-title">{{this.title}}</h3>
                 <div class="slider__slide-text">
                   <p>{{this.text}}</p>
@@ -31,6 +31,7 @@
             </li>
             {{/each}}
           </ul>
+          <div class="pagination slider__pagination"></div>
         </div>
       </div>
     </div>

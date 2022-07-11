@@ -15,6 +15,10 @@
 
   transition: background-color 0.3s ease;
 
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+
   &:link,
   &:visited {
     color: white;
@@ -70,5 +74,35 @@
   &.swiper-button-lock {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+.pagination {
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  &.swiper-pagination-lock {
+    display: none;
+  }
+
+  &__item {
+    display: block;
+
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 10rem;
+
+    background-color: #212A2F;
+    opacity: 0.1;
+
+    transition: background-color 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+
+    &.active {
+      background-color: #1CBA38;
+      opacity: 1;
+      width: 3.6rem;
+    }
   }
 }

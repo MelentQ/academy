@@ -1,28 +1,22 @@
 .gallery {
 
-  &__inner {
-    padding: 8rem 4rem;
-    margin: 0 -4rem;
-
-    background: #F5F5F5;
-    border-radius: 4rem;
+  .swiper {
+    overflow: hidden;
   }
-
-  &__heading {}
 
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(8, 8rem);
     gap: 0.8rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      gap: 0;
+    }
   }
 
   &__item {
-    position: relative;
-    border-radius: 4rem 4rem 4rem 0;
-    overflow: hidden;
-
-    padding: 2.4rem;
 
     &:nth-child(5n + 1),
     &:nth-child(5n + 2) {
@@ -35,6 +29,22 @@
     &:nth-child(5n + 5) {
       grid-column: span 2;
       grid-row: span 3;
+    }
+  }
+
+  &__item-link {
+    flex-grow: 1;
+
+    position: relative;
+    border-radius: 4rem 4rem 4rem 0;
+    overflow: hidden;
+
+    padding: 2.4rem;
+
+    background-color: white;
+
+    @include breakpoint(tablet) {
+      min-height: 21.2rem;
     }
   }
 
@@ -57,9 +67,13 @@
     height: 100%;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6.16%, rgba(0, 0, 0, 0.6) 93.12%);
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
-  &__image-label-block {
+  &__more-block {
     position: absolute;
     bottom: 2.4rem;
     left: 2.4rem;
@@ -72,8 +86,18 @@
     gap: 2.4rem;
 
     text-transform: uppercase;
-    font-size: 2.5rem;
+    @extend %fs-h2;
     font-weight: 700;
+
+    @include breakpoint(tablet) {
+      position: static;
+
+      padding: 1.4rem;
+      margin-top: 4rem;
+
+      background-color: white;
+      border-radius: 0.8rem;
+    }
 
     svg {
       width: 1.2rem;
@@ -82,18 +106,42 @@
     }
   }
 
-  &__image-label {
+  &__more-label {
     color: white;
     font-family: 'Bebas Neue', cursive;
+    font-weight: 700;
+
+    @include breakpoint(tablet) {
+      color: var(--primary-color);
+    }
   }
 
-  &__image-label-gigit-block {
+  &__more-gigit-block {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
     padding: 1rem 1.8rem;
     background-color: white;
     border-radius: 0.8rem;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+      border-radius: 0;
+    }
   }
 
-  &__image-label-digit {
+  &__more-digit {
     color: var(--primary-color);
+  }
+
+  &__pagination {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
   }
 }

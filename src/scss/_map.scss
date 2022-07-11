@@ -1,16 +1,25 @@
 .map {
   margin-top: 8rem;
 
+  @include breakpoint(tablet) {
+    margin-top: 4rem;
+  }
+
   &__inner {
     position: relative;
 
-    margin: 0 -4rem;
-    padding: 0 4rem;
-
     min-height: 60rem;
-    border-radius: 4rem;
 
+    background-color: #F5F5F5;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      min-height: 48rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 32rem;
+    }
   }
 
   &__js-container {

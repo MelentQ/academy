@@ -1,33 +1,47 @@
 @mixin breakpoint($class) {
-    @if $class == large-desktop {
+    @if $class==large-desktop {
         @media only screen and (max-width: (1600px)) {
             @content;
         }
-    } @else if $class == desktop {
-        @media only screen and (max-width: (1400px)) {
+    }
+
+    @else if $class==desktop {
+        @media only screen and (max-width: (1440px)) {
             @content;
         }
-    } @else if $class == laptop {
+    }
+
+    @else if $class==laptop {
         @media only screen and (max-width: (1200px)) {
             @content;
         }
-    } @else if $class == tablet {
+    }
+
+    @else if $class==tablet {
         @media only screen and (max-width: (1024px)) {
             @content;
         }
-    } @else if $class == small-tablet {
+    }
+
+    @else if $class==small-tablet {
         @media only screen and (max-width: (768px)) {
             @content;
         }
-    } @else if $class == mobile {
+    }
+
+    @else if $class==mobile {
         @media only screen and (max-width: (640px)) {
             @content;
         }
-    } @else if $class == small-mobile {
+    }
+
+    @else if $class==small-mobile {
         @media only screen and (max-width: (576px)) {
             @content;
         }
-    } @else if $class == supersmall-mobile {
+    }
+
+    @else if $class==supersmall-mobile {
         @media only screen and (max-width: (370px)) {
             @content;
         }
@@ -66,12 +80,15 @@
     &::-webkit-input-placeholder {
         @content;
     }
+
     &:-moz-placeholder {
         @content;
     }
+
     &::-moz-placeholder {
         @content;
     }
+
     &:-ms-input-placeholder {
         @content;
     }
@@ -80,6 +97,7 @@
 @mixin fullpageBG {
     position: relative;
     background: none;
+
     &::before {
         content: '';
         position: absolute;
@@ -95,16 +113,20 @@
 @mixin noScrollbar {
     scrollbar-width: none;
     -ms-overflow-style: none;
+
     &::-webkit-scrollbar * {
         background: transparent;
     }
+
     &::-webkit-scrollbar-track {
         background-color: transparent;
     }
+
     &::-webkit-scrollbar {
         display: none;
         background-color: transparent;
     }
+
     &::-webkit-scrollbar-thumb {
         background-color: transparent;
     }
@@ -113,6 +135,7 @@
 @mixin customScrollbar {
     scrollbar-color: var(--primary-color) white;
     scrollbar-width: thin;
+
     &::-webkit-scrollbar {
         background-color: white;
         width: 0.6rem;
@@ -143,7 +166,7 @@
     padding-right: var(--content-padding);
     white-space: nowrap;
 
-    & > * {
+    &>* {
         flex-shrink: 0;
     }
 
@@ -175,27 +198,37 @@
 }
 
 @mixin breakpointMF($class) {
-    @if $class == large-desktop {
-        @media only screen and (min-width: 1401px) {
+    @if $class==large-desktop {
+        @media only screen and (min-width: 1441px) {
             @content;
         }
-    } @else if $class == desktop {
+    }
+
+    @else if $class==desktop {
         @media only screen and (min-width: 1201px) {
             @content;
         }
-    } @else if $class == laptop {
+    }
+
+    @else if $class==laptop {
         @media only screen and (min-width: 1025px) {
             @content;
         }
-    } @else if $class == tablet {
+    }
+
+    @else if $class==tablet {
         @media only screen and (min-width: 769px) {
             @content;
         }
-    } @else if $class == small-tablet {
+    }
+
+    @else if $class==small-tablet {
         @media only screen and (min-width: 641px) {
             @content;
         }
-    } @else if $class == mobile {
+    }
+
+    @else if $class==mobile {
         @media only screen and (min-width: 577px) {
             @content;
         }

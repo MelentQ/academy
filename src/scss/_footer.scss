@@ -1,10 +1,19 @@
 .footer {
   padding: 8rem 0;
 
+  @include breakpoint(tablet) {
+    padding: 4rem 0;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 6rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__copyright-block {
@@ -13,6 +22,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      order: 4;
+    }
   }
 
   &__copyright {
@@ -20,6 +34,10 @@
     font-size: 1.2rem;
     font-weight: 400;
     color: #5A5A5A;
+
+    @include breakpoint(tablet) {
+      font-size: 1rem;
+    }
   }
 
   &__policy {
@@ -28,6 +46,15 @@
     font-size: 1.2rem;
     font-weight: 400;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      font-size: 1rem;
+    }
+
+    &:link,
+    &:visited {
+      color: #5A5A5A;
+    }
 
     &:hover {
       color: var(--secondary-color);
@@ -45,12 +72,21 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
+
+    @include breakpoint(tablet) {
+      order: 1;
+      gap: 1rem;
+    }
   }
 
   &__phone {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 6rem;
     font-weight: 700;
+
+    @include breakpoint(large-desktop) {
+      font-size: 3rem;
+    }
 
     &:hover {
       color: var(--secondary-color);
@@ -70,6 +106,12 @@
     font-size: 1.2rem;
     font-weight: 400;
     color: #5A5A5A;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+
+      font-size: 1rem;
+    }
   }
 
   &__email {
@@ -77,6 +119,15 @@
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 400;
+
+    @include breakpoint(desktop) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
 
     &:link,
     &:visited {
@@ -100,9 +151,17 @@
     row-gap: 2rem;
     column-gap: 6rem;
 
+    @include breakpoint(tablet) {
+      order: 3;
+      margin: 2rem 0;
+
+      row-gap: 1.5rem;
+      column-gap: 3.8rem;
+    }
+
     a {
       text-transform: uppercase;
-      font-size: 1.4rem;
+      @extend %fs-t3;
       font-weight: 500;
 
       &:hover {
@@ -122,6 +181,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.6rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+
+      order: 2;
+    }
   }
 
   &__social {
@@ -134,6 +200,12 @@
     border-radius: 0.8rem;
 
     transition: border-color 0.3s ease;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
 
     &:hover,
     &:focus {
@@ -153,6 +225,11 @@
       width: 2.1rem;
       height: 2.1rem;
       fill: #5A5A5A;
+
+      @include breakpoint(tablet) {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
     }
   }
 }
