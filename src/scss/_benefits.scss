@@ -1,0 +1,48 @@
+.benefits {
+
+  &__inner {}
+
+  &__content {}
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem;
+
+    border: 0.1rem solid rgba(33, 42, 47, 0.2);
+    border-radius: 2.4rem;
+  }
+
+  &__item-image {
+    height: 9.2rem;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  &__item-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  &__item-text {
+    margin-top: 1rem;
+
+    @extend %fs-t1;
+    color: #5A5A5A;
+  }
+
+  &__button {
+    margin-top: 4rem;
+  }
+}

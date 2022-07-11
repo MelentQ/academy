@@ -1,0 +1,38 @@
+<section class="js-init-slider page-section-margin slider">
+  <div class="container">
+    <div class="page-section-grid slider__inner">
+      <div class="slider__heading-block">
+        <h2 class="page-section-heading slider__heading">Что будет если довериться любителям?</h2>
+        <div class="slider__buttons">
+          <button class="slider-button --left">
+            <svg>
+              <use xlink:href="#arrow">
+            </svg>
+          </button>
+          <button class="slider-button --right">
+            <svg>
+              <use xlink:href="#arrow">
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="slider__slider-block">
+        <div class="swiper">
+          <ul class="swiper-wrapper">
+            {{#each slider.items}}
+            <li class="swiper-slide">
+              <div class="slider__slide">
+                <img class="slider__slide-image" src="{{this.image}}" alt="Image">
+                <h3 class="slider__slide-title">{{this.title}}</h3>
+                <div class="slider__slide-text">
+                  <p>{{this.text}}</p>
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

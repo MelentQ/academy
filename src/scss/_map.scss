@@ -1,0 +1,25 @@
+.map {
+  margin-top: 8rem;
+
+  &__inner {
+    position: relative;
+
+    margin: 0 -4rem;
+    padding: 0 4rem;
+
+    min-height: 60rem;
+    border-radius: 4rem;
+
+    overflow: hidden;
+  }
+
+  &__js-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__overlay {}
+}

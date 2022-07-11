@@ -1,0 +1,31 @@
+<section class="page-section-margin gallery">
+  <div class="container">
+    <div class="page-section-grid gallery__inner">
+      <h2 class="page-section-heading gallery__heading">Наше производство</h2>
+      <ul class="gallery__list">
+        {{#each gallery.items}}
+        <li class="gallery__item">
+          <a class="gallery__item-link" href="#">
+            <img class="gallery__image" src="{{this.image}}" alt="Gallery">
+          </a>
+        </li>
+        {{/each}}
+        <li class="gallery__item">
+          <a class="gallery__item-link" href="#">
+            <img class="gallery__image" src="img/content/gallery/5.jpg" alt="Gallery">
+            <div class="gallery__image-overlay"></div>
+            <div class="gallery__image-label-block">
+              <span class="gallery__image-label">Смотреть все фото</span>
+              <div class="gallery__image-label-gigit-block">
+                <span class="gallery__image-label-digit">28</span>
+                <svg>
+                  <use xlink:href="#arrow">
+                </svg>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

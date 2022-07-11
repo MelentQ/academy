@@ -1,0 +1,86 @@
+.team {
+
+  &__inner {}
+
+  &__heading-block {}
+
+  &__heading {}
+
+  &__heading-label {
+    display: block;
+    margin-top: 0.8rem;
+
+    @extend %fs-t1;
+    color: #5A5A5A;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  &__item {
+    padding: 3rem;
+    border: 0.1rem solid rgba(33, 42, 47, 0.2);
+    border-radius: 2.4rem;
+  }
+
+  &__item-image {
+    border-radius: 2rem;
+    height: 36rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 3rem;
+  }
+
+  &__item-title {
+    margin-bottom: 0.2rem;
+
+    text-transform: uppercase;
+    @extend %fs-t1;
+    font-weight: 500;
+  }
+
+  &__item-label {
+    display: block;
+
+    font-size: 1.4rem;
+    color: #5A5A5A;
+    opacity: 0.5;
+  }
+
+  &__item-phone {
+    display: block;
+    margin-top: 3rem;
+
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  &__item-email {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    margin-top: 0.6rem;
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    svg {
+      width: 1.9rem;
+      height: 1.5rem;
+
+      fill: var(--primary-color);
+    }
+  }
+
+  &__item-email-label {}
+}

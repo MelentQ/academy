@@ -1,0 +1,99 @@
+.gallery {
+
+  &__inner {
+    padding: 8rem 4rem;
+    margin: 0 -4rem;
+
+    background: #F5F5F5;
+    border-radius: 4rem;
+  }
+
+  &__heading {}
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 8rem);
+    gap: 0.8rem;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 4rem 4rem 4rem 0;
+    overflow: hidden;
+
+    padding: 2.4rem;
+
+    &:nth-child(5n + 1),
+    &:nth-child(5n + 2) {
+      grid-column: span 3;
+      grid-row: span 5;
+    }
+
+    &:nth-child(5n + 3),
+    &:nth-child(5n + 4),
+    &:nth-child(5n + 5) {
+      grid-column: span 2;
+      grid-row: span 3;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6.16%, rgba(0, 0, 0, 0.6) 93.12%);
+  }
+
+  &__image-label-block {
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+    right: 2.4rem;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    svg {
+      width: 1.2rem;
+      height: 1.6rem;
+      fill: var(--primary-color);
+    }
+  }
+
+  &__image-label {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  &__image-label-gigit-block {
+    padding: 1rem 1.8rem;
+    background-color: white;
+    border-radius: 0.8rem;
+  }
+
+  &__image-label-digit {
+    color: var(--primary-color);
+  }
+}

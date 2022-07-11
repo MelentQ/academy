@@ -63,7 +63,5 @@ export default function introSlider() {
 
   lineAnimation();
 
-  console.log(imageSlider.thumbs);
-
   imageSlider.on("slideChange", lineAnimation);
 }

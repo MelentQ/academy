@@ -1,0 +1,21 @@
+<section class="page-section-margin benefits">
+  <div class="container">
+    <div class="page-section-grid benefits__inner">
+      <h2 class="page-section-heading">{{data.title}}</h2>
+      <div class="benefits__content">
+        <ul class="benefits__list">
+          {{#each data.items}}
+          <li class="benefits__item">
+            <img class="benefits__item-image" src="{{this.image}}" alt="Benefit">
+            <h3 class="benefits__item-title">{{this.title}}</h3>
+            <div class="benefits__item-text">
+              <p>{{this.text}}</p>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+        <a class="button benefits__button" href="#">{{data.buttonLabel}}</a>
+      </div>
+    </div>
+  </div>
+</section>

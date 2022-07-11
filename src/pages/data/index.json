@@ -17,5 +17,159 @@
             "text": "Поэтапная оплата,  кредит или рассрочка",
             "image": "img/content/intro-slider/1.png"
         }
-    ]
+    ],
+    "services": {
+        "title": "6 услуг бесплатно",
+        "items": [
+            {
+                "image": "img/content/services/1.svg",
+                "title": "Выезд на замер"
+            },
+            {
+                "image": "img/content/services/2.svg",
+                "title": "Монтажный проект"
+            },
+            {
+                "image": "img/content/services/3.svg",
+                "title": "Дизайн-проект внешнего облика дома"
+            },
+            {
+                "image": "img/content/services/4.svg",
+                "title": "Погрузка и разгрузка материала при полной комплектации объекта"
+            },
+            {
+                "image": "img/content/services/5.svg",
+                "title": "Уборка территории после монтажа"
+            },
+            {
+                "image": "img/content/services/6.svg",
+                "title": "Зимнее хранение материала"
+            }
+        ],
+        "buttonLabel": "Стать клиентом"
+    },
+    "slider": {
+        "items": [
+            {
+                "image": "img/content/slider/1.jpg",
+                "title": "Протечка кровли",
+                "text": "Причин много, причем иногда влажность не связана с осадками"
+            },
+            {
+                "image": "img/content/slider/2.jpg",
+                "title": "Ржавеет покрытие",
+                "text": "Причина: неправильный, неаккуратный монтаж и некачественный материал"
+            },
+            {
+                "image": "img/content/slider/3.jpg",
+                "title": "Деформация водостоков",
+                "text": "Неправильное крепление кронштейнов и установка защита желоба"
+            }
+        ]
+    },
+    "images": {
+        "items": [
+            {
+                "image": "img/content/images/1.jpg",
+                "title": "Услуги под ключ: продажа и монтаж",
+                "text": "Не передаем работы «посредникам» или «подрядчикам» – всё делаем сами. Несем ответственность как за материал так и за продажу."
+            },
+            {
+                "image": "img/content/images/2.jpg",
+                "title": "Проверенные монтажники",
+                "text": "Замерили одни, продали материал вторые, смонтировали третьи – в случае проблем начинается круговая безответственность. Наши монтажники умеют работать со всем продаваемым материалом и не столкнутся с «сюрпризами»"
+            }
+        ]
+    },
+    "team": {
+        "items": [
+            {
+                "image": "img/content/team/1.jpg",
+                "title": "Мощенский Михаил",
+                "label": "Генеральный директор",
+                "phone": "8 929 261 70 51",
+                "email": "744094@mail.ru"
+            },
+            {
+                "image": "img/content/team/2.jpg",
+                "title": "Снигирев Андрей",
+                "label": "Руководитель по строительству",
+                "phone": "8 929 261 37 40",
+                "email": "4905345@mail.ru"
+            },
+            {
+                "image": "img/content/team/3.jpg",
+                "title": "Мощенская Елена",
+                "label": "Кредитный специалист",
+                "phone": "8 908 876 41 74",
+                "email": "89088764174@mail.ru"
+            },
+            {
+                "image": "img/content/team/4.jpg",
+                "title": "Микрюков Александр",
+                "label": "Менеджер",
+                "phone": "8 922 049 32 78",
+                "email": "83452604482@mail.ru"
+            },
+            {
+                "image": "img/content/team/5.jpg",
+                "title": "Калашникова Ирина",
+                "label": "Менеджер",
+                "phone": "+7 922 049-24-87",
+                "email": "83452604482@mail.ru"
+            }
+        ]
+    },
+    "gallery": {
+        "items": [
+            {
+                "image": "img/content/gallery/1.jpg"
+            },
+            {
+                "image": "img/content/gallery/2.jpg"
+            },
+            {
+                "image": "img/content/gallery/3.jpg"
+            },
+            {
+                "image": "img/content/gallery/4.jpg"
+            }
+        ]
+    },
+    "benefits": {
+        "title": "Почему нас выбирают",
+        "items": [
+            {
+                "image": "img/content/services/1.svg",
+                "title": "Даем гарантию",
+                "text": "До 5 лет на монтаж, до 50 лет на материал"
+            },
+            {
+                "image": "img/content/services/2.svg",
+                "title": "Работаем без предоплаты",
+                "text": "Вы оплачиваете только материалы. Остальное - по факту сдачи объекта"
+            },
+            {
+                "image": "img/content/services/3.svg",
+                "title": "Все под ключ",
+                "text": "15 монтажных бригад, собственное производство и склад"
+            },
+            {
+                "image": "img/content/services/4.svg",
+                "title": "Кредит и рассрочка",
+                "text": "Помогаем оформить рассрочку и кредит прямо в нашем офисе"
+            },
+            {
+                "image": "img/content/services/5.svg",
+                "title": "13 лет опыта",
+                "text": "Наши объекты можно найти по всей Тюмени и области"
+            },
+            {
+                "image": "img/content/services/6.svg",
+                "title": "топ - 20",
+                "text": "Представляем 20 ведущих производителей в России и мире"
+            }
+        ],
+        "buttonLabel": "Стать клиентом"
+    }
 }

@@ -1,0 +1,27 @@
+<section class="page-section-margin team">
+  <div class="container">
+    <div class="page-section-grid team__inner">
+      <div class="team__heading-block">
+        <h2 class="page-section-heading team__heading">Академия кровли — команда профессионалов</h2>
+        <span class="team__heading-label">Собранная с 2009 года</span>
+      </div>
+
+      <ul class="team__list">
+        {{#each team.items}}
+        <li class="team__item">
+          <img class="team__item-image" src="{{this.image}}" alt="Team">
+          <h3 class="team__item-title">{{this.title}}</h3>
+          <span class="team__item-label">{{this.label}}</span>
+          <a class="team__item-phone" href="tel:{{this.phone}}">{{this.phone}}</a>
+          <a class="team__item-email" href="mailto:{{this.email}}">
+            <svg>
+              <use xlink:href="#email">
+            </svg>
+            <span class="team__item-email-label">{{this.email}}</span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

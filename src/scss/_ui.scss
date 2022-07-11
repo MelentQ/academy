@@ -1,0 +1,74 @@
+.button {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+
+  transition: background-color 0.3s ease;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background-color: #0A9923;
+  }
+
+  &:focus {
+    background-color: #0A9923;
+  }
+}
+
+.slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  background: #F5F5F5;
+  border-radius: 0.8rem;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--primary-color);
+    }
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.6rem;
+
+    fill: #212A2F;
+  }
+
+  &.--left {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.--right {}
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    background: none;
+  }
+
+  &.swiper-button-lock {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
