@@ -1,0 +1,13 @@
+<div class="manager">
+  <img class="manager__photo lazyload" data-src="{{data.image}}" alt="Manager">
+  <div class="manager__info">
+    <span class="manager__name">{{data.name}}</span>
+    <span class="manager__label">{{data.label}}</span>
+    {{#if data.button}}
+    <a class="button manager__button" href="{{data.button.link}}">{{data.button.text}}</a>
+    {{/if}}
+  </div>
+</div>
+{{#if data.button}}
+<a class="show-on-mobile button" href="{{data.button.link}}">{{data.button.text}}</a>
+{{/if}}

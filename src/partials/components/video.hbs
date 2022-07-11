@@ -11,15 +11,7 @@
               ненужный мусор</p>
           </div>
         </div>
-        <div class="video__manager">
-          <img class="video__manager-photo lazyload" data-src="img/content/video-manager.jpg" alt="Manager">
-          <div class="video__manager-info">
-            <span class="video__manager-name">Снигирев Андрей</span>
-            <span class="video__manager-label">Руководитель по строительству</span>
-            <a class="button video__manager-button" href="#">Вызвать на бесплатный замер</a>
-          </div>
-        </div>
-        <a class="show-on-mobile button" href="#">Вызвать на бесплатный замер</a>
+        {{> utils/manager data=videoManager}}
       </div>
       <a class="video__preview-block" href="#">
         <img class="video__preview-image lazyload" data-src="img/content/video-preview.jpg" alt="Preview">

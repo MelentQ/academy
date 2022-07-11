@@ -1,0 +1,254 @@
+.quiz {
+  position: relative;
+  z-index: 2;
+  margin-top: -4rem;
+  padding-top: 2rem;
+
+  background-color: white;
+  border-radius: 4rem;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 6rem;
+  }
+
+  &__heading-block {
+    grid-column: span 5;
+  }
+
+  &__heading-label {
+    display: block;
+    margin-top: 0.8rem;
+
+    @extend %fs-t1;
+    color: #5A5A5A;
+  }
+
+  &__manager {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    margin-top: 2.4rem;
+  }
+
+  &__maneger-image {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+  }
+
+  &__maneger-info {
+    @extend %fs-t1;
+    max-width: 32rem;
+  }
+
+  &__maneger-name {
+    display: block;
+
+    @extend %fs-h2;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  &__maneger-label {
+    display: block;
+
+    color: #5A5A5A;
+  }
+
+  &__content-block {
+    grid-column: span 7;
+
+    display: grid;
+    grid-template-columns: 1fr 23rem;
+    gap: 4rem;
+
+    padding: 4rem;
+
+    background: #FFFFFF;
+    border-radius: 2.4rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__steps-status {}
+
+  &__steps-status-label {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__steps-status-bar {
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 1.5rem;
+    height: 0.1rem;
+
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &__steps-status-bar-line {
+    position: absolute;
+    top: 0;
+    right: 80%;
+
+    width: 100%;
+    height: 0.1rem;
+
+    background-color: #212A2F;
+  }
+
+  &__steps {}
+
+  &__step {
+    border: none;
+    margin: 0;
+  }
+
+  &__step-heading {
+    @extend %fs-h2;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+
+    margin-bottom: 1.6rem;
+  }
+
+  &__step-input {}
+
+  &__step-radio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  &__step-radio-item {
+    padding: 1.6rem;
+
+    border: 0.1rem solid rgba(33, 42, 47, 0.2);
+    border-radius: 1.2rem;
+
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+    img {
+      height: 13.2rem;
+      width: 100%;
+
+      object-fit: cover;
+
+      background: #E3F5FF;
+      border-radius: 1.2rem;
+
+      margin-bottom: 1.6rem;
+    }
+
+    &.active {
+      background-color: rgba(28, 186, 56, 0.05);
+      box-shadow: 0 0.4rem 2rem rgba(28, 186, 56, 0.1);
+      border-color: #1CBA38;
+
+      .quiz__step-radio-name::after {
+        background-color: #1CBA38;
+      }
+
+      .quiz__step-radio-name::before {
+        background-color: rgba(28, 186, 56, 0.1);
+        border-color: #1CBA38;
+      }
+    }
+  }
+
+  &__step-radio-name {
+    position: relative;
+
+    padding-left: 3.6rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: 2.4rem;
+      height: 2.4rem;
+
+
+      border: 0.1rem solid rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 0.6rem;
+      transform: translateY(-50%);
+
+      width: 1.2rem;
+      height: 1.2rem;
+
+      border-radius: 50%;
+
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &__step-bottom {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &__step-button {}
+
+  &__bonus {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+    background: linear-gradient(180deg, #FF511B 0%, #FFA41B 100%);
+    box-shadow: 0 2rem 4rem rgba(255, 164, 27, 0.4);
+    border-radius: 2.4rem 2.4rem 2.4rem 0;
+  }
+
+  &__bonus-text-container {
+    color: white;
+    padding: 0 2.4rem 2.4rem;
+  }
+
+  &__bonus-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__bonus-heading {
+    @extend %fs-h2;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 1.2rem;
+  }
+
+  &__bonus-text {
+    @extend %fs-t3;
+    line-height: 1;
+  }
+}

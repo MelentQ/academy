@@ -1,0 +1,18 @@
+<section class="page-section-margin stock">
+  <div class="container">
+    <div class="page-section-grid stock__inner">
+      <h2 class="page-section-heading">Акции</h2>
+      <ul class="stock__list">
+        {{#each stock.items}}
+        <li class="stock__item">
+          <img class="stock__item-image lazyload" data-src="{{this.image}}" alt="Stock">
+          <div class="stock__item-text">
+            <h3 class="stock__item-title">{{this.title}}</h3>
+            <span class="stock__item-label">{{this.label}}</span>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

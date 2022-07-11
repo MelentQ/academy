@@ -171,5 +171,51 @@
             }
         ],
         "buttonLabel": "Стать клиентом"
-    }
+    },
+    "stock": {
+        "items": [
+            {
+                "image": "img/content/stock/1.svg",
+                "title": "ДО 10%",
+                "label": "Cкидка пенсионерам"
+            },
+            {
+                "image": "img/content/stock/2.svg",
+                "title": "ДО 10%",
+                "label": "Скидка при подписке на наши соц. сети и ютуб"
+            }
+        ]
+    },
+    "videoManager": {
+        "image": "img/content/video-manager.jpg",
+        "name": "Снигирев Андрей",
+        "label": "Руководитель по строительству",
+        "button": {
+            "text": "Вызвать на бесплатный замер",
+            "link": "#"
+        }
+    },
+    "creditManager": {
+        "image": "img/content/credit-manager.jpg",
+        "name": "Мощенская Елена",
+        "label": "Кредитный специалист",
+        "button": {
+            "text": "Получить консультацию специалиста",
+            "link": "#"
+        }
+    },
+    "banks": [
+        {
+            "link": "#",
+            "image": "img/content/banks/1.svg"
+        },
+        {
+            "link": "#",
+            "image": "img/content/banks/2.jpg"
+        },
+        {
+            "link": "#",
+            "image": "img/content/banks/3.jpg"
+        }
+    ]
 }

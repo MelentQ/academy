@@ -1,0 +1,79 @@
+.credit {
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  &__heading-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__content-block {}
+
+  &__banks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+
+    margin-bottom: 4rem;
+  }
+
+  &__bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    border: 0.1rem solid rgba(33, 42, 47, 0.2);
+    border-radius: 2.4rem;
+    padding: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    @extend %fs-t1;
+    color: #5A5A5A;
+
+    p {
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__bonus {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    margin-top: 4rem;
+    width: fit-content;
+
+    background: #CC073D;
+    border-radius: 0.8rem;
+    padding: 1rem 2rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Bebas Neue', cursive;
+
+    &:link,
+    &:visited {
+      color: white;
+    }
+  }
+}

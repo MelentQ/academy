@@ -1,0 +1,51 @@
+.stock {
+
+  &__inner {}
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    background: linear-gradient(180deg, #FF511B 0%, #FFA41B 100%);
+    box-shadow: 0 2rem 4rem rgba(255, 164, 27, 0.4);
+    border-radius: 4rem;
+
+    padding: 5rem 3rem;
+  }
+
+  &__item-image {
+    width: 9.2rem;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+  &__item-text {
+    color: white;
+  }
+
+  &__item-title {
+    @extend %fs-h1;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+  }
+
+  &__item-label {
+    display: block;
+    margin-top: 1.2rem;
+
+    font-size: 1.6rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<section class="credit">
+  <div class="container">
+    <div class="page-section-wide-content --border credit__inner">
+      <div class="credit__heading-block">
+        <h2 class="page-section-heading">Кредит и Рассрочка От ведущих банков</h2>
+        {{> utils/manager data=creditManager}}
+      </div>
+      <div class="credit__content-block">
+        <ul class="credit__banks">
+          {{#each banks}}
+          <li>
+            <a class="credit__bank" href="{{this.link}}" title="Bank">
+              <img class="lazyload" data-src="{{this.image}}" alt="Bank">
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+        <div class="credit__text">
+          <p>Сумма кредита: от 3 000 до 1 000 000 рублей. Максимальный срок 60 месяцев (5 лет). Первоначальный взнос не
+            обязателен.</p>
+          <p>Рассрочка сроком 10 месяцев, сумма не более 150 000 рублей, при условии что скидки клиенту не
+            предоставляются.</p>
+          <p>Требования к клиенту: Возраст клиента от 20 до 75 лет включительно. Постоянная прописка, не зависимо от
+            региона РФ. Если клиент не пенсионного возраста, то официальное трудоустройство обязательно. Возьмите с
+            собой паспорт и сотовый телефон, а также второй документ – СНИЛС.</p>
+        </div>
+        <a class="credit__bonus" href="#">
+          <img src="img/content/banks/4.jpg" alt="Credit Bonus">
+          <span>Получите предварительное одобрение</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

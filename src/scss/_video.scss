@@ -28,53 +28,6 @@
     margin-top: 1rem;
   }
 
-  &__manager {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  &__manager-photo {
-    width: 20rem;
-    height: 20rem;
-
-    object-fit: cover;
-    border-radius: 50%;
-
-    background-color: white;
-
-    @include breakpoint(mobile) {
-      width: 8rem;
-      height: 8rem;
-    }
-  }
-
-  &__manager-info {
-    @extend %fs-t1;
-  }
-
-  &__manager-name {
-    display: block;
-
-    @extend %fs-h2;
-    font-weight: 700;
-    font-family: 'Bebas Neue', cursive;
-  }
-
-  &__manager-label {
-    display: block;
-
-    color: #5A5A5A;
-  }
-
-  &__manager-button {
-    margin-top: 2rem;
-
-    @include breakpoint(mobile) {
-      display: none;
-    }
-  }
-
   &__preview-block {
     position: relative;
     border-radius: 4rem;

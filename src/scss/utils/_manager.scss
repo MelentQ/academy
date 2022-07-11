@@ -1,0 +1,46 @@
+.manager {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  &__photo {
+    width: 20rem;
+    height: 20rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    background-color: white;
+
+    @include breakpoint(mobile) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__info {
+    @extend %fs-t1;
+  }
+
+  &__name {
+    display: block;
+
+    @extend %fs-h2;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  &__label {
+    display: block;
+
+    color: #5A5A5A;
+  }
+
+  &__button {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
