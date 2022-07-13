@@ -1,0 +1,18 @@
+<div class="mini-video">
+  <a class="mini-video__preview-block" href="#">
+    <img class="mini-video__preview lazyload" data-src="img/content/mini-video.jpg" alt="Preview">
+    <div class="mini-video__play-btn">
+      <svg>
+        <use xlink:href="#play">
+      </svg>
+    </div>
+  </a>
+  <div class="mini-video__text-block">
+    <h3 class="mini-video__heading">{{data.title}}</h3>
+    {{#if data.text}}
+    <div class="mini-video__text">
+      <p>{{data.text}}</p>
+    </div>
+    {{/if}}
+  </div>
+</div>

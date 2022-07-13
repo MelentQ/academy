@@ -24,12 +24,24 @@
     color: white;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #0A9923;
   }
 
-  &:focus {
-    background-color: #0A9923;
+  &.--white {
+
+    &:link,
+    &:visited {
+      color: var(--text-color);
+    }
+
+    background-color: white;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 

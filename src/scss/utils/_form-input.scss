@@ -1,0 +1,16 @@
+.form-input {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Bebas Neue', cursive;
+  line-height: 1;
+
+  padding-bottom: 2rem;
+
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+
+  color: inherit;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

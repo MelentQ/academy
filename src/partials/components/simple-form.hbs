@@ -1,0 +1,19 @@
+<section class="page-section-margin simple-form">
+  <div class="container">
+    <div class="page-section-grid">
+      <h2 class="page-section-heading">Хотите посмотреть как это работает?</h2>
+      <form class="simple-form__form" action="/" method="post" name="" novalidate>
+        <h3 class="simple-form__form-heading">Заполните форму и запишитесь на посещение объекта, где сейчас работают
+          наши монтажники </h3>
+        <div class="simple-form__form-inputs">
+          {{> utils/form-input name="name" placeholder="Ваше имя"}}
+          {{> utils/form-input name="phone" placeholder="Телефон для связи"}}
+        </div>
+        <div class="simple-form__form-bottom">
+          <a class="button" href="#">Отправить</a>
+          {{> utils/policy-checkbox mod="--dark"}}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

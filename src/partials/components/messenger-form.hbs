@@ -1,0 +1,29 @@
+<section class="page-section-margin messenger-form {{data.mod}}">
+  <div class="container">
+    <div class="page-section-wide-content --grey messenger-form__inner">
+      <div class="messenger-form__heading-block">
+        <h2 class="page-section-heading">{{data.title}}</h2>
+        {{#if data.label}}
+        <span class="messenger-form__heading-label">{{data.label}}</span>
+        {{/if}}
+
+        {{> utils/mini-video data=data.video}}
+      </div>
+
+      <form class="messenger-form__form" action="/" method="post" name="" novalidate>
+        <div class="messenger-form__form-heading-block">
+          <h3 class="messenger-form__form-heading">{{data.form.title}}</h3>
+          <span class="messenger-form__form-heading-label">{{data.form.label}}/span>
+        </div>
+        <div class="messenger-form__form-inputs">
+          {{> utils/form-input name="name" placeholder="Ваше имя"}}
+          {{> utils/form-input name="phone" placeholder="Ваш номер и мессенджер куда отправить"}}
+        </div>
+        <div class="messenger-form__form-bottom">
+          {{> utils/policy-checkbox}}
+          <a class="button --white" href="#">Отправить</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

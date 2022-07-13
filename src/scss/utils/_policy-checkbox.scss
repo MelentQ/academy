@@ -1,0 +1,102 @@
+.policy-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 3.4rem;
+  cursor: pointer;
+  user-select: none;
+
+  max-width: 38rem;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.5);
+
+  &.--dark {
+    color: #8C8C8C;
+
+    a:link,
+    a:visited {
+      color: var(--secondary-color);
+    }
+
+    input:checked~.policy-checkbox__checkmark {
+      border-color: #1CBA38;
+      background-color: rgba(28, 186, 56, 0.1);
+    }
+
+    &:hover input~.policy-checkbox__checkmark {
+      border-color: #1CBA38;
+    }
+
+    .policy-checkbox__checkmark {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .policy-checkbox__checkmark::after {
+      border-color: #1CBA38;
+    }
+  }
+
+  a {
+    display: inline;
+
+    &:link,
+    &:visited {
+      color: white;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked~.policy-checkbox__checkmark {
+      border-color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:checked~.policy-checkbox__checkmark:after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &:hover input~.policy-checkbox__checkmark {
+    border-color: white;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.4rem;
+
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0.7rem;
+      top: 0.3rem;
+      width: 0.5rem;
+      height: 1.1rem;
+      border: solid white;
+      border-width: 0 0.2rem 0.2rem 0;
+      border-radius: 0.1rem;
+      transform: rotate(45deg);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s ease, opacity 0.3s ease;
+    }
+  }
+}

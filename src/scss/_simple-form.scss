@@ -1,0 +1,32 @@
+.simple-form {
+
+  .form-input {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__form {
+    border: 0.2rem solid #1CBA38;
+    border-radius: 4rem;
+    padding: 4rem;
+  }
+
+  &__form-heading {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+
+    margin-bottom: 6rem;
+  }
+
+  &__form-inputs {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__form-bottom {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,67 @@
+.messenger-form {
+
+  &.--green {
+    color: white;
+
+    .page-section-wide-content.--grey {
+      background-color: #1CBA38;
+    }
+
+    .messenger-form__form {
+      border: 0.1rem solid #FFFFFF;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  &__heading-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__heading-label {}
+
+  &__form {
+    padding: 6rem;
+    background: #1CBA38;
+    border-radius: 4rem;
+    color: white;
+  }
+
+  &__form-heading-block {
+    margin-bottom: 6rem;
+  }
+
+  &__form-heading {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+  }
+
+  &__form-heading-label {
+    display: block;
+    margin-top: 0.4rem;
+
+    @extend %fs-t3;
+  }
+
+  &__form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__form-bottom {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
