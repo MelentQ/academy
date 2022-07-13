@@ -8,6 +8,10 @@
     border: 0.2rem solid #1CBA38;
     border-radius: 4rem;
     padding: 4rem;
+
+    @include breakpoint(tablet) {
+      padding: 4rem 2rem;
+    }
   }
 
   &__form-heading {
@@ -16,17 +20,35 @@
     line-height: 1;
 
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__form-inputs {
     display: flex;
     gap: 4rem;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__form-bottom {
     display: flex;
     align-items: center;
     gap: 4rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
   }
 }

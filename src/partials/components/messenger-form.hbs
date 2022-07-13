@@ -2,10 +2,12 @@
   <div class="container">
     <div class="page-section-wide-content --grey messenger-form__inner">
       <div class="messenger-form__heading-block">
-        <h2 class="page-section-heading">{{data.title}}</h2>
-        {{#if data.label}}
-        <span class="messenger-form__heading-label">{{data.label}}</span>
-        {{/if}}
+        <div>
+          <h2 class="page-section-heading">{{data.title}}</h2>
+          {{#if data.label}}
+          <span class="messenger-form__heading-label">{{data.label}}</span>
+          {{/if}}
+        </div>
 
         {{> utils/mini-video data=data.video}}
       </div>

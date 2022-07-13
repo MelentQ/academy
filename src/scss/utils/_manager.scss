@@ -12,6 +12,11 @@
 
     background-color: white;
 
+    @include breakpoint(tablet) {
+      width: 14rem;
+      height: 14rem;
+    }
+
     @include breakpoint(mobile) {
       width: 8rem;
       height: 8rem;

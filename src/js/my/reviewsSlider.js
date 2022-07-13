@@ -6,8 +6,8 @@ export default function reviewsSlider() {
   if (!container) return;
 
   const instance = new Swiper(container, {
-    slidesPerView: 3,
-    spaceBetween: 60,
+    slidesPerView: 1,
+    spaceBetween: 20,
     pagination: {
       el: container.querySelector('.pagination'),
       bulletClass: "pagination__item",
@@ -19,6 +19,20 @@ export default function reviewsSlider() {
       nextEl: container.querySelector('.slider-button.--right'),
       prevEl: container.querySelector('.slider-button.--left'),
     },
-    loop: true
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 60
+      }
+    }
   });
 }

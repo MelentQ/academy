@@ -204,6 +204,11 @@
             "link": "#"
         }
     },
+    "quizManager": {
+        "image": "img/content/manager.jpg",
+        "name": "Менеджер Ирина",
+        "label": "Рассчитает стоимость по ваши ответам"
+    },
     "banks": [
         {
             "link": "#",

@@ -2,15 +2,11 @@
   <div class="container">
     <div class="page-section-wide-content --grey quiz__inner">
       <div class="quiz__heading-block">
-        <h2 class="page-section-heading">Узнайте стоимость материалов и монтажа вашей кровли</h2>
-        <span class="quiz__heading-label">Ответьте на несколько вопросов и получите 2 подарка</span>
-        <div class="quiz__manager">
-          <img class="quiz__maneger-image lazyload" data-src="img/content/manager.jpg" alt="Quiz">
-          <div class="quiz__maneger-info">
-            <span class="quiz__maneger-name">Менеджер Ирина</span>
-            <div class="quiz__maneger-label">Рассчитает стоимость по ваши ответам</div>
-          </div>
+        <div>
+          <h2 class="page-section-heading">Узнайте стоимость материалов и монтажа вашей кровли</h2>
+          <span class="quiz__heading-label">Ответьте на несколько вопросов и получите 2 подарка</span>
         </div>
+        {{> utils/manager data=quizManager}}
       </div>
       <div class="quiz__content-block">
         <form class="quiz__form" name="quiz" action="#" method="post">
@@ -26,7 +22,7 @@
               <legend class="visually-hidden">Выберите что считаем</legend>
               <h3 class="quiz__step-heading">Выберите что считаем</h3>
               <input class="quiz__step-input" type="hidden" name="step1" value="1">
-              <div class="quiz__step-radio-list">
+              <div class="quiz__step-radio-list hide-on-mobile">
                 <a class="quiz__step-radio-item active" href="#" data-value="1">
                   <img class="lazyload" data-src="img/content/quiz/1.jpg" alt="Quiz">
                   <span class="quiz__step-radio-name">Фасад</span>

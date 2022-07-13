@@ -11,10 +11,23 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 6rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
   }
 
   &__heading-block {
     grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
   }
 
   &__heading-label {
@@ -71,12 +84,32 @@
 
     background: #FFFFFF;
     border-radius: 2.4rem;
+
+    @include breakpoint(desktop) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+
+      grid-template-columns: 1fr 18rem;
+
+      padding: 4rem 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 3rem;
+    }
   }
 
   &__steps-status {}
@@ -99,6 +132,10 @@
     height: 0.1rem;
 
     background-color: rgba(0, 0, 0, 0.15);
+
+    @include breakpoint(tablet) {
+      margin-top: 1rem;
+    }
   }
 
   &__steps-status-bar-line {
@@ -125,6 +162,10 @@
     font-family: 'Bebas Neue', cursive;
 
     margin-bottom: 1.6rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__step-input {}
@@ -215,6 +256,14 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
+
+    @include breakpoint(desktop) {
+      margin-top: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
   }
 
   &__step-button {}
@@ -227,17 +276,69 @@
     background: linear-gradient(180deg, #FF511B 0%, #FFA41B 100%);
     box-shadow: 0 2rem 4rem rgba(255, 164, 27, 0.4);
     border-radius: 2.4rem 2.4rem 2.4rem 0;
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+
+      box-shadow: 0 1rem 2rem rgba(255, 164, 27, 0.2);
+      border-radius: 1.6rem 1.6rem 1.6rem 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__bonus-text-container {
     color: white;
     padding: 0 2.4rem 2.4rem;
+
+    @include breakpoint(desktop) {
+      padding: 3rem 2rem;
+
+      order: 1;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 2rem 1.6rem;
+
+      order: 2;
+    }
+
+    @include breakpoint(small-tablet) {
+      order: 1;
+    }
   }
 
   &__bonus-image {
     width: 100%;
     height: auto;
     object-fit: contain;
+
+    @include breakpoint(desktop) {
+      width: 13.2rem;
+
+      order: 2;
+    }
+
+    @include breakpoint(tablet) {
+      width: 100%;
+
+      order: 1;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 13.2rem;
+
+      order: 2;
+    }
   }
 
   &__bonus-heading {
@@ -250,5 +351,13 @@
   &__bonus-text {
     @extend %fs-t3;
     line-height: 1;
+
+    p {
+      margin-bottom: 0.8rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 }
