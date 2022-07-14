@@ -1,0 +1,14 @@
+<nav class="header-menu">
+  {{#each menu}}
+  <a class="header-menu__item" href="#">
+    <div class="header-menu__item-head">
+      <span>{{this.name}}</span>
+      {{#if this.items}}
+      <svg>
+        <use xlink:href="#chevron">
+      </svg>
+      {{/if}}
+    </div>
+  </a>
+  {{/each}}
+</nav>

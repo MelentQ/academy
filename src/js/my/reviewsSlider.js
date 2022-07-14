@@ -19,7 +19,6 @@ export default function reviewsSlider() {
       nextEl: container.querySelector('.slider-button.--right'),
       prevEl: container.querySelector('.slider-button.--left'),
     },
-    loop: true,
     breakpoints: {
       768: {
         slidesPerView: 2,

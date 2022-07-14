@@ -1,0 +1,14 @@
+<div class="modal" id="{{id}}" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="modal__close">
+        <svg>
+          <use xlink:href="#close">
+        </svg>
+      </button>
+      {{#block "content"}}
+
+      {{/block}}
+    </div>
+  </div>
+</div>

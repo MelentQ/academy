@@ -1,0 +1,40 @@
+<div class="menu">
+  <div>
+    <div class="menu__top">
+      <div class="menu__contacts">
+        <a class="menu__contact-icon --viber" href="#" title="Viber">
+          <svg>
+            <use xlink:href="#viber">
+          </svg>
+        </a>
+        <a class="menu__contact-icon --wa" href="#" title="WA">
+          <svg>
+            <use xlink:href="#wa">
+          </svg>
+        </a>
+        <a class="menu__contact" href="tel:+79323211118">+7 932 321-11-18</a>
+      </div>
+      <button class="menu__close menu-close">
+        <svg>
+          <use xlink:href="#close">
+        </svg>
+      </button>
+    </div>
+    <nav class="menu__content">
+      <ul class="menu__list">
+        {{#each menu}}
+        <li class="menu__item">
+          <a class="menu__link" href="#">{{this.name}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+  <div class="menu__bottom">
+    <div class="menu__info">
+      <span class="menu__address">Харьковская 83А/4 офис 520</span>
+      <span class="menu__time">Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</span>
+    </div>
+    <a class="button" href="#" data-modal="#order">Позвоните мне</a>
+  </div>
+</div>

@@ -10,29 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>
-        {{ title }}
-    </title>
+    <title>{{title}}</title>
 </head>
 
 <body class="no-touch" ontouchstart="">
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
-        {{> sprite }}
+        {{> sprite}}
     </div>
 
     <div class="page-content">
-        {{> header }}
+        {{> header}}
+        {{> menu/menu}}
         <main class="page-main">
             {{#block "main"}}
 
             {{/block}}
         </main>
-        {{> footer }}
-        {{> ie-placeholder }}
-        <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
+        {{> footer}}
+        {{> ie-placeholder}}
+        {{> modals/order id="order"}}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="js/app.js"></script>
         <script src="assets/js/backend.js"></script>
     </div>

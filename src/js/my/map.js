@@ -30,8 +30,8 @@ function addPlace(map, {coords, image}) {
   const placemarkOptions = {
       iconLayout: 'default#image', // pieChart
       iconImageHref: image,
-      iconImageSize: [36, 36],
-      iconImageOffset: [-18, -18]
+      iconImageSize: [60, 68],
+      iconImageOffset: [-30, -68]
   };
 
   const placemark = new ymaps.Placemark(coords, placemarkProperties, placemarkOptions);

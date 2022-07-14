@@ -130,6 +130,9 @@
     @include hover;
 
     svg {
+      width: 1.8rem;
+      height: 1.8rem;
+
       fill: white;
     }
 
@@ -232,40 +235,6 @@
           transform: translateY(-0.1rem) rotate(-45deg);
         }
       }
-    }
-  }
-
-  &__nav {
-    display: flex;
-    align-items: center;
-    gap: 3.2rem;
-
-    margin-top: 2.4rem;
-    padding: 2.8rem 3.2rem;
-
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: uppercase;
-
-    background-color: white;
-    border-radius: 1.2rem;
-
-    user-select: none;
-
-    @include breakpoint(desktop) {
-      display: none;
-    }
-  }
-
-  &__nav-multi-item-head {
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-
-    svg {
-      width: 0.8rem;
-      height: 0.5rem;
     }
   }
 }

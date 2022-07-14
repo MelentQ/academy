@@ -1,5 +1,6 @@
 import $ from "jquery";
 import './lazyload';
+import Fancybox from "@fancyapps/ui";
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
 import masks from './masks';
@@ -19,6 +20,7 @@ import mobileSlider from "./my/mobileSlider";
 import marquee from "./my/marquee";
 import reviewsSlider from "./my/reviewsSlider";
 import catalogSlider from "./my/catalogSlider";
+import './vendor/hystmodal.min.js';
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -7,13 +7,14 @@
           <ul class="swiper-wrapper gallery__list">
             {{#each gallery.items}}
             <li class="swiper-slide gallery__item">
-              <a class="gallery__item-link" href="#">
+              <a class="gallery__item-link" href="{{this.image}}" data-fancybox="gallery" data-caption="Gallery">
                 <img class="gallery__image lazyload" data-src="{{this.image}}" alt="Gallery">
               </a>
             </li>
             {{/each}}
             <li class="swiper-slide gallery__item">
-              <a class="gallery__item-link" href="#">
+              <a class="gallery__item-link" href="img/content/gallery/5.jpg" data-fancybox="gallery"
+                data-caption="Gallery">
                 <img class="gallery__image lazyload" data-src="img/content/gallery/5.jpg" alt="Gallery">
                 <div class="gallery__image-overlay"></div>
                 <div class="gallery__more-block hide-on-tablet">
@@ -39,6 +40,14 @@
             </div>
           </a>
         </div>
+      </div>
+      <div class="visually-hidden">
+        <div data-src="img/content/trash/1.jpg" data-thumb="img/content/trash/1.jpg" data-fancybox="gallery"
+          data-caption="Gallery"></div>
+        <div data-src="img/content/trash/2.jpg" data-thumb="img/content/trash/2.jpg" data-fancybox="gallery"
+          data-caption="Gallery"></div>
+        <div data-src="img/content/trash/3.jpg" data-thumb="img/content/trash/3.jpg" data-fancybox="gallery"
+          data-caption="Gallery"></div>
       </div>
     </div>
   </div>
