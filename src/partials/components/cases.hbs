@@ -1,0 +1,95 @@
+<section class="page-section-margin js-tabs cases">
+  <div class="container">
+    <div class="page-section-grid page-section-wide-content --grey">
+      <div class="cases__heading-block">
+        <h2 class="page-section-heading">Завершенные объекты</h2>
+        <span class="cases__heading-label">В каждом поселке и дачном сообществе Тюмени</span>
+        <ul class="cases__tabs">
+          {{#each cases.items}}
+          <li>
+            <button class="cases__tab js-tab {{#if this.active}}active{{/if}}" type="button">{{this.name}}</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <ul class="cases__bodies">
+        {{#each cases.items}}
+        <li>
+          <div class="cases__body js-body {{#if this.active}}active{{/if}}">
+            <div class="page-section-swiper-container">
+              <div class="swiper js-init-mobile-slider">
+                <ul class="swiper-wrapper cases__media">
+                  {{#each this.media}}
+                  <li class="swiper-slide">
+                    <a class="cases__media-link" href="#">
+                      {{#if this.image}}
+                      <img class="lazyload" data-src="{{this.image}}" alt="Case">
+                      {{/if}}
+                      {{#if this.video}}
+                      <div class="cases__video-overlay"></div>
+                      <div class="cases__video-block">
+                        <div class="cases__video-text">
+                          <span class="cases__video-title">Смотреть видео</span>
+                          <span class="cases__video-label">2:08</span>
+                        </div>
+                        <div class="cases__video-play-btn">
+                          <svg>
+                            <use xlink:href="#play">
+                          </svg>
+                        </div>
+                      </div>
+                      {{/if}}
+                    </a>
+                  </li>
+                  {{/each}}
+                </ul>
+                <div class="pagination cases__pagination"></div>
+              </div>
+            </div>
+            <div class="cases__result-block">
+              <h3 class="cases__result-heading">Что сделано?</h3>
+              <div class="cases__result-content">
+                <div class="page-section-swiper-container js-init-mobile-slider cases__result-slider-block">
+                  <div class="swiper">
+                    <ul class="swiper-wrapper cases__result-list">
+                      {{#each this.result.items}}
+                      <li class="swiper-slide">
+                        <div class="cases__result">
+                          <p>{{this.text}}</p>
+                        </div>
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <div class="cases__buttons">
+                    <button class="slider-button --left">
+                      <svg>
+                        <use xlink:href="#arrow">
+                      </svg>
+                    </button>
+                    <button class="slider-button --right">
+                      <svg>
+                        <use xlink:href="#arrow">
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="cases__result-digit-block">
+                  <span class="cases__result-digit">20%</span>
+                  <div class="cases__result-digit-text">
+                    <p>Экономия по сравнению с аналогичными работами у конкурентов</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cases__bottom">
+              <a class="button" href="#">Хочу так же</a>
+              <a class="button --transparent" href="#">Все фото</a>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

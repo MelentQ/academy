@@ -272,5 +272,211 @@
                 "text": "Тест."
             }
         ]
+    },
+    "catalog": {
+        "items": [
+            {
+                "title": "Металлочерепица \"Супермонтерей\" 350",
+                "price": "550",
+                "colors": [
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#7E756E",
+                        "name": "Цвет 1"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#B96727",
+                        "name": "Цвет 2"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#C35252",
+                        "name": "Цвет 3"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#598784",
+                        "name": "Цвет 4"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#545454",
+                        "name": "Цвет 5"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#E8E8E8",
+                        "name": "Цвет 6"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#8C3232",
+                        "name": "Цвет 7"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#77865E",
+                        "name": "Цвет 8"
+                    }
+                ]
+            },
+            {
+                "title": "Металлочерепица \"Супермонтерей\" 350",
+                "price": "550",
+                "colors": [
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#7E756E",
+                        "name": "Цвет 1"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#B96727",
+                        "name": "Цвет 2"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#C35252",
+                        "name": "Цвет 3"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#598784",
+                        "name": "Цвет 4"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#545454",
+                        "name": "Цвет 5"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#E8E8E8",
+                        "name": "Цвет 6"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#8C3232",
+                        "name": "Цвет 7"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#77865E",
+                        "name": "Цвет 8"
+                    }
+                ]
+            },
+            {
+                "title": "Металлочерепица \"Супермонтерей\" 350",
+                "price": "550",
+                "colors": [
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#7E756E",
+                        "name": "Цвет 1"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#B96727",
+                        "name": "Цвет 2"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#C35252",
+                        "name": "Цвет 3"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#598784",
+                        "name": "Цвет 4"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#545454",
+                        "name": "Цвет 5"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#E8E8E8",
+                        "name": "Цвет 6"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#8C3232",
+                        "name": "Цвет 7"
+                    },
+                    {
+                        "image": "img/content/catalog/1.jpg",
+                        "color": "#77865E",
+                        "name": "Цвет 8"
+                    }
+                ]
+            },
+            {
+                "title": "Тест",
+                "price": "7 777",
+                "colors": [
+                    {
+                        "color": "#000",
+                        "name": "Тест"
+                    }
+                ]
+            }
+        ]
+    },
+    "cases": {
+        "items": [
+            {
+                "name": "СО Липовый остров",
+                "active": true,
+                "media": [
+                    {
+                        "image": "img/content/cases/1.jpg",
+                        "video": true
+                    },
+                    {
+                        "image": "img/content/cases/2.jpg"
+                    },
+                    {
+                        "image": "img/content/cases/3.jpg"
+                    }
+                ],
+                "result": {
+                    "items": [
+                        {
+                            "text": "Монтаж металлосайдинга блокхаус под дерево без утепления"
+                        },
+                        {
+                            "text": "Подшивка карнизов металлосайдингом Софит"
+                        },
+                        {
+                            "text": "Монтаж водосточной системы docke lux"
+                        },
+                        {
+                            "text": "Монтаж трубчатых снегозадержателей"
+                        },
+                        {
+                            "text": "Профнастил под камень на цоколь"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Тест",
+                "media": [
+                    {},
+                    {},
+                    {}
+                ],
+                "result": {
+                    "items": [
+                        {
+                            "text": "Тест"
+                        }
+                    ]
+                }
+            }
+        ]
     }
 }

@@ -1,11 +1,11 @@
-import {Swiper, Pagination} from "swiper";
-Swiper.use([Pagination]);
+import {Swiper, Pagination, Navigation} from "swiper";
+Swiper.use([Pagination, Navigation]);
 
 export default function mobileSlider() {
   if (window.matchMedia("(max-width: 1024px)").matches) {
     const containers = document.querySelectorAll('.js-init-mobile-slider');
     containers.forEach(container => {
-      const instance = new Swiper(container.querySelector('.swiper'), {
+      const instance = new Swiper(container.classList.contains('swiper') ? container : container.querySelector('.swiper'), {
         slidesPerView: 1,
         spaceBetween: 20,
         autoHeight: true,
@@ -15,6 +15,10 @@ export default function mobileSlider() {
           bulletActiveClass: "active",
           type: 'bullets',
           clickable: true
+        },
+        navigation: {
+          nextEl: container.querySelector('.slider-button.--right'),
+          prevEl: container.querySelector('.slider-button.--left'),
         },
         breakpoints: {
           640: {

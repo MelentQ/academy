@@ -18,6 +18,7 @@ import slider from "./my/slider";
 import mobileSlider from "./my/mobileSlider";
 import marquee from "./my/marquee";
 import reviewsSlider from "./my/reviewsSlider";
+import catalogSlider from "./my/catalogSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileSlider();
     marquee();
     reviewsSlider();
+    catalogSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

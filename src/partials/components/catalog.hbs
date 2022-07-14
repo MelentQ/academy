@@ -1,0 +1,68 @@
+<section class="page-section-margin catalog">
+  <div class="container">
+    <div class="page-section-grid">
+      <div>
+        <h2 class="page-section-heading">Каталог</h2>
+        <span class="catalog__heading-label">Всегда в наличии материалы и комплектующие на собственном складе в
+          Тюмени</span>
+      </div>
+      <div class="page-section-swiper-container">
+        <div class="swiper js-catalog-slider catalog__slider">
+          <ul class="swiper-wrapper">
+            {{#each catalog.items}}
+            <li class="swiper-slide">
+              <div class="catalog__item">
+                <div class="swiper js-colors-slider">
+                  <ul class="swiper-wrapper">
+                    {{#each this.colors}}
+                    <li class="swiper-slide">
+                      <div class="catalog__item-image-wrapper">
+                        {{#if this.image}}
+                        <img class="lazyload" data-src="{{this.image}}" alt="Catalog Image">
+                        {{/if}}
+                      </div>
+                    </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="catalog__item-heading-block">
+                  <h3 class="catalog__item-heading">{{this.title}}</h3>
+                  <div class="catalog__item-price-block">
+                    <span class="catalog__item-price">{{this.price}}</span>
+                    <span class="catalog__item-price-label">руб / м²</span>
+                  </div>
+                </div>
+                <ul class="catalog__item-colors">
+                  {{#each this.colors}}
+                  <li>
+                    <button class="catalog__item-color-button" type="button" style="background-color: {{this.color}};"
+                      title="{{this.name}}"></button>
+                  </li>
+                  {{/each}}
+                </ul>
+                <div class="catalog__item-bottom">
+                  <a class="button" href="#">Заказать</a>
+                  <a class="button --transparent" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+          <div class="pagination catalog__pagination"></div>
+          <div class="catalog__buttons">
+            <button class="slider-button --left">
+              <svg>
+                <use xlink:href="#arrow">
+              </svg>
+            </button>
+            <button class="slider-button --right">
+              <svg>
+                <use xlink:href="#arrow">
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

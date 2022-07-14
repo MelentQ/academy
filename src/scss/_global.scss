@@ -15,6 +15,8 @@
 
     --js-header-height: 256px;
 
+    --placeholder: linear-gradient(180deg, #E3F5FF 0%, #F5FCFF 100%);
+
     @include breakpoint(tablet) {
         --content-padding: 3.5rem;
     }

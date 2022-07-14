@@ -155,7 +155,14 @@
     }
   }
 
-  .pagination {
-    margin-top: 4rem;
+  &__pagination {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+
+      margin: 4rem auto 0;
+      width: fit-content;
+    }
   }
 }
