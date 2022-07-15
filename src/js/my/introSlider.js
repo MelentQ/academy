@@ -15,7 +15,7 @@ export default function introSlider() {
   })
 
   const thumbsSlider = new Swiper(container.querySelector('.intro__thumbs'), {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 60
   });
 

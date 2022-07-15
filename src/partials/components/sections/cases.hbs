@@ -14,7 +14,7 @@
   {{#each data.items}}
   <li>
     <div class="cases__body js-body {{#if this.active}}active{{/if}}">
-      <div class="page-section-swiper-container">
+      <div class="cases__slider-wrapper">
         <div class="swiper js-init-mobile-slider">
           <ul class="swiper-wrapper cases__media">
             {{#each this.media}}
@@ -45,7 +45,7 @@
       <div class="cases__result-block">
         <h3 class="cases__result-heading">Что сделано?</h3>
         <div class="cases__result-content">
-          <div class="page-section-swiper-container js-init-mobile-slider cases__result-slider-block">
+          <div class="js-init-mobile-slider cases__result-slider-block">
             <div class="swiper">
               <ul class="swiper-wrapper cases__result-list">
                 {{#each this.result.items}}

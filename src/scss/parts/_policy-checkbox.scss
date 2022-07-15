@@ -26,12 +26,12 @@
     }
 
     input:checked~.policy-checkbox__checkmark {
-      border-color: #1CBA38;
+      border-color: var(--secondary-color);
       background-color: rgba(28, 186, 56, 0.1);
     }
 
     &:hover input~.policy-checkbox__checkmark {
-      border-color: #1CBA38;
+      border-color: var(--secondary-color);
     }
 
     .policy-checkbox__checkmark {
@@ -39,7 +39,7 @@
     }
 
     .policy-checkbox__checkmark::after {
-      border-color: #1CBA38;
+      border-color: var(--secondary-color);
     }
   }
 

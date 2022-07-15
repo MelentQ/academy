@@ -60,7 +60,7 @@
   &__label {
     display: block;
     @extend %fs-t3;
-    color: #5A5A5A;
+    color: var(--text-color);
     opacity: 0.5;
   }
 

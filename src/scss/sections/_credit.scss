@@ -32,7 +32,7 @@
 
   &__text {
     @extend %fs-t1;
-    color: #5A5A5A;
+    color: var(--text-color);
 
     p {
       margin-bottom: 2rem;

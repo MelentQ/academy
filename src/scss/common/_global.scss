@@ -12,11 +12,11 @@
     --content-padding: 6rem;
     --primary-color: #F6A41B;
     --secondary-color: #1CBA38;
-    --text-color: #212A2F;
+    --text-color: #5A5A5A;
+    --bg: #f5f5f5;
+    --placeholder: linear-gradient(180deg, #E3F5FF 0%, #F5FCFF 100%);
 
     --js-header-height: 256px;
-
-    --placeholder: linear-gradient(180deg, #E3F5FF 0%, #F5FCFF 100%);
 
     @include breakpoint(tablet) {
         --content-padding: 3.5rem;
@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Golos', sans-serif;
-    color: var(--text-color);
+    color: #212A2F;
 }
 
 main {

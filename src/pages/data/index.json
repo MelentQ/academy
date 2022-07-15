@@ -8,15 +8,15 @@
             },
             {
                 "text": "Наши сметы точны до копейки",
-                "image": "img/content/trash/1.jpg"
+                "image": "img/content/intro-slider/2.jpg"
             },
             {
                 "text": "Замер, монтажный проект и еще 4 услуги бесплатно",
-                "image": "img/content/trash/2.jpg"
+                "image": "img/content/intro-slider/1.jpg"
             },
             {
                 "text": "Поэтапная оплата,  кредит или рассрочка",
-                "image": "img/content/trash/3.jpg"
+                "image": "img/content/intro-slider/2.jpg"
             }
         ]
     },
@@ -406,6 +406,10 @@
                 "label": "Менеджер",
                 "phone": "+7 922 049-24-87",
                 "email": "83452604482@mail.ru"
+            },
+            {
+                "title": "Тест",
+                "label": "Тест"
             }
         ]
     },

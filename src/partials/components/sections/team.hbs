@@ -8,16 +8,24 @@
   <ul class="swiper-wrapper team__list">
     {{#each data.items}}
     <li class="swiper-slide team__item">
-      <img class="team__item-image lazyload" data-src="{{this.image}}" alt="Team">
+      <div class="team__item-image-wrapper">
+        {{#if this.image}}
+        <img class="lazyload" data-src="{{this.image}}" alt="Team">
+        {{/if}}
+      </div>
       <h3 class="team__item-title">{{this.title}}</h3>
       <span class="team__item-label">{{this.label}}</span>
+      {{#if this.phone}}
       <a class="team__item-phone" href="tel:{{this.phone}}">{{this.phone}}</a>
+      {{/if}}
+      {{#if this.email}}
       <a class="team__item-email" href="mailto:{{this.email}}">
         <svg>
           <use xlink:href="#email">
         </svg>
         <span>{{this.email}}</span>
       </a>
+      {{/if}}
     </li>
     {{/each}}
   </ul>

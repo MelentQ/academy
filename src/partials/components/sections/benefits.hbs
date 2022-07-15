@@ -8,7 +8,9 @@
   <ul class="swiper-wrapper benefits__list">
     {{#each data.items}}
     <li class="swiper-slide benefits__item">
-      <img class="benefits__item-image lazyload" data-src="{{this.image}}" alt="Benefit">
+      <div class="benefits__item-image-wrapper">
+        <img class="benefits__item-image lazyload" data-src="{{this.image}}" alt="Benefit">
+      </div>
       <h3 class="benefits__item-title">{{this.title}}</h3>
       <div class="benefits__item-text">
         <p>{{this.text}}</p>

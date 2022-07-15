@@ -35,7 +35,7 @@
 
     &:link,
     &:visited {
-      color: var(--text-color);
+      color: #212A2F;
     }
 
     background-color: white;
@@ -52,7 +52,7 @@
 
     &:link,
     &:visited {
-      color: var(--text-color);
+      color: #212A2F;
     }
 
     background-color: rgba(0, 0, 0, 0);
@@ -60,9 +60,9 @@
 
     &:hover,
     &:focus {
-      color: #1CBA38;
+      color: var(--secondary-color);
       background-color: rgba(28, 186, 56, 0.1);
-      border-color: #1CBA38;
+      border-color: var(--secondary-color);
     }
   }
 }
@@ -85,7 +85,7 @@
   }
 
   &.--green {
-    background-color: #1CBA38;
+    background-color: var(--secondary-color);
   }
 
   svg {
@@ -117,7 +117,7 @@
   width: 4rem;
   height: 4rem;
 
-  background: #F5F5F5;
+  background: var(--bg);
   border-radius: 0.8rem;
 
   &:hover,
@@ -176,7 +176,7 @@
     transition: background-color 0.3s ease, opacity 0.3s ease, width 0.3s ease;
 
     &.active {
-      background-color: #1CBA38;
+      background-color: var(--secondary-color);
       opacity: 1;
       width: 3.6rem;
     }

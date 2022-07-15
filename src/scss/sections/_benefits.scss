@@ -25,17 +25,26 @@
     }
   }
 
-  &__item-image {
+  &__item-image-wrapper {
     height: 9.2rem;
-    width: auto;
-    object-fit: contain;
-    object-position: left center;
-    max-width: 100%;
+
     margin-bottom: 3rem;
 
     @include breakpoint(tablet) {
       height: 5.6rem;
       margin-bottom: 2rem;
+    }
+  }
+
+  &__item-image {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+    max-width: 100%;
+
+    @include breakpoint(tablet) {
+      height: 5.6rem;
     }
   }
 
@@ -49,7 +58,7 @@
     margin-top: 1rem;
 
     @extend %fs-t1;
-    color: #5A5A5A;
+    color: var(--text-color);
   }
 
   &__button {

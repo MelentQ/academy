@@ -1,11 +1,11 @@
 .section.--green .messenger-form {
-  border: 0.1rem solid #FFFFFF;
+  border: 0.1rem solid white;
 }
 
 .messenger-form {
 
   padding: 6rem;
-  background: #1CBA38;
+  background: var(--secondary-color);
   border-radius: 4rem;
   color: white;
 

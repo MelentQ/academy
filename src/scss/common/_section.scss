@@ -14,6 +14,7 @@
       padding: 8rem 4rem;
 
       @include breakpoint(tablet) {
+        margin: 0 -2rem;
         padding: 4rem 2rem 2rem;
       }
     }
@@ -24,14 +25,14 @@
   }
 
   &.--grey .section__inner {
-    background-color: #F5F5F5;
+    background-color: var(--bg);
   }
 
   &.--green {
     color: white;
 
     .section__inner {
-      background-color: #1CBA38;
+      background-color: var(--secondary-color);
     }
   }
 
@@ -44,6 +45,7 @@
       border-radius: 4rem;
 
       @include breakpoint(tablet) {
+        margin: 0 -2rem;
         padding: 4rem 2rem;
       }
     }
@@ -71,6 +73,10 @@
   &.--ratio-5x7 {
     .section__inner {
       grid-template-columns: repeat(12, 1fr);
+
+      @include breakpoint(tablet) {
+        grid-template-columns: 1fr;
+      }
 
       &>*:nth-child(1) {
         grid-column: span 5;
@@ -135,7 +141,7 @@
 
   &__subtitle {
     @extend %fs-t1;
-    color: var(--text-color);
+    color: #212A2F;
   }
 
   &__content {
