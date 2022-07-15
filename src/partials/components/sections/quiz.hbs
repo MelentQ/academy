@@ -1,55 +1,50 @@
-<section class="quiz">
-  <div class="container">
-    <div class="page-section-wide-content --grey quiz__inner">
-      <div class="quiz__heading-block">
-        <div>
-          <h2 class="page-section-heading">Узнайте стоимость материалов и монтажа вашей кровли</h2>
-          <span class="quiz__heading-label">Ответьте на несколько вопросов и получите 2 подарка</span>
-        </div>
-        {{> parts/manager data=data.manager}}
+{{#extend "section"}}
+{{#content "heading-content"}}
+{{> parts/manager data=data.manager}}
+{{/content}}
+
+{{#content "content"}}
+<div class="quiz__content-block">
+  <form class="quiz__form" name="quiz" action="#" method="post">
+    <div class="quiz__steps-status">
+      <span class="quiz__steps-status-label">Шаг 1 из 5</span>
+      <div class="quiz__steps-status-bar">
+        <div class="quiz__steps-status-bar-line"></div>
       </div>
-      <div class="quiz__content-block">
-        <form class="quiz__form" name="quiz" action="#" method="post">
-          <div class="quiz__steps-status">
-            <span class="quiz__steps-status-label">Шаг 1 из 5</span>
-            <div class="quiz__steps-status-bar">
-              <div class="quiz__steps-status-bar-line"></div>
-            </div>
-          </div>
+    </div>
 
-          <div class="quiz__steps">
-            <fieldset class="quiz__step">
-              <legend class="visually-hidden">Выберите что считаем</legend>
-              <h3 class="quiz__step-heading">Выберите что считаем</h3>
-              <input class="quiz__step-input" type="hidden" name="step1" value="1">
-              <div class="quiz__step-radio-list hide-on-mobile">
-                <a class="quiz__step-radio-item active" href="#" data-value="1">
-                  <img class="lazyload" data-src="img/content/quiz/1.jpg" alt="Quiz">
-                  <span class="quiz__step-radio-name">Фасад</span>
-                </a>
-                <a class="quiz__step-radio-item" href="#" data-value="1">
-                  <img class="lazyload" data-src="img/content/quiz/2.jpg" alt="Quiz">
-                  <span class="quiz__step-radio-name">Кровля</span>
-                </a>
-              </div>
-              <div class="quiz__step-bottom">
-                <button class="button quiz__step-button" type="button">Продолжить</button>
-              </div>
-            </fieldset>
-          </div>
-
-        </form>
-        <div class="quiz__bonus">
-          <img class="quiz__bonus-image lazyload" data-src="img/content/bonus.png" alt="Quiz Bonus">
-          <div class="quiz__bonus-text-container">
-            <h3 class="quiz__bonus-heading">В подарок:</h3>
-            <div class="quiz__bonus-text">
-              <p>Предварительная смета</p>
-              <p>Скидка 5 % не на словах отразим смете</p>
-            </div>
-          </div>
+    <div class="quiz__steps">
+      <fieldset class="quiz__step">
+        <legend class="visually-hidden">Выберите что считаем</legend>
+        <h3 class="quiz__step-heading">Выберите что считаем</h3>
+        <input class="quiz__step-input" type="hidden" name="step1" value="1">
+        <div class="quiz__step-radio-list hide-on-mobile">
+          <a class="quiz__step-radio-item active" href="#" data-value="1">
+            <img class="lazyload" data-src="img/content/quiz/1.jpg" alt="Quiz">
+            <span class="quiz__step-radio-name">Фасад</span>
+          </a>
+          <a class="quiz__step-radio-item" href="#" data-value="1">
+            <img class="lazyload" data-src="img/content/quiz/2.jpg" alt="Quiz">
+            <span class="quiz__step-radio-name">Кровля</span>
+          </a>
         </div>
+        <div class="quiz__step-bottom">
+          <button class="button quiz__step-button" type="button">Продолжить</button>
+        </div>
+      </fieldset>
+    </div>
+
+  </form>
+  <div class="quiz__bonus">
+    <img class="quiz__bonus-image lazyload" data-src="img/content/bonus.png" alt="Quiz Bonus">
+    <div class="quiz__bonus-text-container">
+      <h3 class="quiz__bonus-heading">В подарок:</h3>
+      <div class="quiz__bonus-text">
+        <p>Предварительная смета</p>
+        <p>Скидка 5 % не на словах отразим смете</p>
       </div>
     </div>
   </div>
-</section>
+</div>
+{{/content}}
+{{/extend}}

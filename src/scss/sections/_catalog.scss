@@ -13,6 +13,17 @@
     padding: 0;
   }
 
+  .pagination {
+    display: flex;
+
+    margin: 4rem auto 0;
+    width: fit-content;
+
+    @include breakpointMF(laptop) {
+      display: none;
+    }
+  }
+
   .navigation {
     position: absolute;
     top: 8rem;
@@ -22,17 +33,6 @@
     width: 100%;
 
     @include breakpoint(tablet) {
-      display: none;
-    }
-  }
-
-  .pagination {
-    display: flex;
-
-    margin: 4rem auto 0;
-    width: fit-content;
-
-    @include breakpointMF(laptop) {
       display: none;
     }
   }

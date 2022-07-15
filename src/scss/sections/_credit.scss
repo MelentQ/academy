@@ -1,23 +1,4 @@
 .credit {
-
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
-
-    @include breakpoint(laptop) {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
-  }
-
-  &__heading-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
   &__banks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

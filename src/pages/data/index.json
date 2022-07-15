@@ -4,23 +4,28 @@
         "slider": [
             {
                 "text": "Гарантия до 50 лет на материалы и 5 лет на монтаж",
-                "image": "img/content/intro-slider/1.png"
+                "image": "img/content/intro-slider/1.jpg"
             },
             {
                 "text": "Наши сметы точны до копейки",
-                "image": "img/content/intro-slider/1.png"
+                "image": "img/content/trash/1.jpg"
             },
             {
                 "text": "Замер, монтажный проект и еще 4 услуги бесплатно",
-                "image": "img/content/intro-slider/1.png"
+                "image": "img/content/trash/2.jpg"
             },
             {
                 "text": "Поэтапная оплата,  кредит или рассрочка",
-                "image": "img/content/intro-slider/1.png"
+                "image": "img/content/trash/3.jpg"
             }
         ]
     },
     "quiz": {
+        "mods": "--grey --ratio-5x7",
+        "heading": {
+            "title": "Узнайте стоимость материалов и монтажа вашей кровли",
+            "label": "Ответьте на несколько вопросов и получите 2 подарка"
+        },
         "manager": {
             "image": "img/content/manager.jpg",
             "name": "Менеджер Ирина",
@@ -28,7 +33,6 @@
         }
     },
     "catalog": {
-        "bemBlock": "catalog",
         "mods": [],
         "heading": {
             "title": "Каталог",
@@ -45,7 +49,7 @@
                         "name": "Цвет 1"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/1.jpg",
                         "color": "#B96727",
                         "name": "Цвет 2"
                     },
@@ -55,7 +59,7 @@
                         "name": "Цвет 3"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/2.jpg",
                         "color": "#598784",
                         "name": "Цвет 4"
                     },
@@ -65,7 +69,7 @@
                         "name": "Цвет 5"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/3.jpg",
                         "color": "#E8E8E8",
                         "name": "Цвет 6"
                     },
@@ -75,7 +79,7 @@
                         "name": "Цвет 7"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/1.jpg",
                         "color": "#77865E",
                         "name": "Цвет 8"
                     }
@@ -91,39 +95,9 @@
                         "name": "Цвет 1"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/1.jpg",
                         "color": "#B96727",
                         "name": "Цвет 2"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#C35252",
-                        "name": "Цвет 3"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#598784",
-                        "name": "Цвет 4"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#545454",
-                        "name": "Цвет 5"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#E8E8E8",
-                        "name": "Цвет 6"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#8C3232",
-                        "name": "Цвет 7"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#77865E",
-                        "name": "Цвет 8"
                     }
                 ]
             },
@@ -137,7 +111,7 @@
                         "name": "Цвет 1"
                     },
                     {
-                        "image": "img/content/catalog/1.jpg",
+                        "image": "img/content/trash/1.jpg",
                         "color": "#B96727",
                         "name": "Цвет 2"
                     },
@@ -145,31 +119,6 @@
                         "image": "img/content/catalog/1.jpg",
                         "color": "#C35252",
                         "name": "Цвет 3"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#598784",
-                        "name": "Цвет 4"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#545454",
-                        "name": "Цвет 5"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#E8E8E8",
-                        "name": "Цвет 6"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#8C3232",
-                        "name": "Цвет 7"
-                    },
-                    {
-                        "image": "img/content/catalog/1.jpg",
-                        "color": "#77865E",
-                        "name": "Цвет 8"
                     }
                 ]
             },
@@ -186,6 +135,12 @@
         ]
     },
     "cases": {
+        "bemBlock": "cases",
+        "mods": "--heading-to-top js-tabs --grey",
+        "heading": {
+            "title": "Завершенные объекты",
+            "subtitle": "<p>В каждом поселке и дачном сообществе Тюмени</p>"
+        },
         "items": [
             {
                 "id": 1,
@@ -241,10 +196,18 @@
             }
         ]
     },
+    "simpleForm": {
+        "heading": {
+            "title": "Хотите посмотреть как это работает?"
+        }
+    },
     "marquee": {
         "text": "Видео-отзывы •"
     },
     "reviews": {
+        "heading": {
+            "title": "реальные клиенты О нашей работе"
+        },
         "items": [
             {
                 "image": "img/content/reviews/1.jpg",
@@ -272,17 +235,22 @@
         ]
     },
     "greenMessengerForm": {
-        "title": "Топ 10 материалов в 2022 году Самые выгодные варианты в текущих условиях изменяющихся цен",
+        "mods": "--ratio-1x1 --green",
+        "heading": {
+            "title": "Топ 10 материалов в 2022 году Самые выгодные варианты в текущих условиях изменяющихся цен"
+        },
         "video": {
             "title": "+ 3 Видео-инструкций по монтажу  с самыми распространенными ошибками"
         },
         "form": {
             "title": "Куда отправить вам PDF?",
             "label": "Бонус - бесплатная монтажная схема"
-        },
-        "mod": "--green"
+        }
     },
     "stock": {
+        "heading": {
+            "title": "Акции"
+        },
         "items": [
             {
                 "image": "img/content/stock/1.svg",
@@ -297,6 +265,10 @@
         ]
     },
     "credit": {
+        "mods": "--ratio-1x1",
+        "heading": {
+            "title": "Кредит и Рассрочка От ведущих банков"
+        },
         "manager": {
             "image": "img/content/credit-manager.jpg",
             "name": "Мощенская Елена",
@@ -322,8 +294,11 @@
         ]
     },
     "greyMessengerForm": {
-        "title": "Планируете монтировать самостоятельно?",
-        "label": "При покупке материала у нас даем монтажную схему в подарок",
+        "mods": "--grey --ratio-1x1",
+        "heading": {
+            "title": "Планируете монтировать самостоятельно?",
+            "label": "При покупке материала у нас даем монтажную схему в подарок"
+        },
         "video": {
             "title": "Что это такое?",
             "text": "Кровля - чем-то похожа на конструктор-паззл Вместе с покупкой мы предоставляем вам инструкцию как монтировать конкретно ваш - на конкретно вашу крышу"
@@ -334,7 +309,9 @@
         }
     },
     "benefits": {
-        "title": "Почему нас выбирают",
+        "heading": {
+            "title": "Почему нас выбирают"
+        },
         "items": [
             {
                 "image": "img/content/services/1.svg",
@@ -370,6 +347,10 @@
         "buttonLabel": "Стать клиентом"
     },
     "gallery": {
+        "mods": "--grey",
+        "heading": {
+            "title": "Наше производство"
+        },
         "items": [
             {
                 "image": "img/content/gallery/1.jpg"
@@ -386,6 +367,10 @@
         ]
     },
     "team": {
+        "heading": {
+            "title": "Академия кровли — команда профессионалов",
+            "label": "Собранная с 2009 года"
+        },
         "items": [
             {
                 "image": "img/content/team/1.jpg",
@@ -425,6 +410,10 @@
         ]
     },
     "images": {
+        "mods": "--border",
+        "heading": {
+            "title": "Несем полную ответственность"
+        },
         "items": [
             {
                 "image": "img/content/images/1.jpg",
@@ -439,6 +428,11 @@
         ]
     },
     "slider": {
+        "bemBlock": "slider",
+        "mods": "js-init-slider",
+        "heading": {
+            "title": "Что будет если довериться любителям?"
+        },
         "items": [
             {
                 "image": "img/content/slider/1.jpg",
@@ -454,10 +448,19 @@
                 "image": "img/content/slider/3.jpg",
                 "title": "Деформация водостоков",
                 "text": "Неправильное крепление кронштейнов и установка защита желоба"
+            },
+            {
+                "title": "Тест",
+                "text": "Тест"
             }
         ]
     },
     "video": {
+        "mods": "--ratio-1x1 --grey",
+        "heading": {
+            "title": "Как происходит нарезка кровли?",
+            "subtitle": "Узнайте, почему важно сделать замер с точностью до нескольких сантиметров. Даже несколько сантиметров могут срезультировать в неправильную нарезку элементов и превратить большое количество кровельного материала в ненужный мусор"
+        },
         "manager": {
             "image": "img/content/video-manager.jpg",
             "name": "Снигирев Андрей",
@@ -469,7 +472,9 @@
         }
     },
     "services": {
-        "title": "6 услуг бесплатно",
+        "heading": {
+            "title": "6 услуг бесплатно"
+        },
         "items": [
             {
                 "image": "img/content/services/1.svg",

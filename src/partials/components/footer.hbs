@@ -17,17 +17,9 @@
                 <a class="footer__email" href="mailto:83452604482@mail.ru">83452604482@mail.ru</a>
             </div>
             <nav class="footer__nav">
-                <a href="#">Каталог</a>
-                <a href="#">Отзывы</a>
-                <a href="#">Услуги</a>
-                <a href="#">О компании</a>
-                <a href="#">Условия</a>
-                <a href="#">Контакты</a>
-                <a href="#">Спецпредложения</a>
-                <a href="#">Блог</a>
-                <a href="#">Наши работы</a>
-                <a href="#">Статьи</a>
-                <a href="#">Видео</a>
+                {{#each menu}}
+                <a href="#">{{this.name}}</a>
+                {{/each}}
             </nav>
             <div class="footer__socials">
                 <a class="footer__social" href="#">

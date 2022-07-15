@@ -5,6 +5,97 @@
     margin: 4rem 0;
   }
 
+  &.--grey,
+  &.--green {
+    .section__inner {
+      margin: 0 -4rem;
+
+      border-radius: 4rem;
+      padding: 8rem 4rem;
+
+      @include breakpoint(tablet) {
+        padding: 4rem 2rem 2rem;
+      }
+    }
+
+    .swiper {
+      overflow: hidden;
+    }
+  }
+
+  &.--grey .section__inner {
+    background-color: #F5F5F5;
+  }
+
+  &.--green {
+    color: white;
+
+    .section__inner {
+      background-color: #1CBA38;
+    }
+  }
+
+  &.--border {
+    .section__inner {
+      margin: 0 -4rem;
+      padding: 8rem 4rem;
+
+      border: 0.1rem solid rgba(33, 42, 47, 0.2);
+      border-radius: 4rem;
+
+      @include breakpoint(tablet) {
+        padding: 4rem 2rem;
+      }
+    }
+
+    .swiper {
+      overflow: hidden;
+    }
+  }
+
+  &.--ratio-1x1 {
+    .section__inner {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include breakpoint(tablet) {
+        grid-template-columns: 1fr;
+      }
+
+      &>*:nth-child(1),
+      &>*:nth-child(2) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &.--ratio-5x7 {
+    .section__inner {
+      grid-template-columns: repeat(12, 1fr);
+
+      &>*:nth-child(1) {
+        grid-column: span 5;
+
+        @include breakpoint(desktop) {
+          grid-column: span 1;
+        }
+      }
+
+      &>*:nth-child(2) {
+        grid-column: span 7;
+
+        @include breakpoint(desktop) {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+
+  &.--heading-to-top {
+    .section__heading {
+      justify-content: flex-start;
+    }
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -31,6 +122,7 @@
   &__heading {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
   }
 

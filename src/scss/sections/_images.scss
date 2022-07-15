@@ -1,17 +1,15 @@
 .images {
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
 
-    @include breakpoint(tablet) {
-      gap: 4rem;
-    }
+  @include breakpoint(tablet) {
+    gap: 4rem;
+  }
 
-    @include breakpoint(small-tablet) {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+  @include breakpoint(small-tablet) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   &__item-image {

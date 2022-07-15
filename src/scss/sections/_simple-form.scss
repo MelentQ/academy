@@ -1,20 +1,13 @@
 .simple-form {
+  border: 0.2rem solid #1CBA38;
+  border-radius: 4rem;
+  padding: 4rem;
 
-  .form-input {
-    border-color: rgba(0, 0, 0, 0.2);
+  @include breakpoint(tablet) {
+    padding: 4rem 2rem;
   }
 
-  &__form {
-    border: 0.2rem solid #1CBA38;
-    border-radius: 4rem;
-    padding: 4rem;
-
-    @include breakpoint(tablet) {
-      padding: 4rem 2rem;
-    }
-  }
-
-  &__form-heading {
+  &__heading {
     font-size: 4rem;
     font-family: 'Bebas Neue', cursive;
     line-height: 1;
@@ -27,7 +20,7 @@
     }
   }
 
-  &__form-inputs {
+  &__inputs {
     display: flex;
     gap: 4rem;
     margin-bottom: 4rem;
@@ -40,7 +33,7 @@
     }
   }
 
-  &__form-bottom {
+  &__bottom {
     display: flex;
     align-items: center;
     gap: 4rem;
@@ -50,5 +43,9 @@
       align-items: flex-start;
       gap: 2rem;
     }
+  }
+
+  .form-input {
+    border-color: rgba(0, 0, 0, 0.2);
   }
 }

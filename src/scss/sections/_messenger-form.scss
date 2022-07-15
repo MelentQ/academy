@@ -1,57 +1,23 @@
+.section.--green .messenger-form {
+  border: 0.1rem solid #FFFFFF;
+}
+
 .messenger-form {
 
-  &.--green {
-    color: white;
+  padding: 6rem;
+  background: #1CBA38;
+  border-radius: 4rem;
+  color: white;
 
-    .page-section-wide-content.--grey {
-      background-color: #1CBA38;
-    }
-
-    .messenger-form__form {
-      border: 0.1rem solid #FFFFFF;
-    }
+  @include breakpoint(laptop) {
+    padding: 4rem;
   }
 
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
-
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
+  @include breakpoint(mobile) {
+    padding: 4rem 2rem;
   }
 
   &__heading-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  &__heading-label {
-    display: block;
-    margin-top: 0.4rem;
-    color: #5a5a5a;
-  }
-
-  &__form {
-    padding: 6rem;
-    background: #1CBA38;
-    border-radius: 4rem;
-    color: white;
-
-    @include breakpoint(laptop) {
-      padding: 4rem;
-    }
-
-    @include breakpoint(mobile) {
-      padding: 4rem 2rem;
-    }
-  }
-
-  &__form-heading-block {
     margin-bottom: 6rem;
 
     @include breakpoint(tablet) {
@@ -59,20 +25,20 @@
     }
   }
 
-  &__form-heading {
+  &__heading {
     font-size: 4rem;
     font-family: 'Bebas Neue', cursive;
     line-height: 1;
   }
 
-  &__form-heading-label {
+  &__heading-label {
     display: block;
     margin-top: 0.4rem;
 
     @extend %fs-t3;
   }
 
-  &__form-inputs {
+  &__inputs {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -82,7 +48,7 @@
     }
   }
 
-  &__form-bottom {
+  &__bottom {
     margin-top: 4rem;
     display: flex;
     gap: 2rem;

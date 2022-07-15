@@ -1,31 +1,15 @@
-<section class="page-section-margin reviews">
-  <div class="container">
-    <div class="page-section-grid">
-      <h2 class="page-section-heading">Реальные клиенты О нашей работе</h2>
-      <div class="page-section-swiper-container">
-        <div class="swiper js-reviews-slider reviews__slider">
-          <ul class="swiper-wrapper">
-            {{#each data.items}}
-            <li class="swiper-slide">
-              {{> parts/review-card data=this}}
-            </li>
-            {{/each}}
-          </ul>
-          <div class="pagination slider__pagination"></div>
-          <div class="reviews__buttons">
-            <button class="slider-button --left">
-              <svg>
-                <use xlink:href="#arrow">
-              </svg>
-            </button>
-            <button class="slider-button --right">
-              <svg>
-                <use xlink:href="#arrow">
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{#extend "section"}}
+{{#content "content"}}
+<div class="swiper js-reviews-slider reviews">
+  <ul class="swiper-wrapper">
+    {{#each data.items}}
+    <li class="swiper-slide">
+      {{> parts/review-card data=this}}
+    </li>
+    {{/each}}
+  </ul>
+  {{> parts/pagination}}
+  {{> parts/navigation}}
+</div>
+{{/content}}
+{{/extend}}

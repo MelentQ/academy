@@ -1,18 +1,19 @@
-<section class="page-section-margin images">
-  <div class="container">
-    <div class="page-section-grid page-section-wide-content --border">
-      <h2 class="page-section-heading">Несем полную ответственность</h2>
-      <ul class="images__list">
-        {{#each data.items}}
-        <li>
-          <img class="images__item-image lazyload" data-src="{{this.image}}" alt="Image">
-          <h3 class="images__item-title">{{this.title}}</h3>
-          <div class="images__item-text">
-            <p>{{this.text}}</p>
-          </div>
-        </li>
-        {{/each}}
-      </ul>
+{{#extend "section"}}
+{{#content "heading-content"}}
+
+{{/content}}
+
+{{#content "content"}}
+<ul class="images">
+  {{#each data.items}}
+  <li>
+    <img class="images__item-image lazyload" data-src="{{this.image}}" alt="Image">
+    <h3 class="images__item-title">{{this.title}}</h3>
+    <div class="images__item-text">
+      <p>{{this.text}}</p>
     </div>
-  </div>
-</section>
+  </li>
+  {{/each}}
+</ul>
+{{/content}}
+{{/extend}}

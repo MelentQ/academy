@@ -5,11 +5,7 @@
       {{#if data.image}}
       <img class="review-card__image lazyload" data-src="{{data.image}}" alt="Review">
       {{/if}}
-      <div class="review-card__play-btn">
-        <svg>
-          <use xlink:href="#play">
-        </svg>
-      </div>
+      {{> parts/play-button}}
     </a>
 
     <h3 class="review-card__heading">{{data.title}}</h3>

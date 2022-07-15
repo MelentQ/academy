@@ -1,20 +1,4 @@
 .slider {
-  &__heading-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2.4rem;
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 1.2rem;
-
-    @include breakpoint(desktop) {
-      display: none;
-    }
-  }
-
   &__slider-block {
     overflow: hidden;
     min-width: 0;
@@ -63,14 +47,22 @@
     color: #5A5A5A;
   }
 
-  &__pagination {
-    display: none;
+  .pagination {
+    display: flex;
 
-    @include breakpoint(tablet) {
-      display: flex;
+    margin: 2rem auto 0;
+    width: fit-content;
 
-      margin: 2rem auto 0;
-      width: fit-content;
+    @include breakpointMF(laptop) {
+      display: none;
+    }
+  }
+
+  .navigation {
+    width: fit-content;
+
+    @include breakpoint(desktop) {
+      display: none;
     }
   }
 }

@@ -50,7 +50,6 @@ export default function catalogSlider() {
     colorsButtons.forEach((button, i) => {
       button.addEventListener('click', () => {
         colorsSlider.slideTo(i);
-        console.log(colorsSlider.activeIndex);
 
         colorsButtons.forEach((b, j) => {
           if (j == i) {

@@ -60,14 +60,14 @@
     }
   }
 
-  &__pagination {
-    display: none;
+  .pagination {
+    display: flex;
 
-    @include breakpoint(tablet) {
-      display: flex;
+    margin: 2rem auto 0;
+    width: fit-content;
 
-      margin: 2rem auto 0;
-      width: fit-content;
+    @include breakpointMF(laptop) {
+      display: none;
     }
   }
 }

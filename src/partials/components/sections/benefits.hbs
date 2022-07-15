@@ -1,24 +1,23 @@
-<section class="js-init-mobile-slider page-section-margin benefits">
-  <div class="container">
-    <div class="page-section-grid">
-      <h2 class="page-section-heading">{{data.title}}</h2>
-      <div class="page-section-swiper-container">
-        <div class="swiper">
-          <ul class="swiper-wrapper benefits__list">
-            {{#each data.items}}
-            <li class="swiper-slide benefits__item">
-              <img class="benefits__item-image lazyload" data-src="{{this.image}}" alt="Benefit">
-              <h3 class="benefits__item-title">{{this.title}}</h3>
-              <div class="benefits__item-text">
-                <p>{{this.text}}</p>
-              </div>
-            </li>
-            {{/each}}
-          </ul>
-          <div class="pagination benefits__pagination"></div>
-          <a class="button benefits__button" href="#">{{data.buttonLabel}}</a>
-        </div>
+{{#extend "section"}}
+{{#content "heading-content"}}
+
+{{/content}}
+
+{{#content "content"}}
+<div class="js-init-mobile-slider swiper benefits">
+  <ul class="swiper-wrapper benefits__list">
+    {{#each data.items}}
+    <li class="swiper-slide benefits__item">
+      <img class="benefits__item-image lazyload" data-src="{{this.image}}" alt="Benefit">
+      <h3 class="benefits__item-title">{{this.title}}</h3>
+      <div class="benefits__item-text">
+        <p>{{this.text}}</p>
       </div>
-    </div>
-  </div>
-</section>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="pagination benefits__pagination"></div>
+  <a class="button benefits__button" href="#">{{data.buttonLabel}}</a>
+</div>
+{{/content}}
+{{/extend}}

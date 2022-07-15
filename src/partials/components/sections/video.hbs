@@ -1,27 +1,13 @@
-<section class="page-section-margin video">
-  <div class="container">
-    <div class="page-section-wide-content --grey video__inner">
-      <div class="video__text-block">
-        <div>
-          <h2 class="page-section-heading">Как происходит нарезка кровли?</h2>
-          <div class="video__text">
-            <p>Узнайте, почему важно сделать замер с точностью до нескольких сантиметров. Даже несколько сантиметров
-              могут
-              срезультировать в неправильную нарезку элементов и превратить большое количество кровельного материала в
-              ненужный мусор</p>
-          </div>
-        </div>
-        {{> parts/manager data=data.manager}}
-      </div>
-      <a class="video__preview-block" href="https://youtu.be/nT14mlv92t4" data-type="iframe" data-preload="false"
-        data-fancybox data-caption="Как происходит нарезка кровли?">
-        <img class="video__preview-image lazyload" data-src="img/content/video-preview.jpg" alt="Preview">
-        <div class="video__play-btn">
-          <svg>
-            <use xlink:href="#play">
-          </svg>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+{{#extend "section"}}
+{{#content "heading-content"}}
+{{> parts/manager data=data.manager}}
+{{/content}}
+
+{{#content "content"}}
+<a class="video" href="https://youtu.be/nT14mlv92t4" data-type="iframe" data-preload="false" data-fancybox
+  data-caption="Как происходит нарезка кровли?">
+  <img class="video__preview lazyload" data-src="img/content/video-preview.jpg" alt="Preview">
+  {{> parts/play-button}}
+</a>
+{{/content}}
+{{/extend}}

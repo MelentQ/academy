@@ -1,21 +1,19 @@
 .reviews {
-  &__slider {
-    position: relative;
-    overflow: hidden;
-    margin: 0 -2rem;
-    padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  margin: 0 -2rem;
+  padding: 0 2rem;
 
-    @include breakpoint(desktop) {
-      overflow: visible;
-    }
-
-    @include breakpoint(tablet) {
-      margin: 0;
-      padding: 0;
-    }
+  @include breakpoint(desktop) {
+    overflow: visible;
   }
 
-  &__buttons {
+  @include breakpoint(tablet) {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation {
     position: absolute;
     top: 8rem;
     left: 0;
@@ -23,22 +21,19 @@
 
     width: 100%;
 
-    display: flex;
-    justify-content: space-between;
-
     @include breakpoint(tablet) {
       display: none;
     }
   }
 
-  &__pagination {
-    display: none;
+  .pagination {
+    display: flex;
 
-    @include breakpoint(tablet) {
-      display: flex;
+    margin: 4rem auto 0;
+    width: fit-content;
 
-      margin: 4rem auto 0;
-      width: fit-content;
+    @include breakpointMF(laptop) {
+      display: none;
     }
   }
 }

@@ -1,14 +1,12 @@
 .stock {
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
 
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   &__item {

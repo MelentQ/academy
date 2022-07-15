@@ -1,9 +1,5 @@
 .gallery {
 
-  .swiper {
-    overflow: hidden;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -137,14 +133,14 @@
     color: var(--primary-color);
   }
 
-  &__pagination {
-    display: none;
+  .pagination {
+    display: flex;
 
-    @include breakpoint(tablet) {
-      display: flex;
+    margin: 4rem auto 0;
+    width: fit-content;
 
-      margin: 2rem auto 0;
-      width: fit-content;
+    @include breakpointMF(laptop) {
+      display: none;
     }
   }
 }

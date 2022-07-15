@@ -9,12 +9,22 @@
     position: relative;
 
     min-height: 60rem;
+    padding: 0 4rem;
+    margin: 0 -4rem;
 
     background-color: #F5F5F5;
     overflow: hidden;
 
+
+    border-radius: 4rem;
+
+
     @include breakpoint(tablet) {
       min-height: 48rem;
+      padding: 0 2rem;
+      margin: 0 -2rem;
+
+      border-radius: 2rem;
     }
 
     @include breakpoint(mobile) {
@@ -29,6 +39,4 @@
     right: 0;
     bottom: 0;
   }
-
-  &__overlay {}
 }

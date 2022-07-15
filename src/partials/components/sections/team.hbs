@@ -1,32 +1,27 @@
-<section class="js-init-mobile-slider page-section-margin team">
-  <div class="container">
-    <div class="page-section-grid">
-      <div>
-        <h2 class="page-section-heading">Академия кровли — команда профессионалов</h2>
-        <span class="team__heading-label">Собранная с 2009 года</span>
-      </div>
+{{#extend "section"}}
+{{#content "heading-content"}}
 
-      <div class="page-section-swiper-container">
-        <div class="swiper">
-          <ul class="swiper-wrapper team__list">
-            {{#each data.items}}
-            <li class="swiper-slide team__item">
-              <img class="team__item-image lazyload" data-src="{{this.image}}" alt="Team">
-              <h3 class="team__item-title">{{this.title}}</h3>
-              <span class="team__item-label">{{this.label}}</span>
-              <a class="team__item-phone" href="tel:{{this.phone}}">{{this.phone}}</a>
-              <a class="team__item-email" href="mailto:{{this.email}}">
-                <svg>
-                  <use xlink:href="#email">
-                </svg>
-                <span>{{this.email}}</span>
-              </a>
-            </li>
-            {{/each}}
-          </ul>
-          <div class="pagination team__pagination"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{/content}}
+
+{{#content "content"}}
+<div class="swiper js-init-mobile-slider team">
+  <ul class="swiper-wrapper team__list">
+    {{#each data.items}}
+    <li class="swiper-slide team__item">
+      <img class="team__item-image lazyload" data-src="{{this.image}}" alt="Team">
+      <h3 class="team__item-title">{{this.title}}</h3>
+      <span class="team__item-label">{{this.label}}</span>
+      <a class="team__item-phone" href="tel:{{this.phone}}">{{this.phone}}</a>
+      <a class="team__item-email" href="mailto:{{this.email}}">
+        <svg>
+          <use xlink:href="#email">
+        </svg>
+        <span>{{this.email}}</span>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+  {{> parts/pagination}}
+</div>
+{{/content}}
+{{/extend}}

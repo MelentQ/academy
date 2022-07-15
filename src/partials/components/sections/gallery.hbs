@@ -1,54 +1,52 @@
-<section class="js-init-mobile-slider page-section-margin gallery">
-  <div class="container">
-    <div class="page-section-grid page-section-wide-content --grey">
-      <h2 class="page-section-heading">Наше производство</h2>
-      <div class="page-section-swiper-container">
-        <div class="swiper">
-          <ul class="swiper-wrapper gallery__list">
-            {{#each data.items}}
-            <li class="swiper-slide gallery__item">
-              <a class="gallery__item-link" href="{{this.image}}" data-fancybox="gallery" data-caption="Gallery">
-                <img class="gallery__image lazyload" data-src="{{this.image}}" alt="Gallery">
-              </a>
-            </li>
-            {{/each}}
-            <li class="swiper-slide gallery__item">
-              <a class="gallery__item-link" href="img/content/gallery/5.jpg" data-fancybox="gallery"
-                data-caption="Gallery">
-                <img class="gallery__image lazyload" data-src="img/content/gallery/5.jpg" alt="Gallery">
-                <div class="gallery__image-overlay"></div>
-                <div class="gallery__more-block hide-on-tablet">
-                  <span class="gallery__more-label">Смотреть все фото</span>
-                  <div class="gallery__more-gigit-block">
-                    <span class="gallery__more-digit">28</span>
-                    <svg>
-                      <use xlink:href="#arrow">
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="pagination gallery__pagination"></div>
-          <a class="gallery__more-block show-on-tablet" href="#">
-            <span class="gallery__more-label">Смотреть все фото</span>
-            <div class="gallery__more-gigit-block">
-              <span class="gallery__more-digit">28</span>
-              <svg>
-                <use xlink:href="#arrow">
-              </svg>
-            </div>
-          </a>
+{{#extend "section"}}
+{{#content "heading-content"}}
+
+{{/content}}
+
+{{#content "content"}}
+<div class="js-init-mobile-slider swiper gallery">
+  <ul class="swiper-wrapper gallery__list">
+    {{#each data.items}}
+    <li class="swiper-slide gallery__item">
+      <a class="gallery__item-link" href="{{this.image}}" data-fancybox="gallery" data-caption="Gallery">
+        <img class="gallery__image lazyload" data-src="{{this.image}}" alt="Gallery">
+      </a>
+    </li>
+    {{/each}}
+    <li class="swiper-slide gallery__item">
+      <a class="gallery__item-link" href="img/content/gallery/5.jpg" data-fancybox="gallery" data-caption="Gallery">
+        <img class="gallery__image lazyload" data-src="img/content/gallery/5.jpg" alt="Gallery">
+        <div class="gallery__image-overlay"></div>
+        <div class="gallery__more-block hide-on-tablet">
+          <span class="gallery__more-label">Смотреть все фото</span>
+          <div class="gallery__more-gigit-block">
+            <span class="gallery__more-digit">28</span>
+            <svg>
+              <use xlink:href="#arrow">
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="visually-hidden">
-        <div data-src="img/content/trash/1.jpg" data-thumb="img/content/trash/1.jpg" data-fancybox="gallery"
-          data-caption="Gallery"></div>
-        <div data-src="img/content/trash/2.jpg" data-thumb="img/content/trash/2.jpg" data-fancybox="gallery"
-          data-caption="Gallery"></div>
-        <div data-src="img/content/trash/3.jpg" data-thumb="img/content/trash/3.jpg" data-fancybox="gallery"
-          data-caption="Gallery"></div>
-      </div>
+      </a>
+    </li>
+  </ul>
+  {{> parts/pagination}}
+  <a class="gallery__more-block show-on-tablet" href="#">
+    <span class="gallery__more-label">Смотреть все фото</span>
+    <div class="gallery__more-gigit-block">
+      <span class="gallery__more-digit">28</span>
+      <svg>
+        <use xlink:href="#arrow">
+      </svg>
     </div>
-  </div>
-</section>
+  </a>
+</div>
+<div class="visually-hidden">
+  <div data-src="img/content/trash/1.jpg" data-thumb="img/content/trash/1.jpg" data-fancybox="gallery"
+    data-caption="Gallery"></div>
+  <div data-src="img/content/trash/2.jpg" data-thumb="img/content/trash/2.jpg" data-fancybox="gallery"
+    data-caption="Gallery"></div>
+  <div data-src="img/content/trash/3.jpg" data-thumb="img/content/trash/3.jpg" data-fancybox="gallery"
+    data-caption="Gallery"></div>
+</div>
+{{/content}}
+{{/extend}}

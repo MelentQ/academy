@@ -1,48 +1,18 @@
 .video {
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
+  position: relative;
+  border-radius: 4rem;
+  overflow: hidden;
 
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
+  display: block;
+  min-height: 45rem;
+
+  background-color: white;
+
+  @include breakpoint(tablet) {
+    min-height: 36rem;
   }
 
-  &__text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4rem;
-
-    @include breakpoint(tablet) {
-      gap: 2rem;
-    }
-  }
-
-  &__text {
-    @extend %fs-t1;
-    color: #5A5A5A;
-
-    margin-top: 1rem;
-  }
-
-  &__preview-block {
-    position: relative;
-    border-radius: 4rem;
-    overflow: hidden;
-
-    min-height: 45rem;
-
-    background-color: white;
-
-    @include breakpoint(tablet) {
-      min-height: 36rem;
-    }
-  }
-
-  &__preview-image {
+  &__preview {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,28 +23,11 @@
     object-fit: cover;
   }
 
-  &__play-btn {
+  .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 2;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 7.2rem;
-    height: 7.2rem;
-    border-radius: 50%;
-
-    background: rgba(0, 0, 0, 0.4);
-
-    svg {
-      position: relative;
-      left: 0.2rem;
-      width: 2rem;
-      height: 1.7rem;
-      fill: white;
-    }
   }
 }
