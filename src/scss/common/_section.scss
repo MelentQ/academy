@@ -1,0 +1,52 @@
+.section {
+  margin: 8rem 0;
+
+  @include breakpoint(tablet) {
+    margin: 4rem 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+
+    @include breakpoint(desktop) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &>*:nth-child(1) {
+      grid-column: span 1;
+    }
+
+    &>*:nth-child(2) {
+      grid-column: span 3;
+
+      @include breakpoint(desktop) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title {
+    @extend %fs-h1;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+  }
+
+  &__subtitle {
+    @extend %fs-t1;
+    color: var(--text-color);
+  }
+
+  &__content {
+    min-width: 0;
+  }
+}

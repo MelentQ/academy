@@ -3,7 +3,7 @@
 
   <div class="swiper intro__images">
     <ul class="swiper-wrapper">
-      {{#each introSlider}}
+      {{#each data.slider}}
       <li class="swiper-slide">
         <div class="intro__image-wrapper">
           <img class="lazyload" data-src="{{this.image}}" alt="Intro Image">
@@ -30,7 +30,7 @@
         <div class="intro__mobile-slider-block">
           <div class="swiper intro__mobile-slider">
             <ul class="swiper-wrapper">
-              {{#each introSlider}}
+              {{#each data.slider}}
               <li class="swiper-slide">
                 <div class="intro__mobile-slider-text">
                   <p>{{this.text}}</p>
@@ -57,7 +57,7 @@
       <div class="intro__bottom">
         <div class="swiper intro__thumbs">
           <ul class="swiper-wrapper">
-            {{#each introSlider}}
+            {{#each data.slider}}
             <li class="swiper-slide">
               <a class="intro__thumb" href="#">
                 <div class="intro__thumb-line">

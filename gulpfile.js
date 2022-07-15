@@ -28,7 +28,7 @@ gulp.task('sprite', function() {
                 mode: {
                     inline: true,
                     symbol: {
-                        sprite: '../sprite.hbs'
+                        sprite: '../utils/sprite.hbs'
                     }
                 }
             })

@@ -1,0 +1,27 @@
+<section class="section {{data.mods}}">
+  <div class="container">
+    <div class="section__inner">
+      <div class="section__heading">
+        <div>
+          <h2 class="section__title">{{data.heading.title}}</h2>
+          {{#if data.heading.subtitle}}
+          <div class="section__subtitle">
+            {{{data.heading.subtitle}}}
+          </div>
+          {{/if}}
+        </div>
+        <div>
+          {{#block "heading-content"}}
+
+          {{/block}}
+        </div>
+      </div>
+
+      <div class="section__content">
+        {{#block "content"}}
+
+        {{/block}}
+      </div>
+    </div>
+  </div>
+</section>

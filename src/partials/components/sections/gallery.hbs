@@ -5,7 +5,7 @@
       <div class="page-section-swiper-container">
         <div class="swiper">
           <ul class="swiper-wrapper gallery__list">
-            {{#each gallery.items}}
+            {{#each data.items}}
             <li class="swiper-slide gallery__item">
               <a class="gallery__item-link" href="{{this.image}}" data-fancybox="gallery" data-caption="Gallery">
                 <img class="gallery__image lazyload" data-src="{{this.image}}" alt="Gallery">

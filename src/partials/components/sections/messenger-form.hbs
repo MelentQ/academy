@@ -9,7 +9,7 @@
           {{/if}}
         </div>
 
-        {{> utils/mini-video data=data.video}}
+        {{> parts/mini-video data=data.video}}
       </div>
 
       <form class="messenger-form__form" action="/" method="post" name="" novalidate>
@@ -18,11 +18,11 @@
           <span class="messenger-form__form-heading-label">{{data.form.label}}/span>
         </div>
         <div class="messenger-form__form-inputs">
-          {{> utils/form-input name="name" placeholder="Ваше имя"}}
-          {{> utils/form-input name="phone" placeholder="Ваш номер и мессенджер куда отправить"}}
+          {{> parts/form-input name="name" placeholder="Ваше имя"}}
+          {{> parts/form-input name="phone" placeholder="Ваш номер и мессенджер куда отправить"}}
         </div>
         <div class="messenger-form__form-bottom">
-          {{> utils/policy-checkbox}}
+          {{> parts/policy-checkbox}}
           <a class="button --white" href="#">Отправить</a>
         </div>
       </form>

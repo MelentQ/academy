@@ -45,7 +45,7 @@ export default function catalogSlider() {
       allowTouchMove: false
     })
 
-    const colorsButtons = slide.querySelectorAll('.catalog__item-color-button');
+    const colorsButtons = slide.querySelectorAll('.catalog-card__color');
     colorsButtons[0].classList.add('active');
     colorsButtons.forEach((button, i) => {
       button.addEventListener('click', () => {

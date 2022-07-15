@@ -1,38 +1,42 @@
-@import 'fonts';
-@import 'vendor';
-@import 'mixins';
-@import 'font-sizes';
-@import 'global';
-@import 'utils';
-@import 'layout';
-
-@import 'ui';
+@import 'common/fonts';
+@import 'common/vendor';
+@import 'common/mixins';
+@import 'common/font-sizes';
+@import 'common/global';
+@import 'common/utils';
+@import 'common/layout';
+@import 'common/section';
 
 @import 'header';
 @import 'footer';
 
+@import 'menu/menu';
+@import 'menu/header-menu';
 
-@import 'map';
-@import 'benefits';
-@import 'video';
-@import 'slider';
-@import 'images';
-@import 'gallery';
-@import 'stock';
-@import 'index/team';
-@import 'index/intro';
-@import 'index/quiz';
-@import 'utils/manager';
-@import 'credit';
-@import 'messenger-form';
-@import 'marquee';
-@import 'reviews';
-@import 'simple-form';
-@import 'utils/policy-checkbox';
-@import 'utils/mini-video';
-@import 'utils/form-input';
-@import 'catalog';
-@import 'cases';
-@import 'modal';
-@import 'menu';
-@import 'header-menu';
+@import 'modals/modal';
+
+@import 'parts/ui';
+@import 'parts/manager';
+@import 'parts/catalog-card';
+@import 'parts/review-card';
+@import 'parts/policy-checkbox';
+@import 'parts/mini-video';
+@import 'parts/form-input';
+
+@import 'sections/map';
+@import 'sections/benefits';
+@import 'sections/video';
+@import 'sections/slider';
+@import 'sections/images';
+@import 'sections/gallery';
+@import 'sections/stock';
+@import 'sections/team';
+@import 'sections/index/intro';
+@import 'sections/quiz';
+@import 'sections/credit';
+@import 'sections/messenger-form';
+@import 'sections/marquee';
+@import 'sections/reviews';
+@import 'sections/simple-form';
+@import 'sections/catalog';
+@import 'sections/cases';

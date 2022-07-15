@@ -5,7 +5,7 @@
         <h2 class="page-section-heading">Завершенные объекты</h2>
         <span class="cases__heading-label">В каждом поселке и дачном сообществе Тюмени</span>
         <ul class="cases__tabs">
-          {{#each cases.items}}
+          {{#each data.items}}
           <li>
             <button class="cases__tab js-tab {{#if this.active}}active{{/if}}" type="button">{{this.name}}</button>
           </li>
@@ -13,7 +13,7 @@
         </ul>
       </div>
       <ul class="cases__bodies">
-        {{#each cases.items}}
+        {{#each data.items}}
         <li>
           <div class="cases__body js-body {{#if this.active}}active{{/if}}">
             <div class="page-section-swiper-container">

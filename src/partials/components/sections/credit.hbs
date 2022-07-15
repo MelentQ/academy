@@ -3,11 +3,11 @@
     <div class="page-section-wide-content --border credit__inner">
       <div class="credit__heading-block">
         <h2 class="page-section-heading">Кредит и Рассрочка От ведущих банков</h2>
-        {{> utils/manager data=creditManager}}
+        {{> parts/manager data=data.manager}}
       </div>
       <div>
         <ul class="credit__banks">
-          {{#each banks}}
+          {{#each data.banks}}
           <li>
             <a class="credit__bank" href="{{this.link}}" title="Bank">
               <img class="lazyload" data-src="{{this.image}}" alt="Bank">

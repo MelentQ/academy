@@ -1,0 +1,15 @@
+{{#extend "section"}}
+{{#content "content"}}
+<div class="swiper js-catalog-slider catalog">
+  <ul class="swiper-wrapper">
+    {{#each data.items}}
+    <li class="swiper-slide">
+      {{> parts/catalog-card data=this}}
+    </li>
+    {{/each}}
+  </ul>
+  {{> parts/pagination}}
+  {{> parts/navigation}}
+</div>
+{{/content}}
+{{/extend}}
