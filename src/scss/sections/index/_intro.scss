@@ -126,10 +126,6 @@
     }
   }
 
-  &__thumb {
-    user-select: none;
-  }
-
   &__thumb-line {
     overflow: hidden;
 
@@ -230,14 +226,21 @@
 
     padding: 2rem 3rem;
 
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     box-shadow: 0 1rem 2rem rgba(255, 164, 27, 0.2);
     border-radius: 1.2rem;
+
+    transition: background-color 0.3s ease;
 
     @include breakpoint(tablet) {
       justify-content: space-between;
 
       width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #ED7B11;
     }
   }
 

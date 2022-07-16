@@ -4,6 +4,7 @@
   gap: 3rem;
 
   &__image-wrapper {
+    flex-shrink: 0;
     position: relative;
 
     width: 20rem;

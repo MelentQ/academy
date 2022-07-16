@@ -81,6 +81,13 @@ export default function validation() {
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
 
     formsToValidate.forEach((form) => {
-        $(form).parsley();
+        $(form).parsley({
+            focus: 'none',
+            errorClass: 'error',
+            successClass: 'success',
+            classHandler: (field) => {
+                return field.$element.closest('.js-validation-wrapper');
+            }
+        })
     });
 }

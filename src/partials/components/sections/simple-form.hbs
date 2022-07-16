@@ -3,15 +3,15 @@
 
 {{/content}}
 {{#content "content"}}
-<form class="simple-form" action="/" method="post" name="" novalidate>
+<form class="simple-form js-handle-form" action="#" method="post" name="" novalidate data-need-validation>
   <h3 class="simple-form__heading">Заполните форму и запишитесь на посещение объекта, где сейчас работают
     наши монтажники</h3>
   <div class="simple-form__inputs">
     {{> parts/form-input name="name" placeholder="Ваше имя"}}
-    {{> parts/form-input name="phone" placeholder="Телефон для связи"}}
+    {{> parts/form-input name="phone" placeholder="Телефон для связи" phone=true}}
   </div>
   <div class="simple-form__bottom">
-    <a class="button" href="#">Отправить</a>
+    <button class="button js-submit-form" type="submit">Отправить</button>
     {{> parts/policy-checkbox mod="--dark"}}
   </div>
 </form>

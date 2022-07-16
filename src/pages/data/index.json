@@ -30,7 +30,243 @@
             "image": "img/content/manager.jpg",
             "name": "Менеджер Ирина",
             "label": "Рассчитает стоимость по ваши ответам"
-        }
+        },
+        "steps": [
+            {
+                "title": "Выберите что считаем",
+                "formRadio": {
+                    "name": "type",
+                    "initialValue": "Фасад",
+                    "items": [
+                        {
+                            "name": "Фасад",
+                            "value": "Фасад",
+                            "active": true,
+                            "image": "img/content/quiz/1.jpg"
+                        },
+                        {
+                            "name": "Кровля",
+                            "value": "Кровля",
+                            "image": "img/content/quiz/2.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Выберите материал крыши",
+                "formRadio": {
+                    "name": "material",
+                    "initialValue": "Металлочерепица",
+                    "items": [
+                        {
+                            "name": "Металлочерепица",
+                            "value": "Металлочерепица",
+                            "active": true
+                        },
+                        {
+                            "name": "Гибкая черепица",
+                            "value": "Гибкая черепица"
+                        },
+                        {
+                            "name": "Профнастил",
+                            "value": "Профнастил"
+                        },
+                        {
+                            "name": "Точно не знаю",
+                            "value": "Точно не знаю"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Выберите тип крыши",
+                "formRadio": {
+                    "mod": "--images-in-select",
+                    "name": "roof",
+                    "initialValue": "Тип 1",
+                    "items": [
+                        {
+                            "name": "Тип 1",
+                            "value": "Тип 1",
+                            "image": "img/content/roofs/1.svg",
+                            "active": true
+                        },
+                        {
+                            "name": "Тип 2",
+                            "value": "Тип 2",
+                            "image": "img/content/roofs/2.svg"
+                        },
+                        {
+                            "name": "Тип 3",
+                            "value": "Тип 3",
+                            "image": "img/content/roofs/3.svg"
+                        },
+                        {
+                            "name": "Тип 4",
+                            "value": "Тип 4",
+                            "image": "img/content/roofs/4.svg"
+                        },
+                        {
+                            "name": "Тип 5",
+                            "value": "Тип 5",
+                            "image": "img/content/roofs/5.svg"
+                        },
+                        {
+                            "name": "Тип 6",
+                            "value": "Тип 6",
+                            "image": "img/content/roofs/6.svg"
+                        },
+                        {
+                            "name": "Тип 7",
+                            "value": "Тип 7",
+                            "image": "img/content/roofs/7.svg"
+                        },
+                        {
+                            "name": "Тип 8",
+                            "value": "Тип 8",
+                            "image": "img/content/roofs/8.svg"
+                        },
+                        {
+                            "name": "Тип 9",
+                            "value": "Тип 9",
+                            "image": "img/content/roofs/9.svg"
+                        },
+                        {
+                            "name": "Тип 10",
+                            "value": "Тип 10",
+                            "image": "img/content/roofs/10.svg"
+                        },
+                        {
+                            "name": "Тип 11",
+                            "value": "Тип 11",
+                            "image": "img/content/roofs/11.svg"
+                        },
+                        {
+                            "name": "Тип 12",
+                            "value": "Тип 12",
+                            "image": "img/content/roofs/12.svg"
+                        },
+                        {
+                            "name": "Тип 13",
+                            "value": "Тип 13",
+                            "image": "img/content/roofs/13.svg"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Выберите тип крыши (тест)",
+                "formRadio": {
+                    "mod": "--small-images",
+                    "name": "roof-test",
+                    "initialValue": "Тип 1",
+                    "items": [
+                        {
+                            "name": "Тип 1",
+                            "value": "Тип 1",
+                            "image": "img/content/roofs/1.svg",
+                            "active": true
+                        },
+                        {
+                            "name": "Тип 2",
+                            "value": "Тип 2",
+                            "image": "img/content/roofs/2.svg"
+                        },
+                        {
+                            "name": "Тип 3",
+                            "value": "Тип 3",
+                            "image": "img/content/roofs/3.svg"
+                        },
+                        {
+                            "name": "Тип 4",
+                            "value": "Тип 4",
+                            "image": "img/content/roofs/4.svg"
+                        },
+                        {
+                            "name": "Тип 5",
+                            "value": "Тип 5",
+                            "image": "img/content/roofs/5.svg"
+                        },
+                        {
+                            "name": "Тип 6",
+                            "value": "Тип 6",
+                            "image": "img/content/roofs/6.svg"
+                        },
+                        {
+                            "name": "Тип 7",
+                            "value": "Тип 7",
+                            "image": "img/content/roofs/7.svg"
+                        },
+                        {
+                            "name": "Тип 8",
+                            "value": "Тип 8",
+                            "image": "img/content/roofs/8.svg"
+                        },
+                        {
+                            "name": "Тип 9",
+                            "value": "Тип 9",
+                            "image": "img/content/roofs/9.svg"
+                        },
+                        {
+                            "name": "Тип 10",
+                            "value": "Тип 10",
+                            "image": "img/content/roofs/10.svg"
+                        },
+                        {
+                            "name": "Тип 11",
+                            "value": "Тип 11",
+                            "image": "img/content/roofs/11.svg"
+                        },
+                        {
+                            "name": "Тип 12",
+                            "value": "Тип 12",
+                            "image": "img/content/roofs/12.svg"
+                        },
+                        {
+                            "name": "Тип 13",
+                            "value": "Тип 13",
+                            "image": "img/content/roofs/13.svg"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Нужны ли работы по монтажу?",
+                "formRadio": {
+                    "name": "mounting",
+                    "initialValue": "Да, конечно",
+                    "items": [
+                        {
+                            "name": "Да, конечно",
+                            "value": "Да, конечно",
+                            "active": true
+                        },
+                        {
+                            "name": "Нет, попробую сделать самостоятельно",
+                            "value": "Нет, попробую сделать самостоятельно"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Выберите подарок",
+                "formRadio": {
+                    "name": "gift",
+                    "initialValue": "Предварительная смета",
+                    "items": [
+                        {
+                            "name": "Предварительная смета",
+                            "value": "Предварительная смета",
+                            "active": true
+                        },
+                        {
+                            "name": "Скидка 5% в итоговой смете",
+                            "value": "Скидка 5% в итоговой смете"
+                        }
+                    ]
+                }
+            }
+        ]
     },
     "catalog": {
         "mods": [],

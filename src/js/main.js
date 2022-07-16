@@ -11,7 +11,9 @@ import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {
+    ScrollTrigger
+} from 'gsap/ScrollTrigger';
 import introSlider from "./my/introSlider";
 import headerHeight from "./my/headerHeight";
 import map from "./my/map";
@@ -21,6 +23,9 @@ import marquee from "./my/marquee";
 import reviewsSlider from "./my/reviewsSlider";
 import catalogSlider from "./my/catalogSlider";
 import './vendor/hystmodal.min.js';
+import placeholders from "./my/placeholders";
+import formRadio from "./my/formRadio";
+import quizTabs from "./my/quizTabs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
     marquee();
     reviewsSlider();
     catalogSlider();
+    placeholders();
+    formRadio();
+    quizTabs();
 });
 
 document.addEventListener('lazyloaded', () => {

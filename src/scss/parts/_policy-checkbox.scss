@@ -43,6 +43,12 @@
     }
   }
 
+  &.error {
+    .policy-checkbox__checkmark {
+      border-color: var(--error);
+    }
+  }
+
   a {
     display: inline;
 

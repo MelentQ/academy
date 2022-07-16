@@ -1,1 +1,5 @@
-<input class="form-input" type="text" name="{{name}}" placeholder="{{placeholder}}" required>
+<div class="js-validation-wrapper js-init-placeholder form-input {{mod}}">
+  <input class="js-input form-input__input {{#if phone}}js-phone-input{{/if}}" type="text" name="{{name}}"
+    autocomplete="off" required>
+  <span class="form-input__placeholder">{{placeholder}}</span>
+</div>
