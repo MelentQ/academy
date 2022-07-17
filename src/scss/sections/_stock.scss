@@ -23,6 +23,9 @@
     @include breakpoint(tablet) {
       padding: 3rem 2rem;
       gap: 2rem;
+
+      box-shadow: 0 1rem 2rem rgba(255, 164, 27, 0.2);
+      border-radius: 2rem;
     }
 
     @include breakpoint(mobile) {

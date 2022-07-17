@@ -22,6 +22,13 @@
     border-radius: 2.4rem;
     padding: 2rem;
 
+    transition: border-color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      border-color: var(--secondary-color);
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -60,9 +67,16 @@
     line-height: 1;
     font-family: 'Bebas Neue', cursive;
 
+    transition: opacity 0.3s ease;
+
     @include breakpoint(mobile) {
       width: 100%;
       flex-direction: column;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
     }
 
     &:link,

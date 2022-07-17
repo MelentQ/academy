@@ -118,6 +118,27 @@
       min-height: 32rem;
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+    }
+
     img {
       position: absolute;
       top: 0;

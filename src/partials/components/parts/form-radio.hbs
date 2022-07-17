@@ -1,7 +1,14 @@
 <div class="js-form-radio form-radio {{data.mod}}">
   <input type="hidden" name="{{data.name}}" value="{{data.initialValue}}">
   <button class="form-radio__select" type="button">
-    <span class="form-radio__select-label">{{data.initialValue}}</span>
+    <div class="form-radio__select-label-wrapper">
+      {{#if data.initialImage}}
+      <div class="form-radio__select-image-wrapper">
+        <img class="lazyload" data-src="{{data.initialImage}}" alt="Quiz">
+      </div>
+      {{/if}}
+      <span class="form-radio__select-label">{{data.initialValue}}</span>
+    </div>
     <svg>
       <use xlink:href="#chevron">
     </svg>

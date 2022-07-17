@@ -27,6 +27,7 @@ import placeholders from "./my/placeholders";
 import formRadio from "./my/formRadio";
 import quizTabs from "./my/quizTabs";
 import rangeSlider from "./my/rangeSlider";
+import animations from "./my/animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     formRadio();
     quizTabs();
     rangeSlider();
+    animations();
 });
 
 document.addEventListener('lazyloaded', () => {

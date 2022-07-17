@@ -4,18 +4,21 @@
 {{/content}}
 
 {{#content "content"}}
-<form class="messenger-form" action="#" method="post" name="" novalidate>
+<form class="messenger-form js-handle-form" action="#" method="post" name="" novalidate data-need-validation>
   <div class="messenger-form__heading-block">
     <h3 class="messenger-form__heading">{{data.form.title}}</h3>
     <span class="messenger-form__heading-label">{{data.form.label}}/span>
   </div>
   <div class="messenger-form__inputs">
     {{> parts/form-input name="name" placeholder="Ваше имя" mod="--green"}}
-    {{> parts/form-input name="phone" placeholder="Ваш номер и мессенджер куда отправить" phone="true" mod="--green"}}
+    <div class="messenger-form__inputs-block">
+      {{> parts/form-input name="phone" placeholder="Ваш номер и мессенджер куда отправить" phone="true" mod="--green"}}
+      {{> parts/form-radio data=data.form.formRadio}}
+    </div>
   </div>
   <div class="messenger-form__bottom">
     {{> parts/policy-checkbox}}
-    <a class="button --white" href="#">Отправить</a>
+    <button class="button --white js-submit-form" type="submit">Отправить</button>
   </div>
 </form>
 {{/content}}

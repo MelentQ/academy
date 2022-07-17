@@ -1,3 +1,10 @@
+body.loaded {
+  .intro__title-block {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro {
   position: relative;
 
@@ -22,7 +29,7 @@
 
     .swiper-slide-active {
       .intro__image-wrapper img {
-        transform: scale(1.01);
+        transform: scale(1) !important;
       }
     }
   }
@@ -36,7 +43,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 5s ease-in;
+      transition: transform 0.7s ease-out;
     }
   }
 
@@ -67,6 +74,11 @@
     line-height: 1;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
+
+    transform: translateY(5rem);
+    opacity: 0;
+
+    transition: transform 0.3s ease-out, opacity 0.2s ease-in;
 
     @include breakpoint(tablet) {
       font-size: 7rem;
@@ -361,5 +373,9 @@
     @include breakpoint(tablet) {
       font-size: 1rem;
     }
+  }
+
+  .slider-button.swiper-button-disabled {
+    opacity: 0.5;
   }
 }

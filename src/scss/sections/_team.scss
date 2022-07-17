@@ -71,6 +71,11 @@
     @include breakpoint(tablet) {
       margin-top: 2rem;
     }
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
+    }
   }
 
   &__item-email {
@@ -86,6 +91,11 @@
     &:link,
     &:visited {
       color: var(--primary-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
     }
 
     svg {

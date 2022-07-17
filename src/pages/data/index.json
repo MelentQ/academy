@@ -8,7 +8,7 @@
             },
             {
                 "text": "Наши сметы точны до копейки",
-                "image": "img/content/intro-slider/2.jpg"
+                "image": "img/content/intro-slider/1.jpg"
             },
             {
                 "text": "Замер, монтажный проект и еще 4 услуги бесплатно",
@@ -16,12 +16,12 @@
             },
             {
                 "text": "Поэтапная оплата,  кредит или рассрочка",
-                "image": "img/content/intro-slider/2.jpg"
+                "image": "img/content/intro-slider/1.jpg"
             }
         ]
     },
     "quiz": {
-        "mods": "--grey --ratio-5x7",
+        "mods": "--first-section --grey --ratio-5x7",
         "heading": {
             "title": "Узнайте стоимость материалов и монтажа вашей кровли",
             "label": "Ответьте на несколько вопросов и получите 2 подарка"
@@ -84,6 +84,7 @@
                 "formRadio": {
                     "mod": "--images-in-select",
                     "name": "roof",
+                    "initialImage": "img/content/roofs/1.svg",
                     "initialValue": "Тип 1",
                     "items": [
                         {
@@ -160,6 +161,7 @@
                 "formRadio": {
                     "mod": "--small-images",
                     "name": "roof-test",
+                    "initialImage": "img/content/roofs/1.svg",
                     "initialValue": "Тип 1",
                     "items": [
                         {
@@ -449,6 +451,7 @@
         }
     },
     "marquee": {
+        "speed": 2,
         "text": "Видео-отзывы •"
     },
     "reviews": {
@@ -491,7 +494,31 @@
         },
         "form": {
             "title": "Куда отправить вам PDF?",
-            "label": "Бонус - бесплатная монтажная схема"
+            "label": "Бонус - бесплатная монтажная схема",
+            "formRadio": {
+                "mod": "--images-in-select --socials",
+                "name": "social",
+                "initialImage": "img/content/soc-viber.svg",
+                "initialValue": "Viber",
+                "items": [
+                    {
+                        "name": "Viber",
+                        "value": "Viber",
+                        "image": "img/content/soc-viber.svg",
+                        "active": true
+                    },
+                    {
+                        "name": "WhatsApp",
+                        "value": "WhatsApp",
+                        "image": "img/content/soc-wa.svg"
+                    },
+                    {
+                        "name": "Telegram",
+                        "value": "Telegram",
+                        "image": "img/content/soc-tg.svg"
+                    }
+                ]
+            }
         }
     },
     "stock": {
@@ -522,7 +549,7 @@
             "label": "Кредитный специалист",
             "button": {
                 "text": "Получить консультацию специалиста",
-                "link": "#"
+                "modalId": "#order"
             }
         },
         "banks": [
@@ -552,7 +579,31 @@
         },
         "form": {
             "title": "Куда отправить вам инструкцию?",
-            "label": "Бонус - бесплатная монтажная схема"
+            "label": "Бонус - бесплатная монтажная схема",
+            "formRadio": {
+                "mod": "--images-in-select --socials",
+                "name": "social",
+                "initialImage": "img/content/soc-viber.svg",
+                "initialValue": "Viber",
+                "items": [
+                    {
+                        "name": "Viber",
+                        "value": "Viber",
+                        "image": "img/content/soc-viber.svg",
+                        "active": true
+                    },
+                    {
+                        "name": "Whats App",
+                        "value": "Whats App",
+                        "image": "img/content/soc-wa.svg"
+                    },
+                    {
+                        "name": "Telegram",
+                        "value": "Telegram",
+                        "image": "img/content/soc-tg.svg"
+                    }
+                ]
+            }
         }
     },
     "benefits": {
@@ -718,7 +769,7 @@
             "label": "Руководитель по строительству",
             "button": {
                 "text": "Вызвать на бесплатный замер",
-                "link": "#"
+                "modalId": "#order"
             }
         }
     },

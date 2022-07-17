@@ -61,4 +61,10 @@
       display: none;
     }
   }
+
+  &~.button {
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
+  }
 }

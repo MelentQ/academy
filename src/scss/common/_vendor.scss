@@ -40,3 +40,32 @@
 .parsley-errors-list {
     display: none;
 }
+
+.fancybox__thumbs,
+.fancybox__button--zoom,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs,
+.fancybox__caption {
+    display: none;
+}
+
+.fancybox__toolbar {
+    display: contents;
+}
+
+.fancybox__toolbar__items--left {
+    position: absolute;
+
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.fancybox__toolbar__items--right {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    z-index: 20;
+}

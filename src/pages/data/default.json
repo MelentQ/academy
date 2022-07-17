@@ -103,5 +103,35 @@
     {
       "name": "Статьи"
     }
+  ],
+  "socials": [
+    {
+      "iconId": "#soc-ok",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-vk",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-youtube",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-viber",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-viber",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-wa",
+      "link": "#"
+    },
+    {
+      "iconId": "#soc-tg",
+      "link": "#"
+    }
   ]
 }

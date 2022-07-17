@@ -1,14 +1,60 @@
-<nav class="header-menu">
-  {{#each menu}}
-  <a class="header-menu__item" href="#">
-    <div class="header-menu__item-head">
-      <span>{{this.name}}</span>
+<div class="header-menu">
+  <nav class="header-menu__list">
+    {{#each menu}}
+    {{#if this.items}}
+    <div class="header-menu__item">
+      <div class="header-menu__item-head">
+        <span>{{this.name}}</span>
+        {{#if this.items}}
+        <svg>
+          <use xlink:href="#chevron">
+        </svg>
+        {{/if}}
+      </div>
       {{#if this.items}}
-      <svg>
-        <use xlink:href="#chevron">
-      </svg>
+      <div class="header-menu__item-body --level-2">
+        {{#each this.items}}
+        {{#if this.items}}
+        <div class="header-menu__item">
+          <div class="header-menu__item-head">
+            <span>{{this.name}}</span>
+            {{#if this.items}}
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+            {{/if}}
+          </div>
+          {{#if this.items}}
+          <div class="header-menu__item-body --level-3">
+            {{#each this.items}}
+            <a class="header-menu__item" href="#">
+              <div class="header-menu__item-head">
+                <span>{{this.name}}</span>
+              </div>
+            </a>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+        {{else}}
+        <a class="header-menu__item" href="#">
+          <div class="header-menu__item-head">
+            <span>{{this.name}}</span>
+          </div>
+        </a>
+        {{/if}}
+        {{/each}}
+      </div>
       {{/if}}
     </div>
-  </a>
-  {{/each}}
-</nav>
+    {{else}}
+    <a class="header-menu__item" href="#">
+      <div class="header-menu__item-head">
+        <span>{{this.name}}</span>
+      </div>
+    </a>
+    {{/if}}
+    {{/each}}
+  </nav>
+  <div class="header-menu__overlay"></div>
+</div>

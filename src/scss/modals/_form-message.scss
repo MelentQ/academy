@@ -1,0 +1,28 @@
+.form-message {
+
+  &__title {
+    @extend %fs-h1;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+    max-width: 50rem;
+  }
+
+  &__label {
+    display: grid;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .button {
+    margin-top: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
+  }
+}

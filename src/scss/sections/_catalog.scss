@@ -36,4 +36,9 @@
       display: none;
     }
   }
+
+  .slider-button.swiper-button-disabled {
+    background-color: var(--bg);
+    opacity: 0.5;
+  }
 }

@@ -6,9 +6,12 @@ export default function formRadio() {
     const buttons = buttonsContainer.querySelectorAll('.js-button');
     const mobileSelectButton = container.querySelector('.form-radio__select');
     const mobileSelectButtonLabel = mobileSelectButton.querySelector('.form-radio__select-label');
+    const mobileSelectImage = mobileSelectButton.querySelector('img');
     let activeButtonIndex = 0;
 
     buttons.forEach((button, index) => {
+      const buttonImage = button.querySelector('img');
+
       button.addEventListener('click', (e) => {
         e.preventDefault();
         button.classList.add('active');
@@ -18,6 +21,9 @@ export default function formRadio() {
         mobileSelectButtonLabel.textContent = button.dataset.value;
         buttonsContainer.classList.remove('active');
         mobileSelectButton.classList.remove('active');
+        if (mobileSelectImage && buttonImage) {
+          mobileSelectImage.src = buttonImage.src;
+        }
       })
     })
 

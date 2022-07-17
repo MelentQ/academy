@@ -5,9 +5,22 @@
     .form-radio__list {
       grid-template-columns: repeat(3, 1fr);
 
+      overflow: auto;
+      max-height: 24rem;
+
+      @include customScrollbar;
+
       @include breakpoint(mobile) {
         grid-template-columns: 1fr;
       }
+    }
+
+    .form-radio__item {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      border: none;
+      padding: 1rem 1.6rem;
     }
 
     .form-radio__image-wrapper {
@@ -15,6 +28,7 @@
       position: relative;
       height: 4.8rem;
       width: 100%;
+      max-width: 4.8rem;
 
       background: none;
       border-radius: 0;
@@ -61,6 +75,11 @@
       visibility: hidden;
 
       transition: opacity 0.3s ease, visibility 0.3s ease;
+
+      overflow: auto;
+      max-height: 24rem;
+
+      @include customScrollbar;
 
       &.active {
         opacity: 1;
@@ -121,6 +140,71 @@
     }
   }
 
+  &.--socials {
+    .form-radio__select {
+      padding: 0 0 1.7rem 0;
+      border: none;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+    }
+
+    .form-radio__select-image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 3.2rem;
+      height: 3.2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.6rem;
+    }
+
+    .form-radio__select-label-wrapper {
+      img {
+        height: 1.8rem;
+        width: 1.8rem;
+
+        object-fit: contain;
+      }
+    }
+
+    .form-radio__select-label {
+      font-size: 2rem;
+      font-family: 'Bebas Neue', cursive;
+      line-height: 1;
+
+      @include breakpoint(tablet) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .form-radio__list {
+      background-color: var(--secondary-color);
+    }
+
+    .form-radio__item {
+      &.active {
+        .form-radio__name {
+          color: white;
+        }
+      }
+
+      .form-radio__name {
+        font-size: 2rem;
+        font-family: 'Bebas Neue', cursive;
+        line-height: 1;
+
+        @include breakpoint(tablet) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .form-radio__image-wrapper {
+      height: 1.8rem;
+      max-width: 1.8rem;
+    }
+  }
+
   &__select {
     display: flex;
     align-items: center;
@@ -145,6 +229,18 @@
 
     &.active svg {
       transform: rotate(-180deg);
+    }
+  }
+
+  &__select-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      height: 4.8rem;
+      width: auto;
+      object-fit: contain;
     }
   }
 

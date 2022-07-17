@@ -43,19 +43,23 @@
   }
 
   &__window {
-    margin: 5rem 0;
+    margin: 5rem var(--content-padding);
     box-sizing: border-box;
     flex-shrink: 0;
     flex-grow: 0;
     background: white;
-    width: 87rem;
+    max-width: calc(87rem);
+    width: 100%;
     padding: 6rem;
     border-radius: 4rem;
-    max-width: 100%;
     overflow: visible;
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
     transform: scale(0.9);
     opacity: 0;
+
+    @media screen and(max-width: 990px) {
+      width: calc(100% - 2 * var(--content-padding));
+    }
   }
 
   &__close {
@@ -73,6 +77,10 @@
 
   &__heading-block {
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__heading {
@@ -91,6 +99,10 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 2rem;
+    }
   }
 
   &__form-bottom {
@@ -98,6 +110,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+
+      .policy-checkbox {
+        order: 2;
+      }
+
+      .button {
+        order: 1;
+      }
+    }
   }
 
   .form-input {

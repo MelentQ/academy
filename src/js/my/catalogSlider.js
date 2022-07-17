@@ -1,4 +1,9 @@
-import {Swiper, Navigation, Pagination, EffectFade} from "swiper";
+import {
+  Swiper,
+  Navigation,
+  Pagination,
+  EffectFade
+} from "swiper";
 Swiper.use([Navigation, Pagination, EffectFade]);
 
 export default function catalogSlider() {
@@ -45,6 +50,8 @@ export default function catalogSlider() {
       allowTouchMove: false
     })
 
+    let activeIndex = 0;
+
     const colorsButtons = slide.querySelectorAll('.catalog-card__color');
     colorsButtons[0].classList.add('active');
     colorsButtons.forEach((button, i) => {
@@ -58,7 +65,16 @@ export default function catalogSlider() {
             b.classList.remove('active');
           }
         })
+        activeIndex = i;
       });
+
+      button.addEventListener('mouseover', () => {
+        colorsSlider.slideTo(i);
+      })
+
+      button.addEventListener('mouseout', () => {
+        colorsSlider.slideTo(activeIndex);
+      })
     })
   });
 }

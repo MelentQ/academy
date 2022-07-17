@@ -22,36 +22,13 @@
                 {{/each}}
             </nav>
             <div class="footer__socials">
+                {{#each socials}}
                 <a class="footer__social" href="#">
                     <svg>
-                        <use xlink:href="#soc-ok">
+                        <use xlink:href="{{this.iconId}}">
                     </svg>
                 </a>
-                <a class="footer__social" href="#">
-                    <svg>
-                        <use xlink:href="#soc-vk">
-                    </svg>
-                </a>
-                <a class="footer__social" href="#">
-                    <svg>
-                        <use xlink:href="#soc-youtube">
-                    </svg>
-                </a>
-                <a class="footer__social" href="#">
-                    <svg>
-                        <use xlink:href="#soc-viber">
-                    </svg>
-                </a>
-                <a class="footer__social" href="#">
-                    <svg>
-                        <use xlink:href="#soc-wa">
-                    </svg>
-                </a>
-                <a class="footer__social" href="#">
-                    <svg>
-                        <use xlink:href="#soc-tg">
-                    </svg>
-                </a>
+                {{/each}}
             </div>
         </div>
     </div>

@@ -182,12 +182,9 @@
       font-size: 1.2rem;
     }
 
-    &:hover {
-      color: var(--primary-color);
-    }
-
+    &:hover,
     &:focus {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
   }
 
