@@ -22,11 +22,15 @@ function handleSubmitForm() {
         .then(response => {
           if (response.ok) {
             debugForm(formData, response.status);
+            window.modals.open('#error');
           } else {
             // У квиза свое окно с сообщением
             if (form.classList.contains('js-success-message')) {
               window.openSuccessQuizTab(form);
+            } else {
+              window.modals.open('#success');
             }
+            form.reset();
             debugForm(formData, response.status);
           }
         })

@@ -60,9 +60,9 @@
                         </div>
                         <div class="header__phone-block">
                             <a class="header__phone-link" href="tel:+79323211118" title="Позвонить">+7 932 321-11-18</a>
-                            <a class="button" href="#">
+                            <button class="button" type="button" data-modal="#order">
                                 позвоните мне
-                            </a>
+                            </button>
                         </div>
                         <button class="header__burger">
                             <span></span>
@@ -70,78 +70,181 @@
                         </button>
                     </div>
                 </div>
-                <nav class="header-menu">
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Каталог</span>
-                      <svg>
-                        <use xlink:href="#chevron">
-                      </svg>
+                <div class="header-menu">
+                  <nav class="header-menu__list">
+                    <div class="header-menu__item">
+                      <div class="header-menu__item-head">
+                        <span>Каталог</span>
+                        <svg>
+                          <use xlink:href="#chevron">
+                        </svg>
+                      </div>
+                      <div class="header-menu__item-body --level-2">
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Проекты домов под ключ</span>
+                          </div>
+                        </a>
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Продукция Docke</span>
+                          </div>
+                        </a>
+                        <div class="header-menu__item">
+                          <div class="header-menu__item-head">
+                            <span>Кровельные материалы</span>
+                            <svg>
+                              <use xlink:href="#chevron">
+                            </svg>
+                          </div>
+                          <div class="header-menu__item-body --level-3">
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Металлочерепица</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Профнастил</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Гибкая черепица</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Водосточная система</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Элементы безопасности</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Кровельная вентиляция</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Кровельные комплектующие</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>OSB и Фанера</span>
+                              </div>
+                            </a>
+                            <a class="header-menu__item" href="#">
+                              <div class="header-menu__item-head">
+                                <span>Мансардные окна</span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Фасадные материалы</span>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Услуги</span>
-                      <svg>
-                        <use xlink:href="#chevron">
-                      </svg>
+                    <div class="header-menu__item">
+                      <div class="header-menu__item-head">
+                        <span>Услуги</span>
+                        <svg>
+                          <use xlink:href="#chevron">
+                        </svg>
+                      </div>
+                      <div class="header-menu__item-body --level-2">
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Подпункт</span>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Условия</span>
-                      <svg>
-                        <use xlink:href="#chevron">
-                      </svg>
+                    <div class="header-menu__item">
+                      <div class="header-menu__item-head">
+                        <span>Условия</span>
+                        <svg>
+                          <use xlink:href="#chevron">
+                        </svg>
+                      </div>
+                      <div class="header-menu__item-body --level-2">
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Подпункт</span>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Спецпредложения</span>
-                      <svg>
-                        <use xlink:href="#chevron">
-                      </svg>
+                    <div class="header-menu__item">
+                      <div class="header-menu__item-head">
+                        <span>Спецпредложения</span>
+                        <svg>
+                          <use xlink:href="#chevron">
+                        </svg>
+                      </div>
+                      <div class="header-menu__item-body --level-2">
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Подпункт</span>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Наши работы</span>
-                      <svg>
-                        <use xlink:href="#chevron">
-                      </svg>
+                    <div class="header-menu__item">
+                      <div class="header-menu__item-head">
+                        <span>Наши работы</span>
+                        <svg>
+                          <use xlink:href="#chevron">
+                        </svg>
+                      </div>
+                      <div class="header-menu__item-body --level-2">
+                        <a class="header-menu__item" href="#">
+                          <div class="header-menu__item-head">
+                            <span>Подпункт</span>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Видео</span>
-                    </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Отзывы</span>
-                    </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>О компании</span>
-                    </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Контакты</span>
-                    </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Блог</span>
-                    </div>
-                  </a>
-                  <a class="header-menu__item" href="#">
-                    <div class="header-menu__item-head">
-                      <span>Статьи</span>
-                    </div>
-                  </a>
-                </nav>    </div>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>Видео</span>
+                      </div>
+                    </a>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>Отзывы</span>
+                      </div>
+                    </a>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>О компании</span>
+                      </div>
+                    </a>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>Контакты</span>
+                      </div>
+                    </a>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>Блог</span>
+                      </div>
+                    </a>
+                    <a class="header-menu__item" href="#">
+                      <div class="header-menu__item-head">
+                        <span>Статьи</span>
+                      </div>
+                    </a>
+                  </nav>
+                  <div class="header-menu__overlay"></div>
+                </div>    </div>
         </header>        <div class="menu">
           <div>
             <div class="menu__top">
@@ -218,22 +321,22 @@
     <ul class="swiper-wrapper">
       <li class="swiper-slide">
         <div class="intro__image-wrapper">
-          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image">
+          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image" style="transform: scale(1.1);">
         </div>
       </li>
       <li class="swiper-slide">
         <div class="intro__image-wrapper">
-          <img class="lazyload" data-src="img/content/intro-slider/2.jpg" alt="Intro Image">
+          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image" style="transform: scale(1.1);">
         </div>
       </li>
       <li class="swiper-slide">
         <div class="intro__image-wrapper">
-          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image">
+          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image" style="transform: scale(1.1);">
         </div>
       </li>
       <li class="swiper-slide">
         <div class="intro__image-wrapper">
-          <img class="lazyload" data-src="img/content/intro-slider/2.jpg" alt="Intro Image">
+          <img class="lazyload" data-src="img/content/intro-slider/1.jpg" alt="Intro Image" style="transform: scale(1.1);">
         </div>
       </li>
     </ul>
@@ -354,7 +457,7 @@
         </div>
 
         <div class="intro__button-block">
-          <a class="intro__button" href="#">
+          <a class="intro__button" href="#" data-modal="#quiz">
             <span class="intro__button-label">Рассчитать стоимость</span>
             <div class="intro__button-arrow">
               <svg>
@@ -379,7 +482,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Узнайте стоимость материалов и монтажа вашей кровли</h2>
         </div>
         <div>
@@ -396,7 +499,7 @@
       </div>
 
       <div class="section__content">
-<div class="quiz__content-block">
+<div class="quiz">
   <form class="js-success-message js-quiz-tabs js-handle-form quiz__form" action="#" method="post" name="" novalidate
     data-need-validation>
     <div class="quiz__progressbar-block">
@@ -607,6 +710,9 @@
             <input type="hidden" name="roof-test" value="Тип 1">
             <button class="form-radio__select" type="button">
               <div class="form-radio__select-label-wrapper">
+                <div class="form-radio__select-image-wrapper">
+                  <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                </div>
                 <span class="form-radio__select-label">Тип 1</span>
               </div>
               <svg>
@@ -836,8 +942,7 @@
       </div>
     </div>
   </div>
-</div>
-      </div>
+</div>      </div>
     </div>
   </div>
 </section>
@@ -845,7 +950,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Каталог</h2>
           <div class="section__subtitle">
             <p>Всегда в наличии материалы и комплектующие на собственном складе в Тюмени</p>
@@ -947,7 +1052,9 @@
           </li>
         </ul>
         <div class="catalog-card__bottom">
-          <a class="button" href="#">Заказать</a>
+          <button class="button" type="button" data-modal="#order">
+            Заказать
+          </button>
           <a class="button --transparent" href="#">Подробнее</a>
         </div>
       </div>    </li>
@@ -985,7 +1092,9 @@
           </li>
         </ul>
         <div class="catalog-card__bottom">
-          <a class="button" href="#">Заказать</a>
+          <button class="button" type="button" data-modal="#order">
+            Заказать
+          </button>
           <a class="button --transparent" href="#">Подробнее</a>
         </div>
       </div>    </li>
@@ -1032,7 +1141,9 @@
           </li>
         </ul>
         <div class="catalog-card__bottom">
-          <a class="button" href="#">Заказать</a>
+          <button class="button" type="button" data-modal="#order">
+            Заказать
+          </button>
           <a class="button --transparent" href="#">Подробнее</a>
         </div>
       </div>    </li>
@@ -1060,7 +1171,9 @@
           </li>
         </ul>
         <div class="catalog-card__bottom">
-          <a class="button" href="#">Заказать</a>
+          <button class="button" type="button" data-modal="#order">
+            Заказать
+          </button>
           <a class="button --transparent" href="#">Подробнее</a>
         </div>
       </div>    </li>
@@ -1085,7 +1198,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Завершенные объекты</h2>
           <div class="section__subtitle">
             <p>В каждом поселке и дачном сообществе Тюмени</p>
@@ -1199,7 +1312,9 @@
         </div>
       </div>
       <div class="cases__bottom">
-        <a class="button" href="#">Хочу так же</a>
+        <button class="button" type="button" data-modal="#order">
+          Хочу так же
+        </button>
         <a class="button --transparent" href="#">Все фото</a>
       </div>
     </div>
@@ -1264,7 +1379,9 @@
         </div>
       </div>
       <div class="cases__bottom">
-        <a class="button" href="#">Хочу так же</a>
+        <button class="button" type="button" data-modal="#order">
+          Хочу так же
+        </button>
         <a class="button --transparent" href="#">Все фото</a>
       </div>
     </div>
@@ -1278,7 +1395,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Хотите посмотреть как это работает?</h2>
         </div>
         <div>
@@ -1315,15 +1432,18 @@
 </section>
 <section class="marquee">
   <h2 class="visually-hidden">Видео-отзывы</h2>
-  <div class="js-marquee">
-    Видео-отзывы •
+  <div class="js-marquee" data-speed="2">
+    <div class="marquee__text-block">
+      <span>Видео-отзывы</span>
+      <span>•</span>
+    </div>
   </div>
 </section>
 <section class="section  ">
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">реальные клиенты О нашей работе</h2>
         </div>
         <div>
@@ -1434,7 +1554,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Топ 10 материалов в 2022 году Самые выгодные варианты в текущих условиях изменяющихся цен</h2>
         </div>
         <div>
@@ -1454,7 +1574,7 @@
       </div>
 
       <div class="section__content">
-<form class="messenger-form" action="#" method="post" name="" novalidate>
+<form class="messenger-form js-handle-form" action="#" method="post" name="" novalidate data-need-validation>
   <div class="messenger-form__heading-block">
     <h3 class="messenger-form__heading">Куда отправить вам PDF?</h3>
     <span class="messenger-form__heading-label">Бонус - бесплатная монтажная схема/span>
@@ -1516,7 +1636,7 @@
           конфеденциальности</a></div>
       <input type="checkbox" name="policy" required>
       <span class="policy-checkbox__checkmark"></span>
-    </label>    <a class="button --white" href="#">Отправить</a>
+    </label>    <button class="button --white js-submit-form" type="submit">Отправить</button>
   </div>
 </form>
       </div>
@@ -1527,7 +1647,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Акции</h2>
         </div>
         <div>
@@ -1560,7 +1680,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Кредит и Рассрочка От ведущих банков</h2>
         </div>
         <div>
@@ -1571,10 +1691,12 @@
   <div class="manager__info">
     <span class="manager__name">Мощенская Елена</span>
     <span class="manager__label">Кредитный специалист</span>
-    <a class="button manager__button" href="#">Получить консультацию специалиста</a>
+    <button class="button manager__button" type="button" data-modal="#order">
+      Получить консультацию специалиста
+    </button>
   </div>
 </div>
-<a class="show-on-mobile button" href="#">Получить консультацию специалиста</a>
+<a class="show-on-mobile button" href="">Получить консультацию специалиста</a>
         </div>
       </div>
 
@@ -1619,7 +1741,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Планируете монтировать самостоятельно?</h2>
         </div>
         <div>
@@ -1642,7 +1764,7 @@
       </div>
 
       <div class="section__content">
-<form class="messenger-form" action="#" method="post" name="" novalidate>
+<form class="messenger-form js-handle-form" action="#" method="post" name="" novalidate data-need-validation>
   <div class="messenger-form__heading-block">
     <h3 class="messenger-form__heading">Куда отправить вам инструкцию?</h3>
     <span class="messenger-form__heading-label">Бонус - бесплатная монтажная схема/span>
@@ -1704,7 +1826,7 @@
           конфеденциальности</a></div>
       <input type="checkbox" name="policy" required>
       <span class="policy-checkbox__checkmark"></span>
-    </label>    <a class="button --white" href="#">Отправить</a>
+    </label>    <button class="button --white js-submit-form" type="submit">Отправить</button>
   </div>
 </form>
       </div>
@@ -1715,7 +1837,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Почему нас выбирают</h2>
         </div>
         <div>
@@ -1782,7 +1904,9 @@
     </li>
   </ul>
   <div class="pagination benefits__pagination"></div>
-  <a class="button benefits__button" href="#">Стать клиентом</a>
+  <button class="button benefits__button" type="button" data-modal="#order">
+    Стать клиентом
+  </button>
 </div>
       </div>
     </div>
@@ -1792,7 +1916,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Наше производство</h2>
         </div>
         <div>
@@ -1839,7 +1963,7 @@
       </a>
     </li>
   </ul>
-  <div class="pagination catalog__pagination"></div>  <a class="gallery__more-block show-on-tablet" href="#">
+  <div class="pagination catalog__pagination"></div>  <a class="gallery__more-block show-on-tablet" href="#" data-fancybox="gallery">
     <span class="gallery__more-label">Смотреть все фото</span>
     <div class="gallery__more-gigit-block">
       <span class="gallery__more-digit">28</span>
@@ -1865,7 +1989,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Академия кровли — команда профессионалов</h2>
         </div>
         <div>
@@ -1962,7 +2086,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Несем полную ответственность</h2>
         </div>
         <div>
@@ -1999,7 +2123,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Что будет если довериться любителям?</h2>
         </div>
         <div>
@@ -2075,7 +2199,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">Как происходит нарезка кровли?</h2>
           <div class="section__subtitle">
             Узнайте, почему важно сделать замер с точностью до нескольких сантиметров. Даже несколько сантиметров могут срезультировать в неправильную нарезку элементов и превратить большое количество кровельного материала в ненужный мусор
@@ -2089,10 +2213,12 @@
   <div class="manager__info">
     <span class="manager__name">Снигирев Андрей</span>
     <span class="manager__label">Руководитель по строительству</span>
-    <a class="button manager__button" href="#">Вызвать на бесплатный замер</a>
+    <button class="button manager__button" type="button" data-modal="#order">
+      Вызвать на бесплатный замер
+    </button>
   </div>
 </div>
-<a class="show-on-mobile button" href="#">Вызвать на бесплатный замер</a>
+<a class="show-on-mobile button" href="">Вызвать на бесплатный замер</a>
         </div>
       </div>
 
@@ -2113,7 +2239,7 @@
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
-        <div>
+        <div class="js-animation">
           <h2 class="section__title">6 услуг бесплатно</h2>
         </div>
         <div>
@@ -2180,7 +2306,9 @@
     </li>
   </ul>
   <div class="pagination benefits__pagination"></div>
-  <a class="button benefits__button" href="#">Стать клиентом</a>
+  <button class="button benefits__button" type="button" data-modal="#order">
+    Стать клиентом
+  </button>
 </div>
       </div>
     </div>
@@ -2307,6 +2435,7 @@
                   <use xlink:href="#close">
                 </svg>
               </button>
+              <div class="modal__content">
         <div class="modal__heading-block">
           <h2 class="modal__heading">Заказать звонок</h2>
           <span class="modal__heading-label">Мы перезвоним Вам в течении 15 минут</span>
@@ -2332,6 +2461,497 @@
           </div>
         </form>
         
+              </div>
+            </div>
+          </div>
+        </div>        <div class="modal" id="success" aria-hidden="true">
+          <div class="modal__wrapper">
+            <div class="modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close">
+                <svg>
+                  <use xlink:href="#close">
+                </svg>
+              </button>
+              <div class="modal__content">
+        <div class="form-message">
+          <h2 class="form-message__title">Спасибо, ваша заявка
+            отправлена!</h2>
+          <span class="form-message__label">Мы свяжемся с вами в самое ближайшее время</span>
+          <button class="button --transparent" data-hystclose>Отправить еще заявку</button>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>        <div class="modal" id="error" aria-hidden="true">
+          <div class="modal__wrapper">
+            <div class="modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close">
+                <svg>
+                  <use xlink:href="#close">
+                </svg>
+              </button>
+              <div class="modal__content">
+        <div class="form-message">
+          <h2 class="form-message__title">При отправке формы возникла ошибка</h2>
+          <span class="form-message__label">Попробуйте ещё раз</span>
+          <button class="button --transparent" data-hystclose>Вернуться к форме</button>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>        <div class="modal" id="quiz" aria-hidden="true">
+          <div class="modal__wrapper">
+            <div class="modal__window" role="dialog" aria-modal="true">
+              <button data-hystclose class="modal__close">
+                <svg>
+                  <use xlink:href="#close">
+                </svg>
+              </button>
+              <div class="modal__content">
+        <div class="quiz">
+          <form class="js-success-message js-quiz-tabs js-handle-form quiz__form" action="#" method="post" name="" novalidate
+            data-need-validation>
+            <div class="quiz__progressbar-block">
+              <span class="quiz__progressbar-label">Шаг 1 из 8</span>
+              <span class="quiz__progressbar-success">Готово</span>
+              <div class="quiz__progressbar">
+                <span class="quiz__progressbar-fill" style="transform: translateX(-87.5%);"></span>
+              </div>
+            </div>
+        
+            <div class="quiz__steps-block">
+              <div class="quiz__steps">
+                <fieldset class="quiz__step active">
+                  <legend class="visually-hidden">Выберите что считаем</legend>
+                  <h3 class="quiz__step-heading">Выберите что считаем</h3>
+                  <div class="js-form-radio form-radio ">
+                    <input type="hidden" name="type" value="Фасад">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <span class="form-radio__select-label">Фасад</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Фасад">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/quiz/1.jpg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Фасад</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Кровля">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/quiz/2.jpg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Кровля</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Выберите материал крыши</legend>
+                  <h3 class="quiz__step-heading">Выберите материал крыши</h3>
+                  <div class="js-form-radio form-radio ">
+                    <input type="hidden" name="material" value="Металлочерепица">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <span class="form-radio__select-label">Металлочерепица</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Металлочерепица">
+                          <span class="form-radio__name">Металлочерепица</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Гибкая черепица">
+                          <span class="form-radio__name">Гибкая черепица</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Профнастил">
+                          <span class="form-radio__name">Профнастил</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Точно не знаю">
+                          <span class="form-radio__name">Точно не знаю</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Выберите тип крыши</legend>
+                  <h3 class="quiz__step-heading">Выберите тип крыши</h3>
+                  <div class="js-form-radio form-radio --images-in-select">
+                    <input type="hidden" name="roof" value="Тип 1">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <div class="form-radio__select-image-wrapper">
+                          <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                        </div>
+                        <span class="form-radio__select-label">Тип 1</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Тип 1">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 2">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/2.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 3">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/3.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 4">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/4.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 4</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 5">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/5.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 5</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 6">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/6.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 6</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 7">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/7.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 7</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 8">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/8.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 8</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 9">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/9.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 9</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 10">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/10.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 10</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 11">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/11.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 11</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 12">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/12.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 13">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/13.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 13</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Выберите тип крыши (тест)</legend>
+                  <h3 class="quiz__step-heading">Выберите тип крыши (тест)</h3>
+                  <div class="js-form-radio form-radio --small-images">
+                    <input type="hidden" name="roof-test" value="Тип 1">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <div class="form-radio__select-image-wrapper">
+                          <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                        </div>
+                        <span class="form-radio__select-label">Тип 1</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Тип 1">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 2">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/2.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 3">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/3.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 4">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/4.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 4</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 5">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/5.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 5</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 6">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/6.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 6</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 7">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/7.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 7</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 8">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/8.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 8</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 9">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/9.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 9</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 10">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/10.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 10</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 11">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/11.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 11</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 12">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/12.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Тип 13">
+                          <div class="form-radio__image-wrapper">
+                            <img class="lazyload" data-src="img/content/roofs/13.svg" alt="Quiz">
+                          </div>
+                          <span class="form-radio__name">Тип 13</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Укажите примерный метраж крыши</legend>
+                  <h3 class="quiz__step-heading">Укажите примерный метраж крыши</h3>
+                  <div class="js-range-slider range-slider" data-min="10" data-max="600" data-step="1">
+                    <input type="hidden" name="square" value="10:300">
+                    <div class="range-slider__slider"></div>
+                    <div class="range-slider__labels">
+                      <span class="range-slider__label">10 м²</span>
+                      <span class="range-slider__label">600 м²</span>
+                    </div>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Нужны ли работы по монтажу?</legend>
+                  <h3 class="quiz__step-heading">Нужны ли работы по монтажу?</h3>
+                  <div class="js-form-radio form-radio ">
+                    <input type="hidden" name="mounting" value="Да, конечно">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <span class="form-radio__select-label">Да, конечно</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Да, конечно">
+                          <span class="form-radio__name">Да, конечно</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Нет, попробую сделать самостоятельно">
+                          <span class="form-radio__name">Нет, попробую сделать самостоятельно</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step ">
+                  <legend class="visually-hidden">Выберите подарок</legend>
+                  <h3 class="quiz__step-heading">Выберите подарок</h3>
+                  <div class="js-form-radio form-radio ">
+                    <input type="hidden" name="gift" value="Предварительная смета">
+                    <button class="form-radio__select" type="button">
+                      <div class="form-radio__select-label-wrapper">
+                        <span class="form-radio__select-label">Предварительная смета</span>
+                      </div>
+                      <svg>
+                        <use xlink:href="#chevron">
+                      </svg>
+                    </button>
+                    <ul class="form-radio__list">
+                      <li>
+                        <a class="js-button form-radio__item active" href="#" data-value="Предварительная смета">
+                          <span class="form-radio__name">Предварительная смета</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="js-button form-radio__item " href="#" data-value="Скидка 5% в итоговой смете">
+                          <span class="form-radio__name">Скидка 5% в итоговой смете</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>        </fieldset>
+                <fieldset class="quiz__step">
+                  <legend class="visually-hidden">Как с вами связаться?</legend>
+                  <h3 class="quiz__step-heading">Как с вами связаться?</h3>
+                  <div class="quiz__submit-step">
+                    <div class="quiz__submit-step-inputs">
+                      <div class="js-validation-wrapper js-init-placeholder form-input ">
+                        <input class="js-input form-input__input " type="text" name="name"
+                          autocomplete="off" required>
+                        <span class="form-input__placeholder">ваше Фамилия Имя отчество</span>
+                      </div>              <div class="js-validation-wrapper js-init-placeholder form-input ">
+                        <input class="js-input form-input__input js-phone-input" type="text" name="phone"
+                          autocomplete="off" required>
+                        <span class="form-input__placeholder">Телефон для связи</span>
+                      </div>            </div>
+                    <div class="quiz__submit-step-bottom">
+                      <label class="policy-checkbox js-validation-wrapper --dark">
+                        <div>Я согласен на обработку персональных данных и соглашаюсь с <a href="#" target="_blank">политикой
+                            конфеденциальности</a></div>
+                        <input type="checkbox" name="policy" required>
+                        <span class="policy-checkbox__checkmark"></span>
+                      </label>              <button class="button js-submit-form" type="submit">Отправить</button>
+                    </div>
+                  </div>
+                </fieldset>
+        
+                <div class="quiz__message --success">
+                  <span class="quiz__message-label">Спасибо, ваша заявка отправлена! Мы свяжемся с вами в самое ближайшее
+                    время.</span>
+                  <button class="button --transparent" type="button">Сделать новый расчет</button>
+                </div>
+        
+              </div>
+              <div class="quiz__navigation">
+                <button class="quiz__step-prev disabled" type="button">
+                  <svg>
+                    <use xlink:href="#arrow">
+                  </svg>
+                </button>
+                <button class="button quiz__step-next" type="button">Продолжить</button>
+              </div>
+            </div>
+        
+          </form>
+          <div class="quiz__bonus">
+            <img class="quiz__bonus-image lazyload" data-src="img/content/bonus.png" alt="Quiz Bonus">
+            <div class="quiz__bonus-text-container">
+              <h3 class="quiz__bonus-heading">В подарок:</h3>
+              <div class="quiz__bonus-text">
+                <p>Предварительная смета</p>
+                <p>Скидка 5 % не на словах отразим смете</p>
+              </div>
+            </div>
+          </div>
+        </div>      </div>
             </div>
           </div>
         </div>        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
