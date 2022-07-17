@@ -375,7 +375,7 @@
     </div>
   </div>
 </section>
-<section class="section  --grey --ratio-5x7">
+<section class="section  --first-section --grey --ratio-5x7">
   <div class="container">
     <div class="section__inner">
       <div class="section__heading">
@@ -415,7 +415,9 @@
           <div class="js-form-radio form-radio ">
             <input type="hidden" name="type" value="Фасад">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Фасад</span>
+              <div class="form-radio__select-label-wrapper">
+                <span class="form-radio__select-label">Фасад</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -445,7 +447,9 @@
           <div class="js-form-radio form-radio ">
             <input type="hidden" name="material" value="Металлочерепица">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Металлочерепица</span>
+              <div class="form-radio__select-label-wrapper">
+                <span class="form-radio__select-label">Металлочерепица</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -479,7 +483,12 @@
           <div class="js-form-radio form-radio --images-in-select">
             <input type="hidden" name="roof" value="Тип 1">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Тип 1</span>
+              <div class="form-radio__select-label-wrapper">
+                <div class="form-radio__select-image-wrapper">
+                  <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
+                </div>
+                <span class="form-radio__select-label">Тип 1</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -597,7 +606,9 @@
           <div class="js-form-radio form-radio --small-images">
             <input type="hidden" name="roof-test" value="Тип 1">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Тип 1</span>
+              <div class="form-radio__select-label-wrapper">
+                <span class="form-radio__select-label">Тип 1</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -726,7 +737,9 @@
           <div class="js-form-radio form-radio ">
             <input type="hidden" name="mounting" value="Да, конечно">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Да, конечно</span>
+              <div class="form-radio__select-label-wrapper">
+                <span class="form-radio__select-label">Да, конечно</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -750,7 +763,9 @@
           <div class="js-form-radio form-radio ">
             <input type="hidden" name="gift" value="Предварительная смета">
             <button class="form-radio__select" type="button">
-              <span class="form-radio__select-label">Предварительная смета</span>
+              <div class="form-radio__select-label-wrapper">
+                <span class="form-radio__select-label">Предварительная смета</span>
+              </div>
               <svg>
                 <use xlink:href="#chevron">
               </svg>
@@ -1449,11 +1464,52 @@
       <input class="js-input form-input__input " type="text" name="name"
         autocomplete="off" required>
       <span class="form-input__placeholder">Ваше имя</span>
-    </div>    <div class="js-validation-wrapper js-init-placeholder form-input --green">
-      <input class="js-input form-input__input js-phone-input" type="text" name="phone"
-        autocomplete="off" required>
-      <span class="form-input__placeholder">Ваш номер и мессенджер куда отправить</span>
-    </div>  </div>
+    </div>    <div class="messenger-form__inputs-block">
+      <div class="js-validation-wrapper js-init-placeholder form-input --green">
+        <input class="js-input form-input__input js-phone-input" type="text" name="phone"
+          autocomplete="off" required>
+        <span class="form-input__placeholder">Ваш номер и мессенджер куда отправить</span>
+      </div>      <div class="js-form-radio form-radio --images-in-select --socials">
+        <input type="hidden" name="social" value="Viber">
+        <button class="form-radio__select" type="button">
+          <div class="form-radio__select-label-wrapper">
+            <div class="form-radio__select-image-wrapper">
+              <img class="lazyload" data-src="img/content/soc-viber.svg" alt="Quiz">
+            </div>
+            <span class="form-radio__select-label">Viber</span>
+          </div>
+          <svg>
+            <use xlink:href="#chevron">
+          </svg>
+        </button>
+        <ul class="form-radio__list">
+          <li>
+            <a class="js-button form-radio__item active" href="#" data-value="Viber">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-viber.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">Viber</span>
+            </a>
+          </li>
+          <li>
+            <a class="js-button form-radio__item " href="#" data-value="WhatsApp">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-wa.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">WhatsApp</span>
+            </a>
+          </li>
+          <li>
+            <a class="js-button form-radio__item " href="#" data-value="Telegram">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-tg.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">Telegram</span>
+            </a>
+          </li>
+        </ul>
+      </div>    </div>
+  </div>
   <div class="messenger-form__bottom">
     <label class="policy-checkbox js-validation-wrapper ">
       <div>Я согласен на обработку персональных данных и соглашаюсь с <a href="#" target="_blank">политикой
@@ -1596,11 +1652,52 @@
       <input class="js-input form-input__input " type="text" name="name"
         autocomplete="off" required>
       <span class="form-input__placeholder">Ваше имя</span>
-    </div>    <div class="js-validation-wrapper js-init-placeholder form-input --green">
-      <input class="js-input form-input__input js-phone-input" type="text" name="phone"
-        autocomplete="off" required>
-      <span class="form-input__placeholder">Ваш номер и мессенджер куда отправить</span>
-    </div>  </div>
+    </div>    <div class="messenger-form__inputs-block">
+      <div class="js-validation-wrapper js-init-placeholder form-input --green">
+        <input class="js-input form-input__input js-phone-input" type="text" name="phone"
+          autocomplete="off" required>
+        <span class="form-input__placeholder">Ваш номер и мессенджер куда отправить</span>
+      </div>      <div class="js-form-radio form-radio --images-in-select --socials">
+        <input type="hidden" name="social" value="Viber">
+        <button class="form-radio__select" type="button">
+          <div class="form-radio__select-label-wrapper">
+            <div class="form-radio__select-image-wrapper">
+              <img class="lazyload" data-src="img/content/soc-viber.svg" alt="Quiz">
+            </div>
+            <span class="form-radio__select-label">Viber</span>
+          </div>
+          <svg>
+            <use xlink:href="#chevron">
+          </svg>
+        </button>
+        <ul class="form-radio__list">
+          <li>
+            <a class="js-button form-radio__item active" href="#" data-value="Viber">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-viber.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">Viber</span>
+            </a>
+          </li>
+          <li>
+            <a class="js-button form-radio__item " href="#" data-value="Whats App">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-wa.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">Whats App</span>
+            </a>
+          </li>
+          <li>
+            <a class="js-button form-radio__item " href="#" data-value="Telegram">
+              <div class="form-radio__image-wrapper">
+                <img class="lazyload" data-src="img/content/soc-tg.svg" alt="Quiz">
+              </div>
+              <span class="form-radio__name">Telegram</span>
+            </a>
+          </li>
+        </ul>
+      </div>    </div>
+  </div>
   <div class="messenger-form__bottom">
     <label class="policy-checkbox js-validation-wrapper ">
       <div>Я согласен на обработку персональных данных и соглашаюсь с <a href="#" target="_blank">политикой
@@ -2146,6 +2243,11 @@
                         <a class="footer__social" href="#">
                             <svg>
                                 <use xlink:href="#soc-youtube">
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#">
+                            <svg>
+                                <use xlink:href="#soc-viber">
                             </svg>
                         </a>
                         <a class="footer__social" href="#">
