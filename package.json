@@ -36,6 +36,7 @@
     "jquery.marquee": "^1.6.0",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",
+    "nouislider": "^15.6.0",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.7.2",
     "swiper": "^8.2.6"

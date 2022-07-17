@@ -116,6 +116,7 @@
 
   &__thumbs {
     width: 21rem;
+    margin: 0;
 
     @media only screen and (max-width: (1439px)) {
       display: none;

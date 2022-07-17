@@ -26,6 +26,7 @@ import './vendor/hystmodal.min.js';
 import placeholders from "./my/placeholders";
 import formRadio from "./my/formRadio";
 import quizTabs from "./my/quizTabs";
+import rangeSlider from "./my/rangeSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     placeholders();
     formRadio();
     quizTabs();
+    rangeSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

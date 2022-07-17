@@ -88,5 +88,9 @@
     line-height: 1;
 
     transition: font-size 0.1s linear, transform 0.1s ease-in, color 0.3s ease;
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
   }
 }

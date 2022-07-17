@@ -42,9 +42,7 @@
 
   &__progressbar-block {
     position: relative;
-  }
 
-  &__progressbar-label {
     font-size: 2rem;
     font-weight: 700;
     font-family: 'Bebas Neue', cursive;
@@ -54,8 +52,54 @@
     }
   }
 
+  &__progressbar-label.hidden {
+    display: none;
+  }
+
+  &__progressbar-success {
+    position: relative;
+
+    display: none;
+    padding-left: 3.2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0.9rem;
+      top: 50%;
+      width: 0.5rem;
+      height: 1.1rem;
+      border: solid white;
+      border-width: 0 0.2rem 0.2rem 0;
+      border-radius: 0.1rem;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &.visible {
+      display: block;
+    }
+  }
+
   &__progressbar {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.15);
+
     margin-top: 1.5rem;
+    height: 0.1rem;
 
     @include breakpoint(tablet) {
       margin-top: 1rem;
@@ -63,28 +107,43 @@
   }
 
   &__progressbar-fill {
+    display: block;
     background-color: #212A2F;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
-    transform: scale(0);
-    transform-origin: left top;
-    height: 0.1rem;
+    width: 100%;
+    transition: transform 0.3s ease;
   }
 
-  &__steps {
+  &__steps-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    overflow: visible !important;
+  }
+
+  &__steps {
+    position: relative;
   }
 
   &__step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
     border: none;
     margin: 0;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__step-heading {
@@ -105,12 +164,17 @@
     align-items: center;
     gap: 0.8rem;
 
+    &.hidden {
+      display: none;
+    }
+
     @include breakpoint(desktop) {
       margin-top: 2rem;
     }
 
     @include breakpoint(mobile) {
       margin-top: 1rem;
+      flex-direction: column;
     }
   }
 
@@ -124,6 +188,11 @@
 
     background: var(--bg);
     border-radius: 0.8rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      order: 2;
+    }
 
     &:hover,
     &:focus {
@@ -140,13 +209,72 @@
       transform: rotate(180deg);
     }
 
-    &.swiper-button-disabled {
+    &.disabled {
       display: none;
     }
   }
 
-  &__step-next.swiper-button-disabled {
+  &__step-next.disabled {
     display: none;
+
+    @include breakpoint(mobile) {
+      order: 1;
+    }
+  }
+
+  &__submit-step {
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__submit-step-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__submit-step-bottom {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.visible {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__message-label {
+    display: block;
+    @extend %fs-h2;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+
+    margin-bottom: 2rem;
   }
 
   &__bonus {

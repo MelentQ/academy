@@ -67,6 +67,58 @@
         visibility: visible;
       }
     }
+
+    .form-radio__item {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      border: none;
+      padding: 1rem 1.6rem;
+
+      &.active {
+        background: none;
+        box-shadow: none;
+
+        .form-radio__name {
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    .form-radio__image-wrapper {
+      overflow: visible;
+      position: relative;
+      height: 4.8rem;
+      width: 100%;
+      max-width: 4.8rem;
+
+      background: none;
+      border-radius: 0;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+
+      img {
+        position: static;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+
+        object-fit: contain;
+      }
+    }
+
+    .form-radio__name {
+      padding-left: 0;
+      font-size: 1.4rem;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
   }
 
   &__select {
@@ -178,6 +230,7 @@
     &:hover,
     &:focus {
       border-color: var(--secondary-color);
+      background-color: rgba(28, 186, 56, 0.05);
 
       .form-radio__name::before {
         border-color: var(--secondary-color);

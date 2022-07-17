@@ -21,9 +21,13 @@ function handleSubmitForm() {
         })
         .then(response => {
           if (response.ok) {
-            alert('success');
+            debugForm(formData, response.status);
           } else {
-            alert('error');
+            // У квиза свое окно с сообщением
+            if (form.classList.contains('js-success-message')) {
+              window.openSuccessQuizTab(form);
+            }
+            debugForm(formData, response.status);
           }
         })
         .catch((err) => {
@@ -34,4 +38,17 @@ function handleSubmitForm() {
         })
     })
   })
+}
+
+function debugForm(formData, status) {
+  let string = "Данные, которые отправятся на бекенд: \n";
+  formData.forEach(function (value, key) {
+    string += `${key}: ${value} \n`;
+  });
+
+  if (status) {
+    string += `Статус: ${status}`;
+  }
+
+  alert(string);
 }
