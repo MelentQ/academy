@@ -6,7 +6,8 @@
     <span class="manager__name">{{data.name}}</span>
     <span class="manager__label">{{data.label}}</span>
     {{#if data.button}}
-    <button class="button manager__button" type="button" data-modal="{{data.button.modalId}}">
+    <button class="button manager__button" type="button" data-modal="{{data.button.modalId}}"
+      data-manager="{{data.name}}">
       {{data.button.text}}
     </button>
     {{/if}}

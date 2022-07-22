@@ -15,11 +15,13 @@ const webpackstream = require('webpack-stream');
 const data = require('gulp-data');
 const hb = require('gulp-hb');
 const sourcemaps = require('gulp-sourcemaps');
+const htmlmin = require('gulp-htmlmin');
+const prettyHtml = require('gulp-pretty-html');
 
 const fs = require('fs');
 const path = require('path');
 
-gulp.task('sprite', function() {
+gulp.task('sprite', function () {
     return gulp
         .src('src/img/icons/*.svg')
         .pipe(plumber())
@@ -36,12 +38,14 @@ gulp.task('sprite', function() {
         .pipe(gulp.dest('./src/partials/components'));
 });
 
-gulp.task('handlebars', function() {
+gulp.task('handlebars', function () {
     return gulp
         .src('./src/pages/**/*.hbs')
-        .pipe(debug({ title: 'handlebars compiler:' }))
+        .pipe(debug({
+            title: 'handlebars compiler:'
+        }))
         .pipe(
-            data(function() {
+            data(function () {
                 try {
                     const data = JSON.parse(fs.readFileSync('./src/pages/data/default.json'));
                     return data;
@@ -51,7 +55,7 @@ gulp.task('handlebars', function() {
             })
         )
         .pipe(
-            data(function(file) {
+            data(function (file) {
                 try {
                     const data = JSON.parse(fs.readFileSync('./src/pages/data/' + path.basename(file.path).replace('.hbs', '.json')));
                     return data;
@@ -62,12 +66,12 @@ gulp.task('handlebars', function() {
         )
         .pipe(
             hb()
-                .partials('./src/partials/components/**/*.hbs')
-                .partials('./src/partials/layouts/**/*.hbs')
-                .helpers(require('handlebars-layouts'))
+            .partials('./src/partials/components/**/*.hbs')
+            .partials('./src/partials/layouts/**/*.hbs')
+            .helpers(require('handlebars-layouts'))
         )
         .pipe(
-            rename(function(path) {
+            rename(function (path) {
                 path.extname = '.html';
             })
         )
@@ -75,7 +79,7 @@ gulp.task('handlebars', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
     return gulp
         .src('src/scss/**/*.scss')
         .pipe(sourcemaps.init())
@@ -88,7 +92,7 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
     return gulp
         .src('./src/js/**/*')
         .pipe(plumber())
@@ -97,20 +101,24 @@ gulp.task('scripts', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('scripts-production', function() {
+gulp.task('scripts-production', function () {
     return gulp
         .src('./src/js/**/*')
         .pipe(plumber())
-        .pipe(webpackstream({ ...webpackconfig, mode: 'production', devtool: 'source-map' }, webpack))
+        .pipe(webpackstream({
+            ...webpackconfig,
+            mode: 'production',
+            devtool: 'source-map'
+        }, webpack))
         .pipe(gulp.dest('./build/js/'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
     return del('./build');
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', function () {
     browserSync.init({
         server: 'build/',
         port: 7000,
@@ -126,14 +134,14 @@ gulp.task('serve', function() {
     gulp.watch('./src/assets/**/*', gulp.series('assets'));
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
     return gulp
         .src('./src/img/**/*')
         .pipe(gulp.dest('./build/img'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('assets', function() {
+gulp.task('assets', function () {
     return gulp
         .src('./src/assets/**/*')
         .pipe(newer('./build/assets'))
@@ -141,8 +149,28 @@ gulp.task('assets', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('beautify-html', () => {
+    return gulp.src('./build/*.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            removeComments: true
+        }))
+        .pipe(prettyHtml({
+            indent_size: 4,
+            indent_char: ' ',
+            indent_inner_html: true,
+            unformatted: [],
+            content_unformatted: [],
+            wrap_line_length: 0,
+            inline: [],
+            extra_liners: ['header', 'main', 'footer', '/body']
+        }))
+        .pipe(gulp.dest('./build'));
+});
+
 gulp.task('build', gulp.series('clean', 'images', 'sprite', 'handlebars', gulp.parallel('assets', 'styles', 'scripts')));
 
-gulp.task('build-production', gulp.series('clean', 'images', 'sprite', 'handlebars', gulp.parallel('assets', 'styles', 'scripts-production')));
+gulp.task('build-production', gulp.series('clean', 'images', 'sprite', 'handlebars', 'beautify-html', gulp.parallel('assets', 'styles', 'scripts-production')));
 
 gulp.task('default', gulp.series('build', 'serve'));

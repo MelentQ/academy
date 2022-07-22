@@ -53,6 +53,8 @@ export default function catalogSlider() {
     let activeIndex = 0;
 
     const colorsButtons = slide.querySelectorAll('.catalog-card__color');
+    const modalButton = slide.querySelector('.js-set-color');
+    modalButton.dataset.color = colorsButtons[0].dataset.color;
     colorsButtons[0].classList.add('active');
     colorsButtons.forEach((button, i) => {
       button.addEventListener('click', () => {
@@ -66,6 +68,8 @@ export default function catalogSlider() {
           }
         })
         activeIndex = i;
+
+        modalButton.dataset.color = button.dataset.color;
       });
 
       button.addEventListener('mouseover', () => {

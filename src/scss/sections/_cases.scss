@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
   }
 
   &__tab {
@@ -46,6 +50,139 @@
       &::before {
         background-color: #FFA41B;
         opacity: 1;
+      }
+    }
+  }
+
+  &__select {
+
+    position: relative;
+
+    margin: 0.6rem 0 2rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include breakpointMF(large-desktop) {
+      display: none;
+    }
+
+    &.active {
+
+      .cases__select-options {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .cases__select-button svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__select-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.4rem;
+    padding: 1.2rem 1.6rem;
+
+    border-radius: 0.8rem;
+    width: 100%;
+    background-color: white;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      &::before {
+        content: '';
+
+        width: 0.6rem;
+        height: 0.6rem;
+
+        border-radius: 50%;
+
+        background-color: #FFA41B;
+      }
+    }
+
+    svg {
+      width: 0.8rem;
+      height: 0.5rem;
+
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__select-options {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    width: 100%;
+    padding: 1rem 0;
+    grid-template-columns: 1fr;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.6rem 0.1rem rgba(34, 60, 80, 0.1);
+
+    background-color: white;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &__select-option {
+    padding: 1rem 1.6rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    opacity: 0.7;
+
+    transition: opacity 0.3s ease;
+
+    &::before {
+      content: '';
+
+      width: 0.6rem;
+      height: 0.6rem;
+
+      border-radius: 50%;
+
+      background-color: #5A5A5A;
+
+      transition: background-color 0.3s ease;
+    }
+
+    &.active {
+      color: var(--secondary-color);
+      opacity: 1;
+
+      &::before {
+        background-color: #FFA41B;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--secondary-color);
+      background-color: rgba(28, 186, 56, 0.05);
+
+      .form-radio__name::before {
+        border-color: var(--secondary-color);
       }
     }
   }

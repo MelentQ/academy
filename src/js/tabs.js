@@ -19,5 +19,36 @@ export default function tabs() {
                 setActiveTab(btnIndex);
             });
         });
+
+        // cases tabs
+        const casesSelect = element.querySelector('.js-cases-select');
+        if (casesSelect) {
+            const casesOptions = casesSelect.querySelectorAll('.js-option');
+            const casesButton = casesSelect.querySelector('.js-button');
+
+            casesButton.addEventListener('click', () => {
+                casesSelect.classList.toggle('active');
+            });
+
+            window.addEventListener('click', e => {
+                const target = e.target
+                if (!target.closest('.js-cases-select') && !target.closest('.js-button')) {
+                    casesSelect.classList.remove('active');
+                }
+            });
+
+            let activeOptionIndex = 0;
+            casesOptions.forEach((option, i) => {
+                option.addEventListener('click', () => {
+                    casesOptions[activeOptionIndex].classList.remove('active');
+
+                    option.classList.add('active');
+                    activeOptionIndex = i;
+                    setActiveTab(i);
+
+                    casesSelect.classList.remove('active');
+                });
+            })
+        }
     });
 }

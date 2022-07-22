@@ -4,14 +4,14 @@
   <h2 class="modal__heading">Заказать звонок</h2>
   <span class="modal__heading-label">Мы перезвоним Вам в течении 15 минут</span>
 </div>
-<form class="modal__form" action="" method="post" name="" novalidate>
+<form class="modal__form js-handle-form" action="" method="post" name="" novalidate data-need-validation>
   <div class="modal__inputs">
     {{> parts/form-input name="name" placeholder="ваше Фамилия Имя отчество"}}
-    {{> parts/form-input name="phone" placeholder="Телефон для связи"}}
+    {{> parts/form-input name="phone" placeholder="Телефон для связи" phone=true}}
   </div>
   <div class="modal__form-bottom">
     {{> parts/policy-checkbox mod="--dark"}}
-    <a class="button" href="#">Отправить</a>
+    <button class="button js-submit-form" type="submit">Отправить</button>
   </div>
 </form>
 

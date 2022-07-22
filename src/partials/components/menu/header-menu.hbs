@@ -1,60 +1,97 @@
 <div class="header-menu">
-  <nav class="header-menu__list">
-    {{#each menu}}
-    {{#if this.items}}
-    <div class="header-menu__item">
-      <div class="header-menu__item-head">
-        <span>{{this.name}}</span>
-        {{#if this.items}}
-        <svg>
-          <use xlink:href="#chevron">
-        </svg>
-        {{/if}}
-      </div>
-      {{#if this.items}}
-      <div class="header-menu__item-body --level-2">
-        {{#each this.items}}
-        {{#if this.items}}
-        <div class="header-menu__item">
-          <div class="header-menu__item-head">
+  <div class="header-menu__wrapper">
+    <nav class="header-menu__list">
+      {{#each menu}}
+
+      <div class="header-menu__item js-root-menu-item">
+        <a class="header-menu__item-head" href="#">
+          <div class="header-menu__item-head-left">
             <span>{{this.name}}</span>
-            {{#if this.items}}
-            <svg>
-              <use xlink:href="#chevron">
-            </svg>
+            {{#if this.tags}}
+            <ul class="header-menu__item-head-tags">
+              {{#each this.tags}}
+              <li class="header-menu__item-head-tag" style="background-color: {{this.bg}}; color: {{this.color}};">
+                {{this.text}}
+              </li>
+              {{/each}}
+            </ul>
             {{/if}}
           </div>
           {{#if this.items}}
-          <div class="header-menu__item-body --level-3">
-            {{#each this.items}}
-            <a class="header-menu__item" href="#">
-              <div class="header-menu__item-head">
-                <span>{{this.name}}</span>
-              </div>
-            </a>
-            {{/each}}
-          </div>
+          <svg>
+            <use xlink:href="#chevron">
+          </svg>
           {{/if}}
-        </div>
-        {{else}}
-        <a class="header-menu__item" href="#">
-          <div class="header-menu__item-head">
-            <span>{{this.name}}</span>
-          </div>
         </a>
+        {{#if this.items}}
+        <div class="header-menu__item-body --level-2">
+          {{#each this.items}}
+
+          <div class="header-menu__item">
+            <a class="header-menu__item-head" href="#">
+              <div class="header-menu__item-head-left">
+                <span>{{this.name}}</span>
+                {{#if this.tags}}
+                <ul class="header-menu__item-head-tags">
+                  {{#each this.tags}}
+                  <li class="header-menu__item-head-tag" style="background-color: {{this.bg}}; color: {{this.color}};">
+                    {{this.text}}
+                  </li>
+                  {{/each}}
+                </ul>
+                {{/if}}
+              </div>
+              {{#if this.items}}
+              <svg>
+                <use xlink:href="#chevron">
+              </svg>
+              {{/if}}
+            </a>
+            {{#if this.items}}
+            <div class="header-menu__item-body --level-3">
+              {{#each this.items}}
+              <div class="header-menu__item">
+                <a class="header-menu__item-head" href="#">
+                  <div class="header-menu__item-head-left">
+                    <span>{{this.name}}</span>
+                    {{#if this.tags}}
+                    <ul class="header-menu__item-head-tags">
+                      {{#each this.tags}}
+                      <li class="header-menu__item-head-tag"
+                        style="background-color: {{this.bg}}; color: {{this.color}};">
+                        {{this.text}}
+                      </li>
+                      {{/each}}
+                    </ul>
+                    {{/if}}
+                  </div>
+                  {{#if this.items}}
+                  <svg>
+                    <use xlink:href="#chevron">
+                  </svg>
+                  {{/if}}
+                </a>
+              </div>
+              {{/each}}
+            </div>
+            {{/if}}
+          </div>
+
+          {{/each}}
+        </div>
         {{/if}}
-        {{/each}}
       </div>
-      {{/if}}
+      {{/each}}
+    </nav>
+    <div class="header-menu__burger-container">
+      <button class="header-menu__burger" type="button">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-menu__burger-list">
+
+      </div>
     </div>
-    {{else}}
-    <a class="header-menu__item" href="#">
-      <div class="header-menu__item-head">
-        <span>{{this.name}}</span>
-      </div>
-    </a>
-    {{/if}}
-    {{/each}}
-  </nav>
+  </div>
   <div class="header-menu__overlay"></div>
 </div>

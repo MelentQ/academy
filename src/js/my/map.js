@@ -5,7 +5,9 @@ export default function map() {
   const mapElement = document.querySelector('.js-init-map');
   if (mapElement) {
     const url = `https://api-maps.yandex.ru/2.1/?apikey=${mapElement.dataset.api}&lang=ru_RU`;
-    loadApi('yandex', url, () => { ymaps.ready(init); });
+    loadApi('yandex', url, () => {
+      ymaps.ready(init);
+    });
   }
 
   initMapOverlay('.js-overlay', 'js-overlay-container');
@@ -16,7 +18,7 @@ export default function map() {
       zoom: mapElement.dataset.initialZoom,
       controls: ['zoomControl']
     });
-    
+
     addPlace(map, {
       coords: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
       image: mapElement.dataset.image
@@ -24,14 +26,17 @@ export default function map() {
   }
 }
 
-function addPlace(map, {coords, image}) {
+function addPlace(map, {
+  coords,
+  image
+}) {
   const placemarkProperties = {};
 
   const placemarkOptions = {
-      iconLayout: 'default#image', // pieChart
-      iconImageHref: image,
-      iconImageSize: [60, 68],
-      iconImageOffset: [-30, -68]
+    iconLayout: 'default#image', // pieChart
+    iconImageHref: image,
+    iconImageSize: [60, 60],
+    iconImageOffset: [-30, -60]
   };
 
   const placemark = new ymaps.Placemark(coords, placemarkProperties, placemarkOptions);

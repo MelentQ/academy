@@ -40,6 +40,10 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(mobile) {
+      justify-content: flex-end;
+    }
   }
 
   &__window {
@@ -60,18 +64,35 @@
     @media screen and(max-width: 990px) {
       width: calc(100% - 2 * var(--content-padding));
     }
+
+    @include breakpoint(mobile) {
+      width: calc(100% - 3rem);
+      margin: 1.5rem;
+      padding: 4rem 2rem;
+      border-radius: 2rem;
+    }
   }
 
   &__close {
     position: absolute;
-    top: 3.5rem;
-    right: 3.5rem;
+    top: 2.5rem;
+    right: 2.5rem;
+
+    @include breakpoint(mobile) {
+      top: 1rem;
+      right: 1rem;
+    }
 
     svg {
       width: 3.2rem;
       height: 3.2rem;
 
       fill: #212A2F;
+
+      @include breakpoint(mobile) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 

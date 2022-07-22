@@ -13,6 +13,57 @@
     padding-bottom: 2rem;
   }
 
+  &.opened {
+    position: fixed;
+    padding: 2.4rem 0;
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 5%);
+    border-radius: 0 0 1.2rem 1.2rem;
+
+    .container,
+    .header__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+    }
+
+    .header__phone-block,
+    .header__top {
+      display: contents;
+    }
+
+    .header__contact-block,
+    .header__logo-label,
+    .header__phone-link,
+    .header__info {
+      display: none;
+    }
+
+    .header__logo-block {
+      order: 1;
+      flex-shrink: 0;
+    }
+
+    .header-menu {
+      order: 2;
+      margin: 0;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    .header__buttons {
+      order: 3;
+      flex-shrink: 0;
+    }
+
+    .header-menu__wrapper {
+      margin: 0;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -123,11 +174,13 @@
     align-items: center;
     justify-content: center;
 
-    width: 4rem;
-    height: 4rem;
+    width: 3.8rem;
+    height: 3.8rem;
     border-radius: 0.8rem;
+    border: 0.1rem solid var(--secondary-color);
+    background-color: var(--secondary-color);
 
-    @include hover;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 
     svg {
       width: 1.8rem;
@@ -138,6 +191,7 @@
 
     &.--viber {
       background-color: #7B519D;
+      border-color: #7B519D;
 
       svg {
         width: 1.8rem;
@@ -147,10 +201,21 @@
 
     &.--wa {
       background-color: #2BD449;
+      border-color: #2BD449;
 
       svg {
         width: 2rem;
         height: 2rem;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(0, 0, 0, 0);
+      border-color: var(--secondary-color);
+
+      svg {
+        fill: var(--secondary-color);
       }
     }
   }

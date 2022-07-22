@@ -22,13 +22,14 @@
   <ul class="catalog-card__colors">
     {{#each data.colors}}
     <li>
-      <button class="catalog-card__color" type="button" style="background-color: {{this.color}};"
-        title="{{this.name}}"></button>
+      <button class="catalog-card__color" type="button" style="background-color: {{this.color}};" title="{{this.name}}"
+        data-color="{{this.name}}"></button>
     </li>
     {{/each}}
   </ul>
   <div class="catalog-card__bottom">
-    <button class="button" type="button" data-modal="#order">
+    <button class="js-set-color js-create-hidden-inputs button" type="button" data-modal="#order" data-block="Каталог"
+      data-color="js" data-product="{{data.title}}">
       Заказать
     </button>
     <a class="button --transparent" href="#">Подробнее</a>

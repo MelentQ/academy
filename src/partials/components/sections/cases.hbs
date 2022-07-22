@@ -7,6 +7,20 @@
   </li>
   {{/each}}
 </ul>
+
+<div class="cases__select js-cases-select">
+  <button class="cases__select-button js-button" type="button">
+    <span class="js-name">{{#each data.items}}{{#if this.active}}{{this.name}}{{/if}}{{/each}}</span>
+    <svg>
+      <use xlink:href="#chevron">
+    </svg>
+  </button>
+  <div class="cases__select-options">
+    {{#each data.items}}
+    <button class="cases__select-option js-option {{#if this.active}}active{{/if}}" type="button">{{this.name}}</button>
+    {{/each}}
+  </div>
+</div>
 {{/content}}
 
 {{#content "content"}}
@@ -68,7 +82,8 @@
         </div>
       </div>
       <div class="cases__bottom">
-        <button class="button" type="button" data-modal="#order">
+        <button class="button" type="button" data-modal="#order" data-block="Завершенные объекты"
+          data-name="Хочу так же: {{this.name}}">
           Хочу так же
         </button>
         <a class="button --transparent" href="#">Все фото</a>

@@ -5,22 +5,23 @@
     .form-radio__list {
       grid-template-columns: repeat(3, 1fr);
 
-      overflow: auto;
-      max-height: 24rem;
-
-      @include customScrollbar;
-
       @include breakpoint(mobile) {
         grid-template-columns: 1fr;
+        overflow: auto;
+        max-height: 24rem;
+
+        @include customScrollbar;
       }
     }
 
     .form-radio__item {
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      border: none;
-      padding: 1rem 1.6rem;
+      @include breakpoint(mobile) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border: none;
+        padding: 1rem 1.6rem;
+      }
     }
 
     .form-radio__image-wrapper {
