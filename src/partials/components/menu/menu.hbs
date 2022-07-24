@@ -20,14 +20,79 @@
         </svg>
       </button>
     </div>
-    <nav class="menu__content">
-      <ul class="menu__list">
+    <nav class="menu__content js-menu-tabs">
+      <ul class="menu__list active" data-group="root">
         {{#each menu}}
         <li class="menu__item">
           <a class="menu__link" href="#">{{this.name}}</a>
+          {{#if this.items}}
+          <button class="menu__next-group menu__nav-button" type="button" data-group="{{this.id}}">
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+          </button>
+          {{/if}}
         </li>
         {{/each}}
       </ul>
+
+      {{#each menu}}
+      {{#if this.items}}
+      <ul class="menu__list" data-group="{{this.id}}">
+        <li class="menu__item menu__item-back">
+          <button class="menu__prev-group menu__nav-button" type="button" data-group="root">
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+          </button>
+          <a class="menu__link" href="#">{{this.name}}</a>
+        </li>
+        {{#each this.items}}
+        <li class="menu__item">
+          <a class="menu__link" href="#">{{this.name}}</a>
+          {{#if this.items}}
+          <button class="menu__next-group menu__nav-button" type="button" data-group="{{this.id}}">
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+          </button>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{/each}}
+
+      {{#each menu}}
+      {{#if this.items}}
+      {{#each this.items}}
+      {{#if this.items}}
+      <ul class="menu__list" data-group="{{this.id}}">
+        <li class="menu__item menu__item-back">
+          <button class="menu__prev-group menu__nav-button" type="button" data-group="{{../this.id}}">
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+          </button>
+          <a class="menu__link" href="#">{{this.name}}</a>
+        </li>
+        {{#each this.items}}
+        <li class="menu__item">
+          <a class="menu__link" href="#">{{this.name}}</a>
+          {{#if this.items}}
+          <button class="menu__next-group menu__nav-button" type="button" data-group="{{this.id}}">
+            <svg>
+              <use xlink:href="#chevron">
+            </svg>
+          </button>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{/each}}
+      {{/if}}
+      {{/each}}
     </nav>
   </div>
   <div class="menu__bottom">

@@ -1,6 +1,9 @@
 .header-menu {
-
   margin-top: 2.4rem;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 
   &__overlay {
     position: fixed;
@@ -105,6 +108,26 @@
     border-radius: 1.2rem;
   }
 
+  &__burger-item {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  &__burger-item-link {
+    padding: 0 3.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
+    }
+  }
 
   &__list {
     position: relative;
@@ -120,17 +143,18 @@
   }
 
   .js-root-menu-item {
-    margin-right: 3.2rem;
+    padding-right: 3.2rem;
 
     &:last-of-type {
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
   &__item {
     flex-shrink: 0;
     position: relative;
-    padding: 2.8rem 0;
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
 
     &:hover,
     &:focus {
@@ -142,6 +166,10 @@
         opacity: 1;
         visibility: visible;
       }
+    }
+
+    &.hidden {
+      display: none;
     }
   }
 

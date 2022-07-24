@@ -1,5 +1,5 @@
 <div class="header-menu">
-  <div class="header-menu__wrapper">
+  <div class="header-menu__wrapper js-toggle-menu">
     <nav class="header-menu__list">
       {{#each menu}}
 
@@ -88,9 +88,13 @@
         <span></span>
         <span></span>
       </button>
-      <div class="header-menu__burger-list">
-
-      </div>
+      <ul class="header-menu__burger-list">
+        {{#each menu}}
+        <li class="header-menu__burger-item js-burger-menu-item">
+          <a class="header-menu__burger-item-link" href="">{{this.name}}</a>
+        </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
   <div class="header-menu__overlay"></div>

@@ -9,9 +9,11 @@ export default function toggleHeader() {
     if (!opened && window.scrollY >= toggleY) {
       opened = true;
       header.classList.add('opened');
+      window.checkMenu();
     } else if (window.scrollY < toggleY) {
       opened = false;
       header.classList.remove('opened');
+      window.checkMenu();
     }
   }, {
     passive: true

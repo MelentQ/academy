@@ -46,17 +46,30 @@
     }
 
     .header-menu {
+      flex-grow: 1;
       order: 2;
       margin: 0;
+
+      max-width: calc(100vw - 2 * var(--content-padding) - 11.6rem - 2 * 4rem - 200);
 
       @include breakpoint(tablet) {
         display: none;
       }
     }
 
+    .header-menu__list {
+      flex-wrap: wrap;
+    }
+
     .header__buttons {
       order: 3;
       flex-shrink: 0;
+
+      .button {
+        @include breakpoint(tablet) {
+          display: none;
+        }
+      }
     }
 
     .header-menu__wrapper {
@@ -257,16 +270,16 @@
     flex-shrink: 0;
 
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 4rem;
     height: 4rem;
     border-radius: 0.8rem;
     background-color: white;
 
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
 
     &>* {

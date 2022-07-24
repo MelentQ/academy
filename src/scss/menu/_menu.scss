@@ -125,9 +125,20 @@
 
   &__content {
     margin-top: 4rem;
+    position: relative;
   }
 
   &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+
     padding: 2.4rem 2rem;
     background-color: white;
     border-radius: 1.2rem;
@@ -139,15 +150,57 @@
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      position: static;
+    }
   }
 
-  &__item {}
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
+
+  &__item-back {
+    justify-content: flex-start;
+  }
 
   &__link {
 
     &:hover,
     &:focus {
       color: var(--secondary-color);
+    }
+  }
+
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      width: 0.8rem;
+      height: 0.5rem;
+      fill: #212A2F;
+    }
+  }
+
+  &__next-group {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__prev-group {
+    svg {
+      transform: rotate(90deg);
     }
   }
 

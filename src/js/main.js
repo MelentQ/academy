@@ -29,7 +29,8 @@ import quizTabs from "./my/quizTabs";
 import rangeSlider from "./my/rangeSlider";
 import animations from "./my/animations";
 import toggleHeader from "./my/toggleHeader";
-import toggleMenuItems from "./my/maxgraph.toggleMenuItems";
+import toggleMenuItems from "./my/toggleMenuItems";
+import menuTabs from "./my/menuTabs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
     rangeSlider();
     animations();
     toggleHeader();
-    // toggleMenuItems();
+    toggleMenuItems();
+    menuTabs();
 });
 
 document.addEventListener('lazyloaded', () => {
