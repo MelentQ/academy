@@ -35,6 +35,7 @@ export default function introSlider() {
   const imageSlider = new Swiper(container.querySelector('.intro__images'), {
     slidesPerView: 1,
     effect: 'fade',
+    speed: 0,
     fadeEffect: {
       crossFade: true
     },
