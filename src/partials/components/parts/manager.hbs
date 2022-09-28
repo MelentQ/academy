@@ -14,5 +14,7 @@
   </div>
 </div>
 {{#if data.button}}
-<a class="show-on-mobile button" href="{{data.button.link}}">{{data.button.text}}</a>
+<button class="show-on-mobile button" type="button" data-modal="{{data.button.modalId}}" data-manager="{{data.name}}">
+  {{data.button.text}}
+</button>
 {{/if}}

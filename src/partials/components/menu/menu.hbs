@@ -79,13 +79,6 @@
         {{#each this.items}}
         <li class="menu__item">
           <a class="menu__link" href="#">{{this.name}}</a>
-          {{#if this.items}}
-          <button class="menu__next-group menu__nav-button" type="button" data-group="{{this.id}}">
-            <svg>
-              <use xlink:href="#chevron">
-            </svg>
-          </button>
-          {{/if}}
         </li>
         {{/each}}
       </ul>
@@ -100,6 +93,8 @@
       <span class="menu__address">Харьковская 83А/4 офис 520</span>
       <span class="menu__time">Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</span>
     </div>
-    <a class="button" href="#" data-modal="#order" data-block="Меню">Позвоните мне</a>
+    <button class="button" type="button" data-modal="#order" data-block="Меню">
+      позвоните мне
+    </button>
   </div>
 </div>

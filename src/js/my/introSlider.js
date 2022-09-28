@@ -15,14 +15,20 @@ export default function introSlider() {
   if (!container) return;
 
   const thumbs = container.querySelectorAll('.intro__thumb');
+
   thumbs.forEach(thumb => {
+
+    if (thumbs.length <= 1) {
+      thumb.classList.add('disabled');
+    }
+
     thumb.addEventListener('click', (e) => {
       e.preventDefault();
     });
   })
 
   const thumbsSlider = new Swiper(container.querySelector('.intro__thumbs'), {
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 60
   });
 

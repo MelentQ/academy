@@ -127,8 +127,13 @@ body.loaded {
   }
 
   &__thumbs {
-    width: 21rem;
+    width: calc(102rem + var(--content-padding));
     margin: 0;
+
+    overflow: hidden;
+
+    margin-left: calc(-1 * var(--content-padding));
+    padding-left: var(--content-padding);
 
     @media only screen and (max-width: (1439px)) {
       display: none;
@@ -136,6 +141,21 @@ body.loaded {
 
     .swiper-slide-thumb-active .intro__thumb-text {
       opacity: 1;
+    }
+  }
+
+  &__thumb {
+    &.disabled {
+      .intro__thumb-line {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .intro__thumb-text {
+        opacity: 0.8;
+      }
     }
   }
 

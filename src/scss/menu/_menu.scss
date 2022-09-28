@@ -15,6 +15,7 @@
   opacity: 0;
   visibility: hidden;
   overflow: auto;
+  pointer-events: none;
 
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
@@ -235,4 +236,5 @@
 .menu-open .menu {
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
 }
