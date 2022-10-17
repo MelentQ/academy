@@ -7,6 +7,11 @@
     outline: none;
 }
 
+*:focus {
+    outline: 0.1rem dotted var(--secondary-color);
+    outline-offset: 0.2rem;
+}
+
 :root {
     --max-container-width: 156rem;
     --content-padding: 6rem;
@@ -17,10 +22,13 @@
     --placeholder: linear-gradient(180deg, #E3F5FF 0%, #F5FCFF 100%);
     --error: #FF541B;
 
+    --base-border-radius: 4rem;
+
     --js-header-height: 256px;
 
     @include breakpoint(tablet) {
         --content-padding: 3.5rem;
+        --base-border-radius: 2rem;
     }
 }
 

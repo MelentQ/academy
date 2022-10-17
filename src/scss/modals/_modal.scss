@@ -55,7 +55,7 @@
     max-width: calc(87rem);
     width: 100%;
     padding: 6rem;
-    border-radius: 4rem;
+    border-radius: var(--base-border-radius);
     overflow: visible;
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
     transform: scale(0.9);
@@ -69,7 +69,6 @@
       width: calc(100% - 3rem);
       margin: 1.5rem;
       padding: 4rem 2rem;
-      border-radius: 2rem;
     }
   }
 

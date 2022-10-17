@@ -16,15 +16,13 @@
     overflow: hidden;
 
 
-    border-radius: 4rem;
+    border-radius: var(--base-border-radius);
 
 
     @include breakpoint(tablet) {
       min-height: 48rem;
       padding: 0 2rem;
       margin: 0 -2rem;
-
-      border-radius: 2rem;
     }
 
     @include breakpoint(mobile) {

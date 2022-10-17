@@ -24,8 +24,7 @@
 
     transition: border-color 0.3s ease;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: var(--secondary-color);
     }
 
@@ -74,8 +73,7 @@
       flex-direction: column;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       opacity: 0.8;
     }
 

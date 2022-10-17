@@ -55,8 +55,7 @@
       z-index: 3;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       &::before {
         opacity: 1;
       }

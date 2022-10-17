@@ -10,7 +10,7 @@
     .section__inner {
       margin: 0 -4rem;
 
-      border-radius: 4rem;
+      border-radius: var(--base-border-radius);
       padding: 8rem 4rem;
 
       @include breakpoint(tablet) {
@@ -42,7 +42,7 @@
       padding: 8rem 4rem;
 
       border: 0.1rem solid rgba(33, 42, 47, 0.2);
-      border-radius: 4rem;
+      border-radius: var(--base-border-radius);
 
       @include breakpoint(tablet) {
         margin: 0 -2rem;
@@ -107,7 +107,7 @@
     z-index: 4;
 
     margin-top: -4rem;
-    border-radius: 4rem;
+    border-radius: var(--base-border-radius);
     padding-top: 2rem;
 
     background: white;
@@ -168,8 +168,9 @@
   }
 
   &__subtitle {
+    margin-top: 1rem;
     @extend %fs-t1;
-    color: #212A2F;
+    color: #5A5A5A;
   }
 
   &__content {

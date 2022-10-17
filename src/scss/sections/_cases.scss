@@ -176,8 +176,7 @@
       }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: var(--secondary-color);
       background-color: rgba(28, 186, 56, 0.05);
 
@@ -246,7 +245,7 @@
 
     display: block;
 
-    border-radius: 2.4rem 2.4rem 2.4rem 0;
+    border-radius: var(--base-border-radius) var(--base-border-radius) var(--base-border-radius) 0;
     overflow: hidden;
 
     background: white;
@@ -269,8 +268,7 @@
       z-index: 1;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       &::after {
         opacity: 1;
       }
@@ -297,6 +295,7 @@
     z-index: 2;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+    border-radius: var(--base-border-radius) var(--base-border-radius) var(--base-border-radius) 0;
   }
 
   &__video-block {
@@ -407,14 +406,14 @@
   }
 
   &__result {
-    font-size: var(--fs-t2);
+    @extend %fs-t2;
     color: #212A2F;
   }
 
   &__result-digit-block {
     background: linear-gradient(180deg, #FF511B 0%, #FFA41B 100%);
     box-shadow: 0 2rem 4rem rgba(255, 164, 27, 0.4);
-    border-radius: 4rem 4rem 4rem 0;
+    border-radius: var(--base-border-radius) var(--base-border-radius) var(--base-border-radius) 0;
     padding: 3rem;
     color: white;
 
@@ -423,7 +422,6 @@
 
       background: linear-gradient(180deg, #FF511B 0%, #FFA41B 100%);
       box-shadow: 0 1rem 2rem rgba(255, 164, 27, 0.2);
-      border-radius: 2rem 2rem 2rem 0;
     }
   }
 
@@ -442,7 +440,11 @@
   }
 
   &__result-digit-text {
-    font-size: var(--fs-t2);
+    font-size: 1.6rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
   }
 
   &__bottom {

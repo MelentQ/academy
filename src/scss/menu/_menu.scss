@@ -77,8 +77,7 @@
       }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba(0, 0, 0, 0);
       border-color: var(--secondary-color);
 
@@ -93,8 +92,7 @@
     font-size: 1.4rem;
     font-weight: 500;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--secondary-color);
     }
   }
@@ -116,8 +114,7 @@
       fill: #212A2F;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       svg {
         fill: var(--secondary-color);
       }
@@ -172,8 +169,7 @@
 
   &__link {
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--secondary-color);
     }
   }

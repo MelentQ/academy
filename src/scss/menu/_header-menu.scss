@@ -123,8 +123,7 @@
     line-height: 1;
     text-transform: uppercase;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--secondary-color);
     }
   }
@@ -156,8 +155,7 @@
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
 
-    &:hover,
-    &:focus {
+    &:hover {
       >.header-menu__item-head {
         color: var(--secondary-color);
       }
@@ -170,6 +168,18 @@
 
     &.hidden {
       display: none;
+    }
+
+    &.js-root-menu-item {
+      >.header-menu__item-head svg {
+        transition: fill 0.3s ease, transform 0.3s ease;
+      }
+
+      &:hover {
+        >.header-menu__item-head svg {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 

@@ -35,6 +35,21 @@
 .fancybox__content>.carousel__button.is-close {
     top: 0;
     right: -6rem;
+
+    @media screen and (max-width: 1200px) {
+        top: -6rem;
+        right: 0;
+    }
+}
+
+.fancybox__slide {
+    padding: 8px;
+}
+
+.fancybox__nav {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .parsley-errors-list {

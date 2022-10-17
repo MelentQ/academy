@@ -146,6 +146,12 @@
       padding: 0 0 1.7rem 0;
       border: none;
       border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+      border-radius: 0;
+
+      svg {
+        width: 1.4rem;
+        height: 0.8rem;
+      }
     }
 
     .form-radio__select-image-wrapper {
@@ -324,8 +330,7 @@
       }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: var(--secondary-color);
       background-color: rgba(28, 186, 56, 0.05);
 

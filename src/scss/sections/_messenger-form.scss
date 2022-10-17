@@ -6,7 +6,7 @@
 
   padding: 6rem;
   background: var(--secondary-color);
-  border-radius: 4rem;
+  border-radius: var(--base-border-radius);
   color: white;
 
   @include breakpoint(laptop) {
@@ -29,6 +29,13 @@
     font-size: 4rem;
     font-family: 'Bebas Neue', cursive;
     line-height: 1;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.5rem;
+    }
   }
 
   &__heading-label {

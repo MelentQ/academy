@@ -59,10 +59,6 @@
     &:hover {
       color: var(--secondary-color);
     }
-
-    &:focus {
-      color: var(--secondary-color);
-    }
   }
 
   &__contacts-block {
@@ -89,10 +85,6 @@
     }
 
     &:hover {
-      color: var(--secondary-color);
-    }
-
-    &:focus {
       color: var(--secondary-color);
     }
   }
@@ -137,10 +129,6 @@
     &:hover {
       color: var(--secondary-color);
     }
-
-    &:focus {
-      color: var(--secondary-color);
-    }
   }
 
   &__nav {
@@ -165,10 +153,6 @@
       font-weight: 500;
 
       &:hover {
-        color: var(--secondary-color);
-      }
-
-      &:focus {
         color: var(--secondary-color);
       }
     }
@@ -207,8 +191,7 @@
       height: 3.2rem;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: var(--secondary-color);
 
       svg {

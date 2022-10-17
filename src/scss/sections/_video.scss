@@ -1,6 +1,6 @@
 .video {
   position: relative;
-  border-radius: 4rem;
+  border-radius: var(--base-border-radius);
   overflow: hidden;
 
   display: block;
@@ -26,8 +26,7 @@
     z-index: 1;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     &::after {
       opacity: 1;
     }

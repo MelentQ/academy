@@ -24,7 +24,7 @@
         "mods": "--first-section --grey --ratio-5x7",
         "heading": {
             "title": "Узнайте стоимость материалов и монтажа вашей кровли",
-            "label": "Ответьте на несколько вопросов и получите 2 подарка"
+            "subtitle": "Ответьте на несколько вопросов и получите 2 подарка"
         },
         "manager": {
             "image": "img/content/manager.jpg",
@@ -539,7 +539,7 @@
         ]
     },
     "credit": {
-        "mods": "--ratio-1x1",
+        "mods": "--ratio-1x1 --border",
         "heading": {
             "title": "Кредит и Рассрочка От ведущих банков"
         },

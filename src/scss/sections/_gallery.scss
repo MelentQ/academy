@@ -34,7 +34,7 @@
     flex-grow: 1;
 
     position: relative;
-    border-radius: 4rem 4rem 4rem 0;
+    border-radius: var(--base-border-radius) var(--base-border-radius) var(--base-border-radius) 0;
     overflow: hidden;
 
     padding: 2.4rem;
@@ -59,8 +59,7 @@
       z-index: 1;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       &::after {
         opacity: 1;
       }
@@ -87,6 +86,7 @@
     height: 100%;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6.16%, rgba(0, 0, 0, 0.6) 93.12%);
+    border-radius: var(--base-border-radius) var(--base-border-radius) var(--base-border-radius) 0;
 
     @include breakpoint(tablet) {
       display: none;

@@ -2,7 +2,7 @@ export default function toggleHeader() {
   const header = document.querySelector('.header');
   if (!header) return;
 
-  const toggleY = header.dataset.toggle || 300;
+  const toggleY = header.dataset.toggle || 250;
   let opened = false;
 
   window.addEventListener('scroll', () => {

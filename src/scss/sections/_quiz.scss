@@ -192,8 +192,7 @@
       order: 2;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       svg {
         fill: var(--primary-color);
       }
@@ -360,7 +359,7 @@
     line-height: 1;
 
     p {
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
 
       &:last-of-type {
         margin-bottom: 0;

@@ -26,8 +26,7 @@
     color: white;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #0A9923;
     border-color: #0A9923;
   }
@@ -43,8 +42,7 @@
     background-color: white;
     border-color: white;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba(255, 255, 255, 0.8);
       border-color: rgba(255, 255, 255, 0.8);
     }
@@ -62,8 +60,7 @@
     background-color: rgba(0, 0, 0, 0);
     border-color:rgba(33, 42, 47, 0.2);
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--secondary-color);
       background-color: rgba(28, 186, 56, 0.1);
       border-color: var(--secondary-color);
@@ -126,10 +123,11 @@
   background: var(--bg);
   border-radius: 0.8rem;
 
-  &:hover,
-  &:focus {
+  transition: opacity 0.3s ease;
+
+  &:hover {
     svg {
-      fill: var(--primary-color);
+      fill: var(--secondary-color);
     }
   }
 
@@ -149,6 +147,7 @@
   &.swiper-button-disabled {
     pointer-events: none;
     background: none;
+    opacity: 0.5;
   }
 
   &.swiper-button-lock {

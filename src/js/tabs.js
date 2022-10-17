@@ -26,9 +26,11 @@ export default function tabs() {
             const casesOptions = casesSelect.querySelectorAll('.js-option');
             const casesButton = casesSelect.querySelector('.js-button');
 
-            casesButton.addEventListener('click', () => {
-                casesSelect.classList.toggle('active');
-            });
+            if (casesButton) {
+                casesButton.addEventListener('click', () => {
+                    casesSelect.classList.toggle('active');
+                });
+            }
 
             window.addEventListener('click', e => {
                 const target = e.target
