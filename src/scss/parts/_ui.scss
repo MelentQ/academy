@@ -66,6 +66,12 @@
       border-color: var(--secondary-color);
     }
   }
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }
 
 .play-button {

@@ -37,27 +37,12 @@ export default function introSlider() {
     effect: 'fade',
     speed: 0,
     fadeEffect: {
-      crossFade: true
+      crossFade: false
     },
     allowTouchMove: false,
     thumbs: {
       swiper: thumbsSlider,
       multipleActiveThumbs: false
-    }
-  });
-
-  const mobileSlider = new Swiper(container.querySelector('.intro__mobile-slider'), {
-    slidesPerView: 1,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    controller: {
-      control: imageSlider
-    },
-    navigation: {
-      nextEl: container.querySelector('.slider-button.--right'),
-      prevEl: container.querySelector('.slider-button.--left'),
     }
   });
 
@@ -102,5 +87,57 @@ export default function introSlider() {
     lineAnimation();
 
     imageSlider.on("slideChange", lineAnimation);
+
+  } else {
+    const mobileSliderContainer = container.querySelector('.intro__mobile-slider');
+    const mobileSlider = new Swiper(mobileSliderContainer, {
+      slidesPerView: 1,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      controller: {
+        control: imageSlider
+      },
+      navigation: {
+        nextEl: container.querySelector('.slider-button.--right'),
+        prevEl: container.querySelector('.slider-button.--left'),
+      }
+    });
+
+    if (window.matchMedia("(min-width: 641px)").matches) {
+      const animation = gsap.timeline();
+      const line = mobileSliderContainer.querySelector('.intro__thumb-fill');
+      gsap.set(line, {
+        xPercent: -100
+      });
+  
+      function lineAnimation() {
+        gsap.set(line, {
+          xPercent: -100
+        });
+  
+        animation.clear();
+        animation.eventCallback('onComplete', null);
+        animation.fromTo(line, {
+          xPercent: -100,
+        }, {
+          ease: "none",
+          xPercent: 0,
+          duration: 5,
+        });
+        animation.eventCallback('onComplete', () => {
+          if (mobileSlider.isEnd) {
+            mobileSlider.slideTo(0);
+          } else {
+            mobileSlider.slideNext();
+          }
+        });
+      }
+  
+      lineAnimation();
+  
+      mobileSlider.on("slideChange", lineAnimation);
+    }
   }
 }
