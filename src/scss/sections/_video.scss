@@ -12,6 +12,10 @@
     min-height: 36rem;
   }
 
+  @include breakpoint(mobile) {
+    min-height: 19.2rem;
+  }
+
   &::after {
     content: '';
     position: absolute;

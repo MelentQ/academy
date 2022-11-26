@@ -18,6 +18,12 @@
     user-select: none;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    left: 0;
+    transform: none;
+}
+
 .lazyload,
 .lazyloading {
     opacity: 0;

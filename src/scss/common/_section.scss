@@ -145,7 +145,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+
+    .manager {
+      margin-top: 2rem;
+    }
   }
 
   .js-animation {

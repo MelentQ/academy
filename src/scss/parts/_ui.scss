@@ -173,6 +173,7 @@
   }
 
   &__item {
+    flex-shrink: 0;
     display: block;
 
     width: 0.8rem;
@@ -187,7 +188,7 @@
     &.active {
       background-color: var(--secondary-color);
       opacity: 1;
-      width: 3.6rem;
+      // width: 3.6rem;
     }
   }
 }
