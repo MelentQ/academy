@@ -168,6 +168,11 @@
   align-items: center;
   gap: 1.2rem;
 
+  overflow: scroll;
+  max-width: 100%;
+
+  @include noScrollbar;
+
   &.swiper-pagination-lock {
     display: none;
   }
@@ -188,7 +193,7 @@
     &.active {
       background-color: var(--secondary-color);
       opacity: 1;
-      // width: 3.6rem;
+      width: 3.6rem;
     }
   }
 }

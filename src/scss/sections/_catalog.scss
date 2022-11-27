@@ -27,6 +27,18 @@
   .swiper-pagination {
     position: static;
     margin: 4rem auto 0;
+
+    @include breakpointMF(laptop) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #212A2F;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--secondary-color);
   }
 
   .navigation {

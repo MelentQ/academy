@@ -14,11 +14,11 @@ export default function catalogSlider() {
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
-      el: container.querySelector('.swiper-pagination'),
+      el: container.querySelector('.pagination'),
+      bulletClass: "pagination__item",
+      bulletActiveClass: "active",
       type: 'bullets',
-      clickable: true,
-      dynamicBullets: true,
-      dynamicMainBullets: 4
+      clickable: true
     },
     navigation: {
       nextEl: container.querySelector('.slider-button.--right'),
