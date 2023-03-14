@@ -2,44 +2,49 @@ import loadApi from "./loadApi";
 import initMapOverlay from "./mapOverlay";
 
 export default function map() {
-  const mapElement = document.querySelector('.js-init-map');
-  if (mapElement) {
-    const url = `https://api-maps.yandex.ru/2.1/?apikey=${mapElement.dataset.api}&lang=ru_RU`;
-    loadApi('yandex', url, () => {
-      ymaps.ready(init);
-    });
-  }
+    const mapElement = document.querySelector('.js-init-map');
+    if (mapElement) {
+        const url = `https://api-maps.yandex.ru/2.1/?apikey=${mapElement.dataset.api}&lang=ru_RU`;
+        loadApi('yandex', url, () => {
+            ymaps.ready(init);
+        });
+    }
 
-  initMapOverlay('.js-overlay', 'js-overlay-container');
+    initMapOverlay('.js-overlay', 'js-overlay-container');
 
-  function init() {
-    const map = new ymaps.Map(mapElement, {
-      center: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
-      zoom: mapElement.dataset.initialZoom,
-      controls: ['zoomControl']
-    });
+    function init() {
+        const map = new ymaps.Map(mapElement, {
+            center: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
+            zoom: mapElement.dataset.initialZoom,
+            controls: ['zoomControl']
+        });
 
-    addPlace(map, {
-      coords: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
-      image: mapElement.dataset.image
-    })
-  }
+        addPlace(map, {
+            coords: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
+            image: mapElement.dataset.image,
+            caption: mapElement.dataset.iconCaption
+        })
+    }
 }
 
 function addPlace(map, {
-  coords,
-  image
+    coords,
+    image,
+    caption
 }) {
-  const placemarkProperties = {};
+    const placemarkProperties = {
+        iconCaption: caption
+    };
 
-  const placemarkOptions = {
-    iconLayout: 'default#image', // pieChart
-    iconImageHref: image,
-    iconImageSize: [60, 60],
-    iconImageOffset: [-30, -60]
-  };
+    const placemarkOptions = {
+        preset: 'islands#orangeDotIcon',
+        // iconLayout: 'default#image', // pieChart
+        // iconImageHref: image,
+        // iconImageSize: [60, 60],
+        // iconImageOffset: [-30, -60]
+    };
 
-  const placemark = new ymaps.Placemark(coords, placemarkProperties, placemarkOptions);
+    const placemark = new ymaps.Placemark(coords, placemarkProperties, placemarkOptions);
 
-  map.geoObjects.add(placemark);
+    map.geoObjects.add(placemark);
 }
