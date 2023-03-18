@@ -31,6 +31,7 @@ import animations from "./my/animations";
 import toggleHeader from "./my/toggleHeader";
 import toggleMenuItems from "./my/toggleMenuItems";
 import menuTabs from "./my/menuTabs";
+import quizNewTabs from "./my/quizNewTabs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     placeholders();
     formRadio();
     quizTabs();
+    quizNewTabs();
     rangeSlider();
     animations();
     toggleHeader();

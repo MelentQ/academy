@@ -1,3 +1,16 @@
+// new mart 2023
+
+.quiz {
+  .js-quiz-new-tabs {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.loading {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 .quiz {
   grid-column: span 7;
 
@@ -109,6 +122,7 @@
     background-color: #212A2F;
     height: 100%;
     width: 100%;
+    transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
 
