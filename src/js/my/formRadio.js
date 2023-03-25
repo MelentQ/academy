@@ -6,14 +6,33 @@ export default function formRadio() {
     const buttons = buttonsContainer.querySelectorAll('.js-button');
     const mobileSelectButton = container.querySelector('.form-radio__select');
     const mobileSelectButtonLabel = mobileSelectButton.querySelector('.form-radio__select-label');
+    const mobileSelectImageWrapper = mobileSelectButton.querySelector('.form-radio__select-image-small-wrapper');
     const mobileSelectImage = mobileSelectButton.querySelector('img');
     let activeButtonIndex = 0;
 
+    const tooltips = [];
+
     buttons.forEach((button, index) => {
       const buttonImage = button.querySelector('img');
+      const tooltip = button.parentNode.querySelector('.tooltip');
+
+      if (tooltip) {
+        tooltip.userParentNode = tooltip.parentNode;
+        tooltips.push(tooltip);
+      }
 
       button.addEventListener('click', (e) => {
         e.preventDefault();
+        if (button.classList.contains('active')) return;
+
+        tooltips.forEach(tt => {
+          tt.userParentNode.append(tt);
+        })
+
+        if (mobileSelectImageWrapper) {
+          mobileSelectImageWrapper.style.display = 'none';
+        }
+
         button.classList.add('active');
         buttons[activeButtonIndex].classList.remove('active');
         activeButtonIndex = index;
@@ -21,8 +40,13 @@ export default function formRadio() {
         mobileSelectButtonLabel.textContent = button.dataset.value;
         buttonsContainer.classList.remove('active');
         mobileSelectButton.classList.remove('active');
-        if (mobileSelectImage && buttonImage) {
+        if (mobileSelectImageWrapper && mobileSelectImage && buttonImage) {
+          mobileSelectImageWrapper.style.display = 'block';
           mobileSelectImage.src = buttonImage.src;
+        }
+
+        if (matchMedia('only screen and (max-width: 640px)').matches && tooltip) {
+          container.parentElement.append(tooltip);
         }
       })
     })

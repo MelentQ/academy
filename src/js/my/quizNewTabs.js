@@ -6,61 +6,103 @@ export default function quizNewTabs() {
         const progressbarFill = progressbar.querySelector('.quiz__progressbar-fill');
         const nextButton = container.querySelector('.quiz__step-next');
         const prevButton = container.querySelector('.quiz__step-prev');
-        const tabs = container.querySelectorAll('.quiz__step');
-        let activeTabIndex = 0;
+        const tabs = [...container.querySelectorAll('[data-index]')];
 
-        function setupContainer() {
-            progressbarLabel.textContent = `Шаг 1 из ${tabs.length}`;
-            progressbarFill.style.transform = `translateX(${100 / tabs.length - 100}%)`;
-            container.classList.remove('loading');
+        const hiddenPathInput = container.querySelector('.js-quiz-path');
+
+        let activeTabIndex = null;
+        const indexesPath = [];
+
+        const activeTab = container.querySelector('.active[data-index]');
+        if (activeTab) {
+            activeTabIndex = activeTab.dataset.index;
+        } else {
+            const firstTab = container.querySelector('[data-index]');
+            activeTabIndex = firstTab.dataset.index;
         }
 
-        setupContainer();
+        const firstIndex = activeTabIndex;
+        const lastTab = container.querySelector('.last[data-index]');
+        if (!lastTab) {
+            tabs[tabs.length - 1].classList.add('last');
+        }
+        const lastIndex = container.querySelector('.last[data-index]').dataset.index;
+
+        const levels = new Set(tabs.map(item => item.dataset.level));
+
+        setActiveTab(activeTabIndex);
+
+        container.classList.remove('loading');
 
         function checkButtons(index) {
-            if (prevButton) {
-                if (tabs[index - 1]) {
-                    prevButton.classList.remove('disabled');
-                } else {
-                    prevButton.classList.add('disabled');
-                }
-            }
-
-            if (nextButton) {
-                if (tabs[index + 1]) {
-                    nextButton.classList.remove('disabled');
-                } else {
-                    nextButton.classList.add('disabled');
-                }
+            if (index == firstIndex) {
+                prevButton.classList.add('disabled');
+                nextButton.classList.remove('disabled');
+            } else if (index == lastIndex) {
+                prevButton.classList.remove('disabled');
+                nextButton.classList.add('disabled');
+            } else {
+                prevButton.classList.remove('disabled');
+                nextButton.classList.remove('disabled');
             }
         }
 
-        function setProgressBar() {
-            const percent = `${(activeTabIndex + 1) / tabs.length * 100 - 100}%`;
-            progressbarFill.style.transform = `translateX(${percent})`;
-            progressbarLabel.textContent = `Шаг ${activeTabIndex + 1} из ${tabs.length}`;
-        }
+        tabs.forEach(tab => {
+            const controls = tab.querySelectorAll('*[data-tab]');
+            controls.forEach(control => {
+                control.addEventListener('click', () => {
+                    nextButton.dataset.tab = control.dataset.tab;
+                })
+            })
+        })
 
         function setActiveTab(index) {
-            if (tabs[index]) {
-                tabs[activeTabIndex].classList.remove('active');
-                tabs[index].classList.add('active');
+            if (!indexesPath.includes(index)) {
+                indexesPath.push(index);
+            }
+
+            const newTab = tabs.find(item => item.dataset.index == index);
+            const oldTab = tabs.find(item => item.dataset.index == activeTabIndex);
+
+            if (newTab) {
+                if (oldTab) {
+                    oldTab.classList.remove('active');
+                }
+                newTab.classList.add('active');
                 activeTabIndex = index;
 
-                nextButton.dataset.tab = activeTabIndex + 1
-                prevButton.dataset.tab = activeTabIndex - 1
+                const controls = newTab.querySelectorAll('*[data-tab]');
+                if (controls.length) {
+                    const activeButton = newTab.querySelector('.active[data-tab]');
+                    if (activeButton) {
+                        nextButton.dataset.tab = activeButton.dataset.tab;
+                    }
+                } else {
+                    if (newTab.dataset.next) {
+                        nextButton.dataset.tab = newTab.dataset.next;
+                    } else {
+                        nextButton.dataset.tab = lastIndex
+                    }
+                }
 
                 checkButtons(index);
-                setProgressBar();
+
+                progressbarFill.style.transform = `translateX(${([...levels].indexOf(newTab.dataset.level) + 1) / [...levels].length * 100 - 100}%)`;
+                progressbarLabel.textContent = `Шаг ${[...levels].indexOf(newTab.dataset.level) + 1} из ${[...levels].length}`;
+            }
+
+            if (hiddenPathInput) {
+                hiddenPathInput.value = JSON.stringify(indexesPath);
             }
         }
 
         prevButton.addEventListener('click', () => {
-            setActiveTab(Number(prevButton.dataset.tab));
+            indexesPath.pop()
+            setActiveTab(indexesPath[indexesPath.length - 1]);
         });
 
         nextButton.addEventListener('click', () => {
-            setActiveTab(Number(nextButton.dataset.tab));
+            setActiveTab(nextButton.dataset.tab);
         });
 
         // Кнопка в сообщении об успехе
@@ -70,7 +112,7 @@ export default function quizNewTabs() {
         const successTabButton = successTab.querySelector('.button')
 
         successTabButton.addEventListener('click', () => {
-            setActiveTab(0);
+            setActiveTab(firstIndex);
             successTab.classList.remove('visible');
             progressbarSuccessLabel.classList.remove('visible');
             progressbarLabel.classList.remove('hidden');

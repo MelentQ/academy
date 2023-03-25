@@ -1,5 +1,4 @@
 // new mart 2023
-
 .quiz {
   .js-quiz-new-tabs {
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -7,6 +6,39 @@
     &.loading {
       opacity: 0;
       visibility: hidden;
+    }
+  }
+
+  &__bonus {
+    max-height: 45rem;
+  }
+
+  .tooltip {
+    @include breakpoint(mobile) {
+      z-index: 0;
+    }
+
+    svg {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+
+    &__content {
+      @include breakpoint(mobile) {
+        opacity: 1;
+        visibility: visible;
+
+        position: static;
+
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1.6rem 1.2rem;
+
+        box-shadow: none;
+        background: var(--bg);
+        border-radius: 0.8rem;
+      }
     }
   }
 }
@@ -73,6 +105,8 @@
     display: none;
     padding-left: 3.2rem;
 
+    color: var(--secondary-color);
+
     &::before {
       content: '';
       position: absolute;
@@ -97,7 +131,7 @@
       border: solid white;
       border-width: 0 0.2rem 0.2rem 0;
       border-radius: 0.1rem;
-      transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-60%) rotate(45deg);
     }
 
     &.visible {

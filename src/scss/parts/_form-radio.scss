@@ -1,3 +1,47 @@
+// new mart 2023
+.form-radio {
+  &__list-item-wrapper--wide {
+    grid-column: span 2;
+
+    @include breakpoint(mobile) {
+      grid-column: 1;
+    }
+  }
+
+  &__list-item-wrapper--empty {
+    .form-radio__image-wrapper {
+      background: none;
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  .form-radio__select-label-wrapper .form-radio__select-image-small-wrapper {
+    flex-shrink: 0;
+    position: relative;
+
+    width: 2.2rem;
+    height: 2.2rem;
+
+    border-radius: 0.4rem;
+
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
 .form-radio {
   position: relative;
 
@@ -253,6 +297,11 @@
 
   &__select-label {
     font-size: 1.4rem;
+
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__list {
@@ -285,9 +334,25 @@
         visibility: visible;
       }
     }
+
+    & > * {
+      position: relative;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 2.8rem;
+      right: 2.8rem;
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
   }
 
   &__item {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -302,6 +367,10 @@
     transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 
     @include breakpoint(mobile) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
       border: none;
       padding: 1rem 1.6rem;
 
@@ -350,7 +419,10 @@
     border-radius: 1.2rem;
 
     @include breakpoint(mobile) {
-      display: none;
+      width: 2.2rem;
+      height: 2.2rem;
+
+      border-radius: 0.4rem;
     }
 
     img {
