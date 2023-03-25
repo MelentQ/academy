@@ -199,7 +199,7 @@
 }
 
 .range-slider {
-  padding-top: 1.4rem;
+  padding-top: 2.8rem;
 
   &__labels {
     display: flex;
@@ -225,6 +225,15 @@
 
   .noUi-horizontal {
     height: 0.4rem;
+
+    .noUi-tooltip {
+      bottom: 180%;
+    }
+  }
+
+  .noUi-tooltip {
+    padding: 0;
+    border: none;
   }
 
   .noUi-handle {

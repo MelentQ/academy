@@ -13,6 +13,15 @@ export default function rangeSlider() {
       range: {
         'min': Number(container.dataset.min),
         'max': Number(container.dataset.max)
+      },
+      tooltips: true,
+      format: {
+        from: function (formattedValue) {
+          return Number(formattedValue);
+        },
+        to: function(numericValue) {
+          return Math.round(numericValue);
+        }
       }
     });
 
