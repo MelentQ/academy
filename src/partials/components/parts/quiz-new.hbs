@@ -34,7 +34,7 @@
                         <ul class="form-radio__list">
                             <li>
                                 <a class="js-button form-radio__item active" href="#"
-                                   data-value="Фасад" data-tab="Фасад">
+                                   data-value="Фасад" data-tab="Выберите материал крыши">
                                     <div class="form-radio__image-wrapper">
                                         <img class="lazyload" data-src="img/content/quiz/1.jpg"
                                              alt="Quiz">
@@ -44,7 +44,7 @@
                             </li>
                             <li>
                                 <a class="js-button form-radio__item " href="#"
-                                   data-value="Кровля" data-tab="Кровля">
+                                   data-value="Кровля" data-tab="Выберите материал крыши">
                                     <div class="form-radio__image-wrapper">
                                         <img class="lazyload" data-src="img/content/quiz/2.jpg"
                                              alt="Quiz">
@@ -95,155 +95,298 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="quiz__step" data-level="lvl2" data-index="Фасад" data-next="Фасад ур 2">
-                    <legend class="visually-hidden">Фасад</legend>
-                    <h3 class="quiz__step-heading">Фасад</h3>
-                    <div class="js-form-radio form-radio ">
+                <fieldset class="quiz__step" data-level="lvl2" data-index="Выберите материал крыши" data-next="Выберите тип крыши">
+                    <legend class="visually-hidden">Выберите материал крыши</legend>
+                    <h3 class="quiz__step-heading">Выберите материал крыши</h3>
+                    <div class="js-form-radio form-radio">
                         <input type="hidden" name="material" value="Металлочерепица">
                         <button class="form-radio__select" type="button">
                             <div class="form-radio__select-label-wrapper">
-                                <span class="form-radio__select-label">Фасад 1</span>
+                                <span class="form-radio__select-label">Металлочерепица</span>
                             </div>
                             <svg>
-                                <use xlink:href="#chevron"/>
+                                <use xlink:href="#chevron" />
                             </svg>
                         </button>
                         <ul class="form-radio__list">
                             <li>
-                                <a class="js-button form-radio__item active" href="#"
-                                   data-value="Фасад 1">
-                                    <span class="form-radio__name">Фасад 1</span>
+                                <a class="js-button form-radio__item active" href="#" data-value="Металлочерепица">
+                                    <span class="form-radio__name">Металлочерепица</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="js-button form-radio__item " href="#"
-                                   data-value="Фасад 2">
-                                    <span class="form-radio__name">Фасад 2</span>
+                                <a class="js-button form-radio__item" href="#" data-value="Гибкая черепица">
+                                    <span class="form-radio__name">Гибкая черепица</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Профнастил">
+                                    <span class="form-radio__name">Профнастил</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Точно не знаю">
+                                    <span class="form-radio__name">Точно не знаю</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </fieldset>
 
-                <fieldset class="quiz__step" data-level="lvl2" data-index="Кровля" data-next="Кровля ур 2">
-                    <legend class="visually-hidden">Кровля</legend>
-                    <h3 class="quiz__step-heading">Кровля</h3>
+                <fieldset class="quiz__step" data-level="lvl3" data-index="Выберите тип крыши" data-next="Укажите примерный метраж крыши">
+                    <legend class="visually-hidden">Выберите тип крыши</legend>
+                    <h3 class="quiz__step-heading">Выберите тип крыши</h3>
                     <div class="js-form-radio form-radio --images-in-select">
                         <input type="hidden" name="roof" value="Тип 1">
                         <button class="form-radio__select" type="button">
                             <div class="form-radio__select-label-wrapper">
                                 <div class="form-radio__select-image-wrapper">
-                                    <img class="lazyload" data-src="img/content/roofs/1.svg"
-                                         alt="Quiz">
+                                    <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
                                 </div>
-                                <span class="form-radio__select-label">Кровля 1</span>
+                                <span class="form-radio__select-label">Тип 1</span>
                             </div>
                             <svg>
-                                <use xlink:href="#chevron"/>
+                                <use xlink:href="#chevron" />
                             </svg>
                         </button>
                         <ul class="form-radio__list">
                             <li>
-                                <a class="js-button form-radio__item active" href="#"
-                                   data-value="Кровля 1">
+                                <a class="js-button form-radio__item active" href="#" data-value="Тип 1">
                                     <div class="form-radio__image-wrapper">
-                                        <img class="lazyload" data-src="img/content/roofs/1.svg"
-                                             alt="Quiz">
+                                        <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
                                     </div>
-                                    <span class="form-radio__name">Кровля 1</span>
+                                    <span class="form-radio__name">Тип 1</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="js-button form-radio__item " href="#"
-                                   data-value="Кровля 2">
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 2">
                                     <div class="form-radio__image-wrapper">
-                                        <img class="lazyload" data-src="img/content/roofs/2.svg"
-                                             alt="Quiz">
+                                        <img class="lazyload" data-src="img/content/roofs/2.svg" alt="Quiz">
                                     </div>
-                                    <span class="form-radio__name">Кровля 2</span>
+                                    <span class="form-radio__name">Тип 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 3">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/3.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 4">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/4.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 5">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/5.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 6">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/6.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 7">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/7.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 7</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 8">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/8.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 9">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/9.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 9</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 10">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/10.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 11">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/11.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 11</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 12">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/12.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 13">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/13.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 13</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </fieldset>
 
-                <fieldset class="quiz__step" data-level="lvl3" data-index="Фасад ур 2" data-next="Фасад ур 3">
-                    <legend class="visually-hidden">Фасад ур 2</legend>
-                    <h3 class="quiz__step-heading">Фасад ур 2</h3>
+                <fieldset class="quiz__step" data-level="lvl3" data-index="Выберите тип крыши (тест)" data-next="Укажите примерный метраж крыши">
+                    <legend class="visually-hidden">Выберите тип крыши (тест)</legend>
+                    <h3 class="quiz__step-heading">Выберите тип крыши (тест)</h3>
                     <div class="js-form-radio form-radio --small-images">
                         <input type="hidden" name="roof-test" value="Тип 1">
                         <button class="form-radio__select" type="button">
                             <div class="form-radio__select-label-wrapper">
                                 <div class="form-radio__select-image-wrapper">
-                                    <img class="lazyload" data-src="img/content/roofs/1.svg"
-                                         alt="Quiz">
+                                    <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
                                 </div>
-                                <span class="form-radio__select-label">Фасад 1</span>
+                                <span class="form-radio__select-label">Тип 1</span>
                             </div>
                             <svg>
-                                <use xlink:href="#chevron"/>
+                                <use xlink:href="#chevron" />
                             </svg>
                         </button>
                         <ul class="form-radio__list">
                             <li>
-                                <a class="js-button form-radio__item active" href="#"
-                                   data-value="Фасад 1">
+                                <a class="js-button form-radio__item active" href="#" data-value="Тип 1">
                                     <div class="form-radio__image-wrapper">
-                                        <img class="lazyload" data-src="img/content/roofs/1.svg"
-                                             alt="Quiz">
+                                        <img class="lazyload" data-src="img/content/roofs/1.svg" alt="Quiz">
                                     </div>
-                                    <span class="form-radio__name">Фасад 1</span>
+                                    <span class="form-radio__name">Тип 1</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="js-button form-radio__item " href="#"
-                                   data-value="Фасад 2">
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 2">
                                     <div class="form-radio__image-wrapper">
-                                        <img class="lazyload" data-src="img/content/roofs/2.svg"
-                                             alt="Quiz">
+                                        <img class="lazyload" data-src="img/content/roofs/2.svg" alt="Quiz">
                                     </div>
-                                    <span class="form-radio__name">Фасад 2</span>
+                                    <span class="form-radio__name">Тип 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 3">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/3.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 4">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/4.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 5">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/5.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 6">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/6.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 7">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/7.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 7</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 8">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/8.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 9">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/9.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 9</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 10">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/10.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 11">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/11.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 11</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 12">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/12.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Тип 13">
+                                    <div class="form-radio__image-wrapper">
+                                        <img class="lazyload" data-src="img/content/roofs/13.svg" alt="Quiz">
+                                    </div>
+                                    <span class="form-radio__name">Тип 13</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </fieldset>
 
-                <fieldset class="quiz__step" data-level="lvl3" data-index="Кровля ур 2" data-next="Выберите подарок">
-                    <legend class="visually-hidden">Кровля ур 2</legend>
-                    <h3 class="quiz__step-heading">Кровля ур 2</h3>
-                    <div class="js-form-radio form-radio ">
-                        <input type="hidden" name="mounting" value="Да, конечно">
-                        <button class="form-radio__select" type="button">
-                            <div class="form-radio__select-label-wrapper">
-                                <span class="form-radio__select-label">Кровля 1</span>
-                            </div>
-                            <svg>
-                                <use xlink:href="#chevron"/>
-                            </svg>
-                        </button>
-                        <ul class="form-radio__list">
-                            <li>
-                                <a class="js-button form-radio__item active" href="#"
-                                   data-value="Кровля 1">
-                                    <span class="form-radio__name">Кровля 1</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="js-button form-radio__item " href="#"
-                                   data-value="Кровля 2">
-                                    <span class="form-radio__name">Кровля 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </fieldset>
-
-                <fieldset class="quiz__step" data-level="lvl4" data-index="Фасад ур 3" data-next="Выберите подарок">
-                    <legend class="visually-hidden">Фасад ур 3</legend>
-                    <h3 class="quiz__step-heading">Фасад ур 3</h3>
-                    <div class="js-range-slider range-slider" data-min="10" data-max="600"
-                         data-step="1">
+                <fieldset class="quiz__step" data-level="lvl4" data-index="Укажите примерный метраж крыши" data-next="Нужны ли работы по монтажу?">
+                    <legend class="visually-hidden">Укажите примерный метраж крыши</legend>
+                    <h3 class="quiz__step-heading">Укажите примерный метраж крыши</h3>
+                    <div class="js-range-slider range-slider" data-min="10" data-max="600" data-step="1">
                         <input type="hidden" name="square" value="10:300">
                         <div class="range-slider__slider"></div>
                         <div class="range-slider__labels">
@@ -253,29 +396,55 @@
                     </div>
                 </fieldset>
 
+                <fieldset class="quiz__step" data-level="lvl5" data-index="Нужны ли работы по монтажу?" data-next="Выберите подарок">
+                    <legend class="visually-hidden">Нужны ли работы по монтажу?</legend>
+                    <h3 class="quiz__step-heading">Нужны ли работы по монтажу?</h3>
+                    <div class="js-form-radio form-radio">
+                        <input type="hidden" name="mounting" value="Да, конечно">
+                        <button class="form-radio__select" type="button">
+                            <div class="form-radio__select-label-wrapper">
+                                <span class="form-radio__select-label">Да, конечно</span>
+                            </div>
+                            <svg>
+                                <use xlink:href="#chevron" />
+                            </svg>
+                        </button>
+                        <ul class="form-radio__list">
+                            <li>
+                                <a class="js-button form-radio__item active" href="#" data-value="Да, конечно">
+                                    <span class="form-radio__name">Да, конечно</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="js-button form-radio__item" href="#" data-value="Нет, попробую сделать самостоятельно">
+                                    <span class="form-radio__name">Нет, попробую сделать самостоятельно</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </fieldset>
+
                 <fieldset class="quiz__step" data-level="gift" data-index="Выберите подарок" data-next="Как с вами связаться?">
                     <legend class="visually-hidden">Выберите подарок</legend>
                     <h3 class="quiz__step-heading">Выберите подарок</h3>
-                    <div class="js-form-radio form-radio ">
+                    <div class="js-form-radio form-radio">
                         <input type="hidden" name="gift" value="Предварительная смета">
                         <button class="form-radio__select" type="button">
                             <div class="form-radio__select-label-wrapper">
                                 <span class="form-radio__select-label">Предварительная смета</span>
                             </div>
                             <svg>
-                                <use xlink:href="#chevron"/>
+                                <use xlink:href="#chevron" />
                             </svg>
                         </button>
                         <ul class="form-radio__list">
                             <li>
-                                <a class="js-button form-radio__item active" href="#"
-                                   data-value="Предварительная смета">
+                                <a class="js-button form-radio__item active" href="#" data-value="Предварительная смета">
                                     <span class="form-radio__name">Предварительная смета</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="js-button form-radio__item " href="#"
-                                   data-value="Скидка 5% в итоговой смете">
+                                <a class="js-button form-radio__item" href="#" data-value="Скидка 5% в итоговой смете">
                                     <span class="form-radio__name">Скидка 5% в итоговой смете</span>
                                 </a>
                             </li>
@@ -283,33 +452,28 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="quiz__step last" data-level="end" data-index="Как с вами связаться?">
+                <fieldset class="quiz__step" data-level="end" data-index="Как с вами связаться?">
                     <legend class="visually-hidden">Как с вами связаться?</legend>
                     <h3 class="quiz__step-heading">Как с вами связаться?</h3>
                     <div class="quiz__submit-step">
                         <div class="quiz__submit-step-inputs">
-                            <div class="js-validation-wrapper js-init-placeholder form-input ">
-                                <input class="js-input form-input__input "
-                                       type="text" name="name" autocomplete="off" required>
+                            <div class="js-validation-wrapper js-init-placeholder form-input">
+                                <input class="js-input form-input__input" type="text" name="name" autocomplete="off" required>
                                 <span class="form-input__placeholder">ваше Фамилия Имя отчество</span>
                             </div>
-                            <div class="js-validation-wrapper js-init-placeholder form-input ">
-                                <input class="js-input form-input__input js-phone-input"
-                                       data-parsley-phone
-                                       type="text" name="phone" autocomplete="off" required>
+                            <div class="js-validation-wrapper js-init-placeholder form-input">
+                                <input class="js-input form-input__input js-phone-input" data-parsley-phone type="text" name="phone" autocomplete="off" required>
                                 <span class="form-input__placeholder">Телефон для связи</span>
                             </div>
                         </div>
                         <div class="quiz__submit-step-bottom">
                             <label class="policy-checkbox js-validation-wrapper --dark">
-                                <div>Я согласен на обработку персональных данных и соглашаюсь с
-                                    <a href="#" target="_blank">политикой
-                                        конфеденциальности</a></div>
+                                <div>Я согласен на обработку персональных данных и соглашаюсь с<a href="#" target="_blank">политикой конфеденциальности</a>
+                                </div>
                                 <input type="checkbox" name="policy" required>
                                 <span class="policy-checkbox__checkmark"></span>
                             </label>
-                            <button class="button js-submit-form" type="submit">Отправить
-                            </button>
+                            <button class="button js-submit-form" type="submit">Отправить</button>
                         </div>
                     </div>
                 </fieldset>
