@@ -438,3 +438,29 @@ body.loaded {
     opacity: 0.5;
   }
 }
+
+body.--white .intro {
+  color: white;
+
+  &__thumb-line {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__thumb-fill {
+    background-color: white;
+  }
+
+  &__button-block {
+    padding: 0;
+
+    background: none;
+  }
+
+  &__tip-text {
+    color: white;
+  }
+
+  &__tip-icon {
+    fill: white;
+  }
+}

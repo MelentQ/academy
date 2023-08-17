@@ -40,8 +40,10 @@ export default function formRadio() {
         mobileSelectButtonLabel.textContent = button.dataset.value;
         buttonsContainer.classList.remove('active');
         mobileSelectButton.classList.remove('active');
-        if (mobileSelectImageWrapper && mobileSelectImage && buttonImage) {
+        if (mobileSelectImageWrapper) {
           mobileSelectImageWrapper.style.display = 'block';
+        }
+        if (mobileSelectImage && buttonImage) {
           mobileSelectImage.src = buttonImage.src;
         }
 

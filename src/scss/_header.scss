@@ -311,3 +311,51 @@
     }
   }
 }
+
+body.--white .header {
+  color: white;
+
+  &__logo {
+    background: white;
+    padding: 1.6rem 1.8rem;
+    border-radius: 1.2rem;
+  }
+
+  &__time {
+    opacity: 0.4;
+  }
+
+  &__buttons {
+    gap: 4rem;
+  }
+
+  &__contact-block,
+  &__phone-block {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+
+  &__contact.--viber,
+  &__contact.--wa {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.30);
+  }
+}
+
+body.--white .header:not(.opened) .header__phone-block .button {
+  background: none;
+  border-color: rgba(255, 255, 255, 0.30);
+  padding: 1.1rem 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 500;
+  font-family: inherit;
+  min-height: 3.8rem;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+}

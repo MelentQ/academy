@@ -1,6 +1,8 @@
 .header-menu {
   margin-top: 2.4rem;
 
+  color: #212A2F;
+
   @include breakpoint(tablet) {
     display: none;
   }
@@ -271,5 +273,17 @@
     .header-menu__item {
       padding: 0 3.2rem;
     }
+  }
+}
+
+body.--white header:not(.opened) .header-menu {
+  color: white;
+
+  &__wrapper {
+    background-color: rgba(0, 0, 0, 0.30);
+  }
+
+  &__item-body {
+    background-color: rgba(0, 0, 0, 0.80);
   }
 }
